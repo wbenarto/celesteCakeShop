@@ -4,6 +4,7 @@ function products() {
     return (
         <div>
             Products
+            Products Images Here
         </div>
     )
 }
