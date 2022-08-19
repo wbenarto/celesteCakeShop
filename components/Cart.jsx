@@ -14,7 +14,6 @@ const Cart = () => {
 
     const handleCheckout = async () => {
         const stripe = await getStripe();
-        console.log(cartItems)
 
         const response = await fetch('/api/stripe', {
             method: 'POST',
@@ -23,7 +22,7 @@ const Cart = () => {
             },
             body: JSON.stringify(cartItems),
         });
-        console.log(response)
+
         if (response.statusCode === 500) return;
 
         const data = await response.json();
