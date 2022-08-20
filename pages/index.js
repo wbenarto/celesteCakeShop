@@ -21,7 +21,7 @@ const Home = ({bannerData, products}) => {
             <h1 className='font-bold'>Made especially for you</h1>
           </div>
           <div className='w-1/2 flex justify-end '>
-            <img src={'/images/bday1.jpg'} alt='' className='h-full w-[90%] object-cover' ></img>
+            <img src='/images/bday1.jpg' alt='' className='h-full w-[90%] object-cover' ></img>
           </div>
         </div>
       
