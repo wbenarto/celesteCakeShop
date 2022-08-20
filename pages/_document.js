@@ -7,7 +7,7 @@ class MyDocument extends Document {
       <Html>
         <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         <link href="https://fonts.googleapis.com/css2?family=BIZ+UDMincho&family=Poiret+One&family=Raleway:wght@200;400&display=swap" rel="stylesheet" />
         {/* <script
             src={`https://maps.googleapis.com/maps/api/js?key=${settings?.googleMaps?.apiKey}&callback=initMap&libraries=&v=weekly`}
