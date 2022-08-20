@@ -6,7 +6,7 @@ import { urlFor } from '../lib/client'
 const HeroBanner = ({ heroBanner }) => {
     return (
         <div className='hero-banner-container '>
-            <img className='contrast-50 object-cover h-[500px] w-full ' src={'/images/flower.jpg'}></img>
+            <img className='contrast-50 object-cover h-[500px] w-full ' src='/images/flower.jpg'></img>
             <div className='top-0  h-1/2 w-full absolute text-white text-center'>
 
                 <h5 className='my-24 font-raleway text-4xl'>CELESTE CAKESHOP</h5>

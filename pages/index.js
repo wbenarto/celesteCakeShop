@@ -17,11 +17,11 @@ const Home = ({bannerData, products}) => {
         <div className='flex flex-row my-20 h-96 px-32'>
           <div className='w-1/2 my-auto'>
             <h2 className='text-red-300 text-6xl'>Custom Cake Order</h2>
-            <p className='py-10 '>We take Custom Design Cake pre-orders for your special occassion. Send us  </p>
+            <p className='py-10 '>We take Custom Design Cake pre-orders for your special occassion. Send us your design! </p>
             <h1 className='font-bold'>Made especially for you</h1>
           </div>
           <div className='w-1/2 flex justify-end '>
-            <img src={'/images/bday1.jpg'} className='h-full w-[90%] object-cover' ></img>
+            <img src='/images/bday1.jpg' alt='' className='h-full w-[90%] object-cover' ></img>
           </div>
         </div>
       
