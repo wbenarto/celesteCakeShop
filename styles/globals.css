@@ -1,10 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body,
 * {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Raleway;
   box-sizing: border-box;
 
 }
@@ -22,7 +25,7 @@ a {
   max-width: 1400px;
   margin: auto;
   width: 100%;
-
+  background-color: #fdf5dc;
 }
 
 .layout {
@@ -32,8 +35,11 @@ a {
 .navbar-container {
   display: flex;
   justify-content: space-between;
-  margin: 6px 18px;
+  margin: 0 18px;
+  height: 40px;
   position: relative;
+  align-items: center;
+  background-color: #fdf5dc;
 }
 
 .marquee-text {
@@ -150,9 +156,9 @@ span.text-red {
 }
 
 .hero-banner-container {
-  padding: 100px 40px;
+
   background-color: #dcdcdc;
-  border-radius: 15px;
+
   position: relative;
   height: 500px;
   line-height: 0.9;
@@ -167,7 +173,7 @@ span.text-red {
 .hero-banner-container button {
   border-radius: 15px;
   padding: 10px 16px;
-  background-color: #f02d34;
+  background-color: #f7abdb;
   color: white;
   border: none;
   margin-top: 40px;
@@ -180,6 +186,7 @@ span.text-red {
 .hero-banner-container h3 {
   font-size: 4rem;
   margin-top: 4px;
+  z-index: 10000 !important;
 }
 
 .hero-banner-container h1 {
@@ -187,6 +194,7 @@ span.text-red {
   font-size: 10em;
   margin-left: -20px;
   text-transform: uppercase;
+  z-index: 10000 !important;
 }
 
 .hero-banner-image {
