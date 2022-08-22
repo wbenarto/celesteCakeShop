@@ -5,7 +5,7 @@ import { urlFor } from '../lib/client'
 
 const HeroBanner = ({ heroBanner }) => {
     return (
-        <div className='hero-banner-container '>
+        <div className='h-[500px] relative overflow-hidden '>
             <img className='contrast-50 object-cover h-[500px] w-full ' src='/images/flower.jpg'></img>
             <div className='top-0  h-1/2 w-full absolute text-white text-center'>
 
@@ -15,7 +15,7 @@ const HeroBanner = ({ heroBanner }) => {
                 <p className='font-display'>Beautifully crafted sweet treats for your sweetest moments.</p>
 
 
-                <div className='relative'>
+                <div className='bg-red-300 w-[150px] h-14 mx-auto border-2 rounded-md mt-4 text-center flex justify-center items-center'>
                     <Link href={`/product/${heroBanner.product}`}>
                         <button type='button'>{heroBanner.buttonText}</button>
                     </Link>

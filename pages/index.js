@@ -16,7 +16,7 @@ const Home = ({bannerData, products}) => {
         </h1>
       </div>
    
-        <div className='flex flex-row my-20 h-96 px-32'>
+        <div className='flex flex-row my-20 h-96 px-32 sm:px-10'>
           <div className='w-1/2 my-auto'>
             <h2 className='text-red-300 text-6xl'>Custom Cake Order</h2>
             <p className='py-10 '>We take Custom Design Cake pre-orders for your special occassion. Send us your design! </p>
@@ -28,9 +28,9 @@ const Home = ({bannerData, products}) => {
         </div>
       
       
-      <div className='my-20 text-center'>
+      <div className='my-20 text-center '>
         <h2 className=' text-red-300 text-4xl'>Other Baked Goods</h2>
-        <div className='products-container'>
+        <div className='flex flex-wrap justify-center gap-[15px] mt-10 w-full'>
           {products.map((e,i) => (
             <Product product={e} key={e.id} />
           ))}
