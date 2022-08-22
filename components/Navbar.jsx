@@ -7,7 +7,7 @@ import { useStateContext } from '../context/StateContext'
 const Navbar = () => {
     const { showCart, setShowCart, totalQuantities } = useStateContext()
     return (
-        <div className='navbar-container'>
+        <div className='flex justify-between w-full m-0 px-10 py-4'>
             <p className='logo'>
                 <Link href='/'>Celeste Cake Shop</Link>
             </p>
