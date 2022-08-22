@@ -1,5 +1,6 @@
 import React from 'react'
 import { Product, FooterBanner, HeroBanner, InstagramPosts } from '../components'
+import {  Head } from 'next/document'
 
 import { client } from '../lib/client'
 
@@ -7,6 +8,7 @@ const Home = ({bannerData, products}) => {
   // console.log(bannerData, products)
   return (
     <>
+     
       <HeroBanner heroBanner={bannerData.length && bannerData[0]}/>
       <div className='h-8 w-full text-white grid content-center text-center bg-gradient-to-r from-[#f7abdb] to-purple-500 '>
         <h1 className='self-center font-body '>
