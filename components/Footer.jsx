@@ -4,8 +4,8 @@ import { AiFillInstagram } from 'react-icons/ai'
 const Footer = () => {
     return (
         <div className='footer-container'>
-            <p>Celeste Cake Shop All rights reserved</p>
-            <p className='icons'><AiFillInstagram /></p>
+            <p>Celeste Cake Shop All Rights Reserved 2022</p>
+
         </div>
     )
 }

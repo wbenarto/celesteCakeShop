@@ -1,13 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDMincho&family=Poiret+One&family=Raleway:wght@200;400&display=swap');
 
 html,
 body,
 * {
   padding: 0;
   margin: 0;
-  font-family: "Raleway", "Poiret One";
+  font-family: "Raleway", "Poiret One", sans-serif;
   box-sizing: border-box;
 
 }
