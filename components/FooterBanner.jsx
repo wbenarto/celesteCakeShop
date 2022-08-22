@@ -6,8 +6,8 @@ const FooterBanner = () => {
     return (
         <div className='h-[400px] w-full py-10 px-10 flex'>
             <div className='w-1/2 h-full'>
-
-                <Map />
+                Maps
+                {/* <Map /> */}
             </div>
             <div className='w-1/2 text-center'>
                 <h3 className='pb-10 text-4xl font-display'>Contact Us</h3>
