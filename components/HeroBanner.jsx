@@ -16,8 +16,8 @@ const HeroBanner = ({ heroBanner }) => {
 
 
                 <div className='bg-red-300 w-24 h-10 md:w-[150px] md:h-14 mx-auto border-2 rounded-md mt-4 text-center flex justify-center items-center'>
-                    <Link href={`/product/${heroBanner.product}`}>
-                        <button type='button'>{heroBanner.buttonText}</button>
+                    <Link href={`/menu`}>
+                        <button type='button'>shop now</button>
                     </Link>
 
 

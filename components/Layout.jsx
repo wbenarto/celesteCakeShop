@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
             <header>
                 <Navbar />
             </header>
-            <main className='main-container'>
+            <main className='bg-[#fdf5dc] w-full margin-auto max-w-[1400px]'>
                 {children}
             </main>
             <footer>
