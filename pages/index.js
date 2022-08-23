@@ -16,7 +16,7 @@ const Home = ({bannerData, products}) => {
         </h1>
       </div>
    
-        <div className='flex flex-row my-2 py-10 md:my-20 h-96 px-4 md:px-32 '>
+        <div className='flex flex-row my-2 py-10 md:my-20 h-96 px-10 md:px-20 md:h-[600px] '>
           <div className='w-1/2 my-auto flex-column content-start'>
             <h2 className='text-red-300 text-xl font-bold md:text-6xl'>Custom Cake Order</h2>
             <p className='py-4 md:py-10 md:text-lg text-xs '>We take Custom Design Cake pre-orders for your special occassion. Send us your design! </p>
