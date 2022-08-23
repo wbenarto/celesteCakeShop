@@ -1,7 +1,6 @@
 import React from 'react'
 import { Product, FooterBanner, HeroBanner, InstagramPosts } from '../components'
-import {  Head } from 'next/document'
-
+import Link from 'next/link'
 import { client } from '../lib/client'
 
 const Home = ({bannerData, products}) => {
@@ -21,6 +20,9 @@ const Home = ({bannerData, products}) => {
             <h2 className='text-red-300 text-xl font-bold md:text-6xl'>Custom Cake Order</h2>
             <p className='py-4 md:py-10 md:text-lg text-xs '>We take Custom Design Cake pre-orders for your special occassion. Send us your design! </p>
             <h1 className='font-bold'>Made especially for you</h1>
+            <Link href='/menu/custom'>
+            <button className='bg-red-300 w-24 h-10 md:w-[150px] md:h-14 mx-auto border-2 rounded-md mt-4 text-center flex justify-center text-white items-center' type='button'>Order Here</button>
+            </Link>
           </div>
           <div className='w-1/2 flex justify-end '>
             <img src='/images/bday1.jpg' alt='' className='h-full w-[90%] object-cover' ></img>

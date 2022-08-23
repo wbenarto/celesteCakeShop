@@ -11,17 +11,16 @@ const HeroBanner = ({ heroBanner }) => {
 
                 <h5 className='my-24 font-raleway text-2xl md:text-4xl'>CELESTE CAKESHOP</h5>
 
-                <h5 className='mb-10 font-body font-light text-2xl md:text-5xl'>ORLANDO'S BEST DESIGNED <br /> BAKED GOODS</h5>
-                <p className='font-display'>Beautifully crafted sweet treats for your sweetest moments.</p>
+                <h5 className='mb-10 font-body font-md text-3xl md:text-5xl'>ORLANDO'S BEST DESIGNED <br /> BAKED GOODS</h5>
+                <p className='font-display text-sm md:text-md'>Beautifully crafted sweet treats for your sweetest moments.</p>
 
 
-                <div className='bg-red-300 w-24 h-10 md:w-[150px] md:h-14 mx-auto border-2 rounded-md mt-4 text-center flex justify-center items-center'>
-                    <Link href={`/menu`}>
-                        <button type='button'>shop now</button>
-                    </Link>
+                <Link href={`/menu`}>
+                    <button className='bg-red-300 w-24 h-10 md:w-[150px] md:h-14 mx-auto border-2 rounded-md mt-4 text-center flex justify-center items-center' type='button'>Shop Now</button>
+                </Link>
 
 
-                </div>
+
             </div>
         </div>
     )
