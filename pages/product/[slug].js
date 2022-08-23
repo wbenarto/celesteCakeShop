@@ -18,27 +18,27 @@ const ProductDetails = ({ product, products }) => {
 
   return (
     <div>
-      <div className="product-detail-container">
+      <div className="md:flex gap-20 px-4 md:m-10 justify-center text-[#324d67]">
         <div>
-          <div className="image-container">
-            <img src={urlFor(image && image[index])} className="product-detail-image" />
+          <div className="">
+            <img src={urlFor(image && image[index])} className="w-full md:w-[300px] md:h-[400px]" />
           </div>
-          <div className="small-images-container">
+          <div className="flex gap-4 mt-4">
             {image?.map((item, i) => (
               <img 
                 key={i}
                 src={urlFor(item)}
-                className={i === index ? 'small-image selected-image' : 'small-image'}
+                className={i === index ? 'bg-red-400 w-24 h-32 rounded-md object-cover cursor-pointer ' : ' w-24 h-32 rounded-md object-cover cursor-pointer '}
                 onMouseEnter={() => setIndex(i)}
               />
             ))}
           </div>
         </div>
 
-        <div className="product-detail-desc">
-          <h1>{name}</h1>
-          <div className="reviews">
-            <div>
+        <div className="">
+          <h1 className=" md:text-4xl">{name}</h1>
+          <div className="text-red-300 flex gap-2 items-center">
+            <div className='flex'>
               <AiFillStar />
               <AiFillStar />
               <AiFillStar />
@@ -50,14 +50,14 @@ const ProductDetails = ({ product, products }) => {
             </p>
           </div>
           <h4>Details: </h4>
-          <p>{details}</p>
-          <p className="price">${price}</p>
-          <div className="quantity">
-            <h3>Quantity:</h3>
-            <p className="quantity-desc">
-              <span className="minus" onClick={decQty}><AiOutlineMinus /></span>
-              <span className="num">{qty}</span>
-              <span className="plus" onClick={incQty}><AiOutlinePlus /></span>
+          <p className='min-h-[80px] md:min-h-[150px]'>{details}</p>
+          <p className="text-2xl py-5 font-bold">${price}</p>
+          <div className="flex h-14 gap-4 items-center">
+            <h3 className=''>Quantity:</h3>
+            <p className="flex gap-4 items-center">
+              <button className="text-red-400 text-2xl" onClick={decQty}><AiOutlineMinus /></button>
+              <span className="text-2xl">{qty}</span>
+              <button className="text-green-400 text-2xl" onClick={incQty}><AiOutlinePlus /></button>
             </p>
           </div>
           <div className="buttons">

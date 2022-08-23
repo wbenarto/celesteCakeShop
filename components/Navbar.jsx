@@ -9,14 +9,14 @@ const Navbar = () => {
     return (
         <div className='flex  w-full m-0 px-10 py-4'>
             <Link href='/'>
-                <p className='text-gray-500 font-bold'>
+                <p className='text-gray-500 font-bold hover:cursor-pointer'>
                     C
 
                 </p>
             </Link>
 
             <Link href='/menu'>
-                <p className='text-gray-500 font-body font-bold self-center mx-auto'>
+                <p className='text-gray-500 font-body font-bold self-center mx-auto hover:cursor-pointer'>
                     MENU
                 </p>
             </Link>
