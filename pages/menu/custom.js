@@ -1,6 +1,8 @@
 import React from 'react'
+import { useRouter } from 'next/router'
 
 const custom = () => {
+    const router = useRouter()
     async function handleOnSubmit(e) {
         e.preventDefault();
     
@@ -10,12 +12,20 @@ const custom = () => {
           if ( !field.name ) return;
           formData[field.name] = field.value;
         });
+     
+        try {
+            await fetch('/api/mail', {
+                method: 'POST',
+                body: JSON.stringify(formData)
+            });
+
+            router.push('/menu')
+     
+
+        } catch(err) {
+            console.log(err)
+        }
         
-        console.log(formData)
-        await fetch('/api/mail', {
-          method: 'POST',
-          body: JSON.stringify(formData)
-        });
       }
   return (
     <div className='grid mx-auto'>
@@ -42,7 +52,8 @@ const custom = () => {
                 <input className='flex w-full p-2 ' id='imageURL' type='text' name='imageURL'/>
             </div>
             <div className='flex-column justify-center flex py-4'>
-                <button className='border-2 border-gray-400 rounded-md p-3 bg-green-400 text-white font-bold'>Submit</button>
+                <button className='border-2 border-gray-400 rounded-md p-3 bg-green-400 text-white font-
+                '>Submit</button>
             </div>
         </form> 
 
