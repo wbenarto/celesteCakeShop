@@ -7,27 +7,38 @@ import { useStateContext } from '../context/StateContext'
 const Navbar = () => {
     const { showCart, setShowCart, totalQuantities } = useStateContext()
     return (
-        <div className='flex  w-full m-0 px-10 py-4'>
+        <div className='flex items-center justify-between h-20  w-full m-0 px-10 '>
+            <Link href='/menu'>
+                <div>
+                    <p className='text-gray-500  font-body font-bold  mx-auto hover:cursor-pointer'>
+                        Store
+                    </p>
+                </div>
+
+            </Link>
             <Link href='/'>
-                <p className='text-gray-500 font-bold hover:cursor-pointer'>
+                <button className=''>
+                    <img src='/images/celeste4.png' className='w-20 h-20'></img>
+                </button>
+
+                {/* <p className='text-gray-500 font-bold hover:cursor-pointer'>
                     C
 
-                </p>
-            </Link>
-
-            <Link href='/menu'>
-                <p className='text-gray-500 font-body font-bold self-center mx-auto hover:cursor-pointer'>
-                    MENU
-                </p>
+                </p> */}
             </Link>
 
 
-            <button type='button'
-                className='cart-icon'
-                onClick={() => setShowCart(true)}>
-                <AiOutlineShopping />
-                <span className='cart-item-qty top-0'>{totalQuantities}</span>
-            </button>
+
+            <div className=' h-full my-auto '>
+                <button type='button'
+                    className='text-3xl cursor-pointer  '
+                    onClick={() => setShowCart(true)}>
+
+                    <span className='text-sm ml-4  w-4 h-4 rounded-full text-center font-bold'>{totalQuantities}</span>
+                    <AiOutlineShopping />
+                </button>
+            </div>
+
 
             {showCart && <Cart />}
         </div>
