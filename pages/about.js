@@ -2,8 +2,8 @@ import React from 'react'
 
 function about() {
     return (
-        <div>
-            about page
+        <div className='pt-[80px] text-center'>
+            COMING SOON
         </div>
     )
 }

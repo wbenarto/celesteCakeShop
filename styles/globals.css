@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDMincho&family=Caveat&family=Nanum+Myeongjo:wght@700&family=Poiret+One&family=Raleway:wght@200;400&display=swap');
+
 html,
 body,
 * {
@@ -9,8 +11,6 @@ body,
   margin: 0;
   font-family: "Raleway", "Poiret One", sans-serif;
   box-sizing: border-box;
-  scroll-snap-type: y var(--tw-scroll-snap-strictness);
-  scroll-snap-align: top;
 
 }
 

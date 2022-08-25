@@ -10,20 +10,20 @@ const Home = ({bannerData, products}) => {
     <div className=''>
 
       <HeroBanner />
-      <div className='h-[24rem]  snap-start w-full text-[#324d67] grid content-center text-center bg-white overflow-hidden '>
+      <div className='h-[12rem] w-full text-[#324d67] grid content-center text-center bg-white overflow-hidden '>
       {/* <div className='bg-[url("/images/bday1.jpg")] bg-fixed bg-cover bg-center bg-no-repeat w-full h-screen '></div> */}
 
-        <h1 className='self-center text-xs md:text-md font-nav tracking-widest '>
+        <h1 className='self-center text-sm md:text-md font-nav tracking-widest '>
           Baked with the finest natural ingredients. 
         </h1>
       </div>
    
-        <div className='flex my-2 py-5 md:my-20 h-[24rem] px-4 gap-4 md:px-20 md:h-[600px] '>
+        <div className='flex my-2 py-5 md:my-20 h-[20rem] px-4 gap-4 md:px-20 md:h-[600px] '>
           <div className='w-1/2  '>
             <img src='/images/bday1.jpg' alt='' className='border-4 border-white mt-[-80px]  object-cover' ></img>
           </div>
           <div className='w-1/2 flex-column my-auto'>
-            <h2 className='text-[#324d67] text-lg font-bold md:text-6xl'>Custom Cake Order</h2>
+            <h2 className='text-[#324d67] text-lg font-hero md:text-6xl'>Custom Cake Order</h2>
             <p className='py-4 md:py-10 md:text-lg text-xs '>We take Custom Design Cake pre-orders for your special occassion. Send us your design! </p>
             <p className='font-bold text-sm'>Made especially for you</p>
             <Link href='/menu/custom'>
@@ -33,7 +33,7 @@ const Home = ({bannerData, products}) => {
         
         </div>
 
-        <div className='w-full z-2 border-white border-2 h-[24rem] overflow-hidden'>
+        <div className='w-full z-2 border-white border-2 h-[12rem] overflow-hidden'>
          
           {/* <img src='/images/cupcake.jpg' className='fixed contrast-50 w-full h-full object-cover object-center '></img> */}
           <div className='bg-[url("/images/cupcake.jpg")] bg-fixed bg-cover bg-center bg-no-repeat min-w-full h-screen '></div>
@@ -41,7 +41,7 @@ const Home = ({bannerData, products}) => {
       
       
       <div className=' md:my-20 h-[24rem] md:h-[600px] text-center '>
-        <h2 className='text-[#324d67] pt-14 text-lg  font-bold md:text-4xl'>Other Baked Goods</h2>
+        <h2 className='text-[#324d67] pt-14 text-lg  font-hero md:text-4xl'>Other Baked Goods</h2>
         <div className='flex flex-wrap justify-center gap-[10px] mt-4 w-full'>
           {products.map((e,i) => (
             <div className='w-1/4 h-32 bg-white '>
