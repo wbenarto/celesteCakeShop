@@ -5,11 +5,11 @@ import { urlFor } from '../lib/client'
 
 const HeroBanner = ({ heroBanner }) => {
     return (
-        <div className='h-[500px] relative overflow-hidden '>
-            <img className='contrast-50 object-cover h-[500px] w-full ' src='/images/flower.jpg'></img>
-            <div className='top-0  h-1/2 w-full absolute text-white text-center'>
+        <div className='min-h-screen md:h-[500px] relative overflow-hidden '>
+            <img className='contrast-50 object-cover min-h-screen md:h-[500px] w-full ' src='/images/flower.jpg'></img>
+            <div className='top-[30%] px-4  absolute w-full text-white text-center'>
 
-                <h5 className='my-24 font-raleway text-2xl md:text-4xl'>CELESTE CAKESHOP</h5>
+                {/* <img src='/images/celeste4.png' className='w-40 h-40 mx-auto my-10'></img> */}
 
                 <h5 className='mb-10 font-body font-md text-3xl md:text-5xl'>ORLANDO'S BEST DESIGNED <br /> BAKED GOODS</h5>
                 <p className='font-display text-sm md:text-md'>Beautifully crafted sweet treats for your sweetest moments.</p>
