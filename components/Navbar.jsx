@@ -1,27 +1,55 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import { AiOutlineShopping } from 'react-icons/ai'
 import { Cart } from './'
 import { useStateContext } from '../context/StateContext'
+import { useEffect } from 'react'
 
 const Navbar = () => {
     const { showCart, setShowCart, totalQuantities } = useStateContext()
+    const [scroll, setScroll] = useState(true)
+
+
+    useEffect(() => {
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset
+
+            if (currentScroll > 80) {
+                setScroll(false)
+            } else {
+                setScroll(true)
+            }
+
+        })
+    }, true)
+
+
     return (
 
 
-        <div className='relative w-full h-20 pt-20 flex text-white justify-center gap-10 md:gap-20 font-hero'>
-            <button className='font-hero'>
-                <p className='font-nav text-sm tracking-wide'>about</p>
-            </button>
-            <button className=''>
-                <p className='font-nav text-sm tracking-wide'>flavors</p>
-            </button>
-            <button className=''>
-                <p className='font-nav text-sm tracking-wide'>ordering</p>
-            </button>
-            <button className=''>
-                <p className='font-nav text-sm tracking-wide'>shop</p>
-            </button>
+        <div className={scroll ? 'fixed top-0 left-0 w-full h-20 flex transition duration-150 ease-in-out text-white justify-center gap-10 md:gap-20 font-hero' : 'transition-all hidden'}>
+            <Link href='/'>
+                <button className=''>
+                    <p className='font-nav text-lg tracking-wide'>home</p>
+                </button>
+            </Link>
+            <Link href='about'>
+                <button className=''>
+                    <p className='font-nav text-lg tracking-wide'>flavors</p>
+                </button>
+            </Link>
+            <Link href='/menu/custom'>
+                <button className=''>
+                    <p className='font-nav text-lg tracking-wide'>ordering</p>
+                </button>
+            </Link>
+            <Link href='/menu'>
+                <button className=''>
+                    <p className='font-nav text-lg tracking-wide'>shop</p>
+                </button>
+            </Link>
+
 
             {/* <Link href='/menu'>
                 <div>

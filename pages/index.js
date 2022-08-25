@@ -7,16 +7,18 @@ import { urlFor } from '../lib/client'
 const Home = ({bannerData, products}) => {
   // console.log(bannerData, products)
   return (
-    <>
-     
-      <HeroBanner heroBanner={bannerData.length && bannerData[0]}/>
-      <div className='h-[16rem] w-full text-[#324d67] grid content-center text-center bg-white  '>
+    <div className=''>
+
+      <HeroBanner />
+      <div className='h-[24rem]  snap-start w-full text-[#324d67] grid content-center text-center bg-white overflow-hidden '>
+      {/* <div className='bg-[url("/images/bday1.jpg")] bg-fixed bg-cover bg-center bg-no-repeat w-full h-screen '></div> */}
+
         <h1 className='self-center text-xs md:text-md font-nav tracking-widest '>
           Baked with the finest natural ingredients. 
         </h1>
       </div>
    
-        <div className='flex my-2 py-5 md:my-20 h-[16rem] px-4 gap-4 md:px-20 md:h-[600px] '>
+        <div className='flex my-2 py-5 md:my-20 h-[24rem] px-4 gap-4 md:px-20 md:h-[600px] '>
           <div className='w-1/2  '>
             <img src='/images/bday1.jpg' alt='' className='border-4 border-white mt-[-80px]  object-cover' ></img>
           </div>
@@ -31,13 +33,15 @@ const Home = ({bannerData, products}) => {
         
         </div>
 
-        <div className='w-full z-2 bg-white border-white border-2 h-[16rem] overflow-hidden'>
-          <img src='/images/cupcake.jpg' className='contrast-50 w-full h-full object-cover object-center '></img>
+        <div className='w-full z-2 border-white border-2 h-[24rem] overflow-hidden'>
+         
+          {/* <img src='/images/cupcake.jpg' className='fixed contrast-50 w-full h-full object-cover object-center '></img> */}
+          <div className='bg-[url("/images/cupcake.jpg")] bg-fixed bg-cover bg-center bg-no-repeat min-w-full h-screen '></div>
         </div>
       
       
-      <div className=' md:my-20 h-[16rem]  md:h-[600px] text-center '>
-        <h2 className='text-[#324d67] pt-4 text-lg font-bold md:text-4xl'>Other Baked Goods</h2>
+      <div className=' md:my-20 h-[24rem] md:h-[600px] text-center '>
+        <h2 className='text-[#324d67] pt-14 text-lg  font-bold md:text-4xl'>Other Baked Goods</h2>
         <div className='flex flex-wrap justify-center gap-[10px] mt-4 w-full'>
           {products.map((e,i) => (
             <div className='w-1/4 h-32 bg-white '>
@@ -49,7 +53,7 @@ const Home = ({bannerData, products}) => {
       </div>
       {/* <InstagramPosts /> */}
       <FooterBanner />
-    </>
+    </div>
   )
 }
 

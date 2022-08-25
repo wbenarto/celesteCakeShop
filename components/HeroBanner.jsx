@@ -3,12 +3,14 @@ import Link from 'next/link'
 
 import { urlFor } from '../lib/client'
 
-const HeroBanner = ({ heroBanner }) => {
+const HeroBanner = () => {
     return (
-        <div className='min-h-screen relative  overflow-hidden '>
-            <img className='absolute z-0 contrast-50  object-cover object-top  min-h-screen lg:min-w-screen md:h-[500px] w-full ' src='/images/flower.jpg'></img>
+        <div className='min-h-screen snap-start pt-[70%] overflow-hidden bg-[url("/images/flower-2.jpg")] bg-cover '>
+            {/* <img className=' z-0    object-cover object-top  min-h-screen lg:min-w-screen md:h-[500px] w-full ' src='/images/flower.jpg'></img> */}
 
-            <div className='relative w-full h-20  flex text-white justify-center mt-20 gap-10 md:gap-20 font-hero'>
+
+
+            {/* <div className='relative w-full h-20  flex text-white justify-center mt-20 gap-10 md:gap-20 font-hero'>
                 <button className='font-hero'>
                     <p className='font-nav text-xl tracking-wide'>about</p>
                 </button>
@@ -21,8 +23,9 @@ const HeroBanner = ({ heroBanner }) => {
                 <button className=''>
                     <p className='font-nav text-xl tracking-wide'>shop</p>
                 </button>
-            </div>
-            <div className='relative w-full  my-auto mt-[50%]  text-white text-center'>
+            </div> */}
+            <div className=' w-full  text-white text-center'>
+
 
                 {/* <img src='/images/celeste4.png' className='w-40 h-40 mx-auto my-10'></img> */}
 
@@ -37,6 +40,7 @@ const HeroBanner = ({ heroBanner }) => {
 
 
             </div>
+
         </div>
     )
 }
