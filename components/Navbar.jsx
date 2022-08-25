@@ -7,10 +7,25 @@ import { useStateContext } from '../context/StateContext'
 const Navbar = () => {
     const { showCart, setShowCart, totalQuantities } = useStateContext()
     return (
-        <div className='flex items-center justify-between h-20  w-full m-0 px-10 '>
-            <Link href='/menu'>
+
+
+        <div className='relative w-full h-20 pt-20 flex text-white justify-center gap-10 md:gap-20 font-hero'>
+            <button className='font-hero'>
+                <p className='font-nav text-sm tracking-wide'>about</p>
+            </button>
+            <button className=''>
+                <p className='font-nav text-sm tracking-wide'>flavors</p>
+            </button>
+            <button className=''>
+                <p className='font-nav text-sm tracking-wide'>ordering</p>
+            </button>
+            <button className=''>
+                <p className='font-nav text-sm tracking-wide'>shop</p>
+            </button>
+
+            {/* <Link href='/menu'>
                 <div>
-                    <p className='text-gray-500  font-body font-bold  mx-auto hover:cursor-pointer'>
+                    <p className='text-gray-500 font-bold font-nav  mx-auto hover:cursor-pointer'>
                         Store
                     </p>
                 </div>
@@ -21,14 +36,14 @@ const Navbar = () => {
                     <img src='/images/celeste4.png' className='w-20 h-20'></img>
                 </button>
 
-                {/* <p className='text-gray-500 font-bold hover:cursor-pointer'>
+                <p className='text-gray-500 font-bold hover:cursor-pointer'>
                     C
 
-                </p> */}
-            </Link>
+                </p>
+            </Link> */}
 
 
-
+            {/* 
             <div className=' h-full my-auto '>
                 <button type='button'
                     className='text-3xl cursor-pointer  '
@@ -37,11 +52,12 @@ const Navbar = () => {
                     <span className='text-sm ml-4  w-4 h-4 rounded-full text-center font-bold'>{totalQuantities}</span>
                     <AiOutlineShopping />
                 </button>
-            </div>
+            </div> */}
 
 
             {showCart && <Cart />}
         </div>
+
     )
 }
 

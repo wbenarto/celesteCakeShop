@@ -6,7 +6,7 @@ import {Product} from '../../components/'
 const menu = ({products}) => {
     // console.log(products)
   return (
-    <div className='min-h-full bg-[#fdf5dc] sm:px-14 md:px-24 lg:px-48 py-4'>
+    <div className='min-h-full sm:px-14 md:px-24 lg:px-48 py-4'>
         <div className='pt-10 flex-column border-2 h-40 border-white overflow-hidden text-center justify-center'>
             {/* <img src='/images/bday1.jpg' className='w-full h-full absolute object-contain' ></img> */}
             <p className='py-2 font-bold text-xl'>Custom Design Your Cake</p>

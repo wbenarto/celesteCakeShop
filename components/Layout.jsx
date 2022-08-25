@@ -5,15 +5,15 @@ import Footer from './Footer'
 
 const Layout = ({ children }) => {
     return (
-        <div className='font-body bg-[#fdf5dc]'>
+        <div className='font-body bg-[#e6d5da] '>
             <Head>
                 <title>Celeste Cake Shop!</title>
 
             </Head>
             <header>
-                <Navbar />
+                {/* <Navbar /> */}
             </header>
-            <main className='bg-[#fdf5dc] w-full min-h-screen mx-auto max-w-[1400px]'>
+            <main className='w-full min-h-screen mx-auto '>
                 {children}
             </main>
             <footer>
