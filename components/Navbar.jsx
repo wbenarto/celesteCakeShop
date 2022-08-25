@@ -30,23 +30,23 @@ const Navbar = () => {
 
         <div className={scroll ? 'fixed top-0 left-0 w-full h-20 flex transition duration-150 ease-in-out text-white justify-center gap-10 md:gap-20 font-hero' : 'transition-all hidden'}>
             <Link href='/'>
-                <button className=''>
-                    <p className='font-nav text-lg tracking-wide'>home</p>
+                <button className='text-lg md:text-3xl lg:text-4xl '>
+                    <p className='font-nav tracking-wider'>home</p>
                 </button>
             </Link>
             <Link href='about'>
-                <button className=''>
-                    <p className='font-nav text-lg tracking-wide'>flavors</p>
+                <button className='text-lg md:text-3xl lg:text-4xl'>
+                    <p className='font-nav tracking-wider'>flavors</p>
                 </button>
             </Link>
             <Link href='/menu/custom'>
-                <button className=''>
-                    <p className='font-nav text-lg tracking-wide'>ordering</p>
+                <button className='text-lg md:text-3xl lg:text-4xl'>
+                    <p className='font-nav tracking-wider'>ordering</p>
                 </button>
             </Link>
             <Link href='/menu'>
-                <button className=''>
-                    <p className='font-nav text-lg tracking-wide'>shop</p>
+                <button className='text-lg md:text-3xl lg:text-4xl'>
+                    <p className='font-nav tracking-wider'>shop</p>
                 </button>
             </Link>
 
