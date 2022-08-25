@@ -10,10 +10,10 @@ const Layout = ({ children }) => {
                 <title>Celeste Cake Shop!</title>
 
             </Head>
-            <header>
-                {/* <Navbar /> */}
+            <header >
+                <Navbar />
             </header>
-            <main className='w-full min-h-screen mx-auto '>
+            <main className='w-full min-h-screen mx-auto  '>
                 {children}
             </main>
             <footer>
