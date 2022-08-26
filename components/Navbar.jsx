@@ -30,25 +30,25 @@ const Navbar = () => {
     return (
 
 
-        <div className={scrollDown ? 'fixed top-0 left-0 w-full h-20 flex duration-200 ease-in bg-[rgba(0,0,0,0.1)] text-white justify-center gap-10 md:gap-20 font-hero' : 'translate-y-[-150%] duration-200 ease-out invisible'}>
+        <div className={scrollDown ? 'absolute top-0 left-0 w-full h-20 flex duration-200 ease-in bg-[rgba(0,0,0,0.1)] text-white justify-center gap-10 md:gap-20 font-hero' : 'translate-y-[-150%] duration-200 ease-out invisible'}>
             <Link href='/'>
-                <button className='text-lg md:text-xl  navlink'>
-                    <p className='font-nav tracking-wider'>HOME</p>
+                <button className='md:text-xl  navlink'>
+                    <p className='font-body tracking-wider'>HOME</p>
                 </button>
             </Link>
             <Link href='/about'>
-                <button className='text-lg md:text-xl '>
-                    <p className='font-nav tracking-wider'>FLAVORS</p>
+                <button className='md:text-xl '>
+                    <p className='font-body tracking-wider'>FLAVORS</p>
                 </button>
             </Link>
             <Link href='/menu/custom'>
-                <button className='text-lg md:text-xl '>
-                    <p className='font-nav tracking-wider'>ORDER</p>
+                <button className='md:text-xl '>
+                    <p className='font-body tracking-wider'>ORDER</p>
                 </button>
             </Link>
             <Link href='/menu'>
-                <button className='text-lg md:text-xl '>
-                    <p className='font-nav tracking-wider'>SHOP</p>
+                <button className='md:text-xl '>
+                    <p className='font-body tracking-wider'>SHOP</p>
                 </button>
             </Link>
 

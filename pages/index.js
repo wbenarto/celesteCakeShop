@@ -20,7 +20,7 @@ const Home = ({bannerData, products}) => {
    
         <div className='flex-row my-2 py-5 md:my-20 h-[24rem] px-4 gap-4 md:gap-14 md:px-20 lg:px-32 md:h-[30rem]  '>
           <div className='w-1/2 absolute  z-1 px-4 lg:px-0'>
-            <img src='/images/bday1.jpg' alt='' className='border-4 border-white mt-[-80px] md:mt-[-120px] lg:max-h-[900px] md:p-2 lg:p-4 object-cover' ></img>
+            <img src='/images/bday1.jpg' alt='' className='border-4 border-white mt-[-80px] md:mt-[-120px] lg:max-h-[600px] md:p-2 lg:p-4 object-cover' ></img>
           </div>
           <div className='w-3/4 md:w-1/2  relative mt-32 float-right bg-white p-4  '>
             <h2 className='text-[#324d67] text-lg font-hero md:text-4xl'>Custom Cake Order</h2>
@@ -49,7 +49,7 @@ const Home = ({bannerData, products}) => {
         </div> */}
       
       
-      <div className='grid my-auto md:my-10 min-h-full h-[30rem] md:h-[36rem] text-center mx-auto md:max-w-[1200px]'>
+      <div className='grid my-auto md:my-10 min-h-full h-[24rem] md:h-[36rem] text-center mx-auto md:max-w-[1200px]'>
         <div className='w-full h-[20rem] bg-white absolute mt-[10%] skew-y-[190deg]'></div>
         <h2 className='relative text-[#324d67] pt-14 md:pt-8  text-lg  font-hero md:text-2xl lg:text-3xl'>Other Baked Goods</h2>
         <div className=' relative px-4 grid grid-cols-3 gap-[10px] md:gap-[4rem] mt-4 w-full '>
