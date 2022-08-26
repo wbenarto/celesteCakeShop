@@ -7,46 +7,51 @@ import { useEffect } from 'react'
 
 const Navbar = () => {
     const { showCart, setShowCart, totalQuantities } = useStateContext()
-    const [scroll, setScroll] = useState(true)
+    const [scrollDown, setScrollDown] = useState(false)
 
+    let lastScrollTop = 0;
+
+    const handleScroll = () => {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop <= lastScrollTop || scrollTop <= 140) {
+            setScrollDown(true);
+        } else {
+            setScrollDown(false);
+        }
+        lastScrollTop = scrollTop;
+    };
 
     useEffect(() => {
+        setScrollDown(true);
+        window.addEventListener("scroll", handleScroll);
+    }, []);
 
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset
 
-            if (currentScroll > 80) {
-                setScroll(false)
-            } else {
-                setScroll(true)
-            }
 
-        })
-    }, true)
 
 
     return (
 
 
-        <div className={scroll ? 'fixed top-0 left-0 w-full h-20 flex transition duration-150 ease-in-out text-white justify-center gap-10 md:gap-20 font-hero' : 'transition-all hidden'}>
+        <div className={scrollDown ? 'fixed top-0 left-0 w-full h-20 flex duration-200 ease-in bg-[rgba(0,0,0,0.1)] text-white justify-center gap-10 md:gap-20 font-hero' : 'translate-y-[-150%] duration-200 ease-out invisible'}>
             <Link href='/'>
-                <button className='text-lg md:text-3xl lg:text-4xl '>
-                    <p className='font-nav tracking-wider'>home</p>
+                <button className='text-lg md:text-3xl lg:text-4xl navlink'>
+                    <p className='font-nav tracking-wider'>HOME</p>
                 </button>
             </Link>
             <Link href='/about'>
                 <button className='text-lg md:text-3xl lg:text-4xl'>
-                    <p className='font-nav tracking-wider'>flavors</p>
+                    <p className='font-nav tracking-wider'>FLAVORS</p>
                 </button>
             </Link>
             <Link href='/menu/custom'>
                 <button className='text-lg md:text-3xl lg:text-4xl'>
-                    <p className='font-nav tracking-wider'>ordering</p>
+                    <p className='font-nav tracking-wider'>ORDER</p>
                 </button>
             </Link>
             <Link href='/menu'>
                 <button className='text-lg md:text-3xl lg:text-4xl'>
-                    <p className='font-nav tracking-wider'>shop</p>
+                    <p className='font-nav tracking-wider'>SHOP</p>
                 </button>
             </Link>
 
