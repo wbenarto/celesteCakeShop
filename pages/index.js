@@ -20,7 +20,7 @@ const Home = ({bannerData, products}) => {
    
         <div className='flex my-2 py-5 md:my-20 h-[20rem] px-4 gap-4 md:gap-14 md:px-20 lg:px-32 md:h-[600px] '>
           <div className='w-1/2   px-4 lg:px-0'>
-            <img src='/images/bday1.jpg' alt='' className='border-4 border-white mt-[-80px] md:mt-[-120px] object-cover' ></img>
+            <img src='/images/bday1.jpg' alt='' className='border-4 border-white mt-[-80px] md:mt-[-120px] lg:max-h-[900px] md:p-2 lg:p-4 object-cover' ></img>
           </div>
           <div className='w-1/2 flex-column my-auto '>
             <h2 className='text-[#324d67] text-lg font-hero md:text-6xl'>Custom Cake Order</h2>
@@ -49,13 +49,13 @@ const Home = ({bannerData, products}) => {
         </div> */}
       
       
-      <div className=' md:my-20 h-[24rem] md:h-[600px] text-center '>
-        <h2 className='text-[#324d67] pt-14 text-lg  font-hero md:text-4xl'>Other Baked Goods</h2>
-        <div className='flex flex-wrap justify-center gap-[10px] mt-4 w-full'>
+      <div className=' md:my-20 h-[24rem] md:h-[36rem] text-center mx-auto md:max-w-[1200px]'>
+        <h2 className='text-[#324d67] pt-14 md:pt-8 md:pb-4 text-lg  font-hero md:text-4xl'>Other Baked Goods</h2>
+        <div className='px-4 grid grid-cols-3 gap-[10px] md:gap-[4rem] mt-4 w-full '>
           {products.map((e,i) => (
-            <div className='w-1/4 h-32 bg-white '>
-                <img className='rounded-md ' src={urlFor(e.image && e.image[0])} />
-                <p className='text-xs'>{e.name}</p>
+            <div className=''>
+                <img className='rounded-md pb-2' src={urlFor(e.image && e.image[0])} />
+                <p className='text-sm md:text-lg'>{e.name}</p>
             </div>
           ))}
         </div>
