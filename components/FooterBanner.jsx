@@ -5,12 +5,12 @@ import { AiFillInstagram, AiFillMail } from 'react-icons/ai'
 
 const FooterBanner = () => {
     return (
-        <div className='md:h-[400px] w-full bg-white sm:py-2 md:flex '>
+        <div className='md:h-[28rem] w-full bg-white  md:flex '>
             <div className='h-[16rem] w-full mb-5 md:w-1/2 md:h-full'>
 
                 <Map />
             </div>
-            <div className=' w-full h-[16rem] md:w-1/2 text-center py-4 bg-white '>
+            <div className=' w-full h-[16rem]  md:w-1/2 text-center py-4 bg-white '>
                 <h3 className='pb-10 text-2xl md:text-6xl font-display'>Contact Us</h3>
 
                 <div className='flex hover:cursor-pointer items-center py-4 justify-center '>

@@ -34,7 +34,7 @@ const Navbar = () => {
                     <p className='font-nav tracking-wider'>home</p>
                 </button>
             </Link>
-            <Link href='about'>
+            <Link href='/about'>
                 <button className='text-lg md:text-3xl lg:text-4xl'>
                     <p className='font-nav tracking-wider'>flavors</p>
                 </button>
