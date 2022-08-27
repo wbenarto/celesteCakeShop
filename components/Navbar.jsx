@@ -32,22 +32,22 @@ const Navbar = () => {
 
         <div className={scrollDown ? 'absolute top-0 left-0 w-full h-20 flex duration-200 ease-in bg-[rgba(0,0,0,0.1)] text-white justify-center gap-10 md:gap-20 font-hero' : 'translate-y-[-150%] duration-200 ease-out invisible'}>
             <Link href='/'>
-                <button className='md:text-xl  navlink'>
+                <button className='text-sm md:text-lg'>
                     <p className='font-body tracking-wider'>HOME</p>
                 </button>
             </Link>
             <Link href='/about'>
-                <button className='md:text-xl '>
+                <button className='text-sm md:text-lg '>
                     <p className='font-body tracking-wider'>FLAVORS</p>
                 </button>
             </Link>
             <Link href='/menu/custom'>
-                <button className='md:text-xl '>
+                <button className='text-sm md:text-lg'>
                     <p className='font-body tracking-wider'>ORDER</p>
                 </button>
             </Link>
             <Link href='/menu'>
-                <button className='md:text-xl '>
+                <button className='text-sm md:text-lg'>
                     <p className='font-body tracking-wider'>SHOP</p>
                 </button>
             </Link>
