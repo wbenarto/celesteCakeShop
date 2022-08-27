@@ -6,7 +6,7 @@ import { urlFor } from '../lib/client'
 const HeroBanner = () => {
     return (
 
-        <div className=' z-0 w-full h-screen flex justify-center items-center  bg-[url("/images/home.jpg")] bg-fixed bg-cover max-h-screen '>
+        <div className=' z-0 w-full h-screen flex justify-center items-center  bg-[url("/images/home.jpg")] bg-center-right bg-fixed bg-cover max-h-screen '>
             {/* <img className=' h-screen object-cover     ' src='/images/flower.jpg'></img> */}
             {/* <div className='absolute w-full h-screen bg-[rgba(0,0,0,0.5)] z-[1]'></div> */}
             <div className='bg-[rgba(0,0,0,0.5)] flex items-center justify-center w-full h-full my-auto text-center'>
