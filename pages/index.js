@@ -50,10 +50,10 @@ const Home = ({bannerData, products}) => {
       
       
       <div className='grid my-auto md:my-10 min-h-full h-[24rem] md:h-[36rem] text-center mx-auto md:max-w-[1200px]'>
-        <div className='w-full h-[20rem] bg-white absolute mt-[10%] skew-y-[190deg]'></div>
+        <div className=' h-[20rem] bg-white absolute  skew-y-[190deg]'></div>
         <h2 className='relative text-[#324d67] pt-14 md:pt-8  text-lg  font-hero md:text-2xl lg:text-3xl'>Other Baked Goods</h2>
         <div className=' relative px-4 grid grid-cols-3 gap-[10px] md:gap-[4rem] mt-4 w-full '>
-          {products.map((e,i) => (
+          {products.slice(0,3).map((e,i) => (
             <div className=''>
                 <img className='rounded-md pb-2' src={urlFor(e.image && e.image[0])} />
                 <p className='text-sm md:text-lg'>{e.name}</p>

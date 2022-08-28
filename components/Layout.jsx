@@ -5,7 +5,7 @@ import Footer from './Footer'
 
 const Layout = ({ children }) => {
     return (
-        <div className='font-body z-99 bg-[#e6d5da] '>
+        <div className='font-body z-99 bg-[#ebd8de] '>
             <Head>
                 <title>Celeste Cake Shop!</title>
 
