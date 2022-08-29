@@ -11,8 +11,8 @@ const HeroBanner = () => {
             {/* <div className='absolute w-full h-screen bg-[rgba(0,0,0,0.5)] z-[1]'></div> */}
             <div className='bg-[rgba(0,0,0,0.3)] flex items-center justify-center w-full h-full my-auto text-center'>
                 <div>
-                    <h1 className='text-4xl font-hero tracking-widest text-white'>CELESTE</h1>
-                    <p className='text-white'>Cake Design</p>
+                    <h1 className='text-5xl md:text-5xl lg:text-7xl font-hero tracking-widest text-white'>CELESTE</h1>
+                    <p className='text-white font-aug text-2xl md:text-4xl '>Cake Design</p>
 
                 </div>
 
