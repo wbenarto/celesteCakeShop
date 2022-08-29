@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=BIZ+UDMincho&family=Caveat&family=Nanum+Myeongjo:wght@700&family=Poiret+One&family=Raleway:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDMincho&family=Caveat&family=Montserrat:wght@100;300;400;500;600;800&family=Nanum+Myeongjo:wght@700&family=Poiret+One&family=Raleway:wght@200;400&display=swap');
+@import url("https://use.typekit.net/ilq4tag.css");
 
 html,
 body,
@@ -12,6 +13,16 @@ body,
   font-family: "Raleway", "Poiret One", sans-serif;
   box-sizing: border-box;
 
+
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: blue;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 2px;
+  background-color: white;
 }
 
 #map {

@@ -28,7 +28,7 @@ const custom = () => {
         
       }
   return (
-    <div className='grid w-full absolute mt-24 mx-auto px-4 bg-white  sm:px-14 md:px-24 lg:px-48'>
+    <div className='grid pt-[80px]  w-full mx-auto px-4 bg-white  sm:px-14 md:px-24 lg:px-48'>
         <h1 className=' p-8 border-b-2 font-hero border-gray-500 text-gray-500 rounded-md text-center font-bold text-xl'>Custom Cake Order</h1>
         <form className='p-4 gap-4  ' onSubmit={handleOnSubmit}>
             <div className='flex-column py-2'>

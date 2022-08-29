@@ -13,7 +13,8 @@ class MyDocument extends Document {
         <Head>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin={true} />
-          <link href="https://fonts.googleapis.com/css2?family=BIZ+UDMincho&family=Caveat&family=Nanum+Myeongjo:wght@700&family=Poiret+One&family=Raleway:wght@200;400&display=swap" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css2?family=BIZ+UDMincho&family=Caveat&family=Montserrat:wght@100;300;400;500;600;800&family=Nanum+Myeongjo:wght@700&family=Poiret+One&family=Raleway:wght@200;400&display=swap" rel="stylesheet" />
+          <link rel="stylesheet" href="https://use.typekit.net/ilq4tag.css"></link>
         <script
             src={`https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}`}
             async

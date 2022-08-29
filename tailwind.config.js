@@ -28,8 +28,9 @@ module.exports = {
       'display': ['Oswald'],
       'body': ['Raleway'],
       'nav': ['Caveat'],
-      'hero': ['Nanum Myeongjo']
+      'hero': ['Nanum Myeongjo'],
+      'futura' : ['futura-pt'],
+      'mont': ['Montserrat']
     }
   },
-  plugins: [],
 }

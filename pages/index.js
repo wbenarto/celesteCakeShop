@@ -7,7 +7,7 @@ import { urlFor } from '../lib/client'
 const Home = ({bannerData, products}) => {
   // console.log(bannerData, products)
   return (
-    <div className=''>
+    <>
 
       <HeroBanner />
       <div className='h-[12rem] w-full text-[#324d67] grid content-center text-center bg-white overflow-hidden '>
@@ -18,19 +18,18 @@ const Home = ({bannerData, products}) => {
         </h1>
       </div>
    
-        <div className='flex-row my-2 py-5 md:my-20 h-[24rem] px-4 gap-4 md:gap-14 md:px-20 lg:px-32 md:h-[30rem]  '>
-          <div className='w-1/2 absolute  z-1 px-4 lg:px-0'>
-            <img src='/images/bday1.jpg' alt='' className='border-4 border-white mt-[-80px] md:mt-[-120px] lg:max-h-[600px] md:p-2 lg:p-4 object-cover' ></img>
+        <div className=' px-8 flex-column   h-full my-4  md:gap-10 md:max-w-[1200px] md:min-h-[30rem] md:mx-auto  md:flex '>
+          <div className='w-full md:w-1/2 '>
+            <img src='/images/bday1.jpg' alt='' className='border-4  border-white  object-cover' ></img>
           </div>
-          <div className='w-3/4 md:w-1/2  relative mt-32 float-right bg-white p-4  '>
-            <h2 className='text-[#324d67] text-lg font-hero md:text-4xl'>Custom Cake Order</h2>
+          <div className='w-full z-2 h-auto mb-4 md:w-1/2 md:h-full md:my-auto  float-right p-4  '>
+            <h2 className='text-white text-2xl font-mont font-semibold  md:text-5xl'>Custom Cake Order</h2>
             <p className='py-4 md:py-10 md:text-lg text-xs '>We take Custom Design Cake pre-orders for your special occassion. Send us your design! </p>
-            <p className='font-bold text-sm'>Made especially for you</p>
+            <p className='font-bold text-sm pb-4'>Made especially for you</p>
             <Link href='/menu/custom'>
-            <button className='animate-bounce bg-red-300 w-24 h-8 text-sm md:w-[150px] md:h-14  border-2 rounded-md mt-4 text-center flex justify-center text-white items-center' type='button'>Order Here</button>
+            <button className=' bg-red-300 w-24 h-8 text-sm md:w-[150px] md:h-14  border-2 rounded-md mt-4 text-center flex justify-center text-white items-center' type='button'>Order Here</button>
             </Link>
           </div>
-        
         </div>
 
         <div className='h-[12rem] w-full text-[#324d67] grid content-center text-center bg-white overflow-hidden '>
@@ -49,21 +48,29 @@ const Home = ({bannerData, products}) => {
         </div> */}
       
       
-      <div className='grid my-auto md:my-10 min-h-full h-[24rem] md:h-[36rem] text-center mx-auto md:max-w-[1200px]'>
-        <div className=' h-[20rem] bg-white absolute  skew-y-[190deg]'></div>
-        <h2 className='relative text-[#324d67] pt-14 md:pt-8  text-lg  font-hero md:text-2xl lg:text-3xl'>Other Baked Goods</h2>
-        <div className=' relative px-4 grid grid-cols-3 gap-[10px] md:gap-[4rem] mt-4 w-full '>
-          {products.slice(0,3).map((e,i) => (
-            <div className=''>
-                <img className='rounded-md pb-2' src={urlFor(e.image && e.image[0])} />
-                <p className='text-sm md:text-lg'>{e.name}</p>
-            </div>
-          ))}
+      <div className='grid px-8 min-h-full h-[36rem] md:h-[44rem] text-center mx-auto md:max-w-[1200px]'>
+        <div className=' my-auto  overflow-hidden'>
+           <h2 className=' text-white py-4 text-2xl  font-mont font-semibold md:text-5xl'>Other Baked Goods</h2>
+          <div className='h-[26rem] py-4  flex overflow-x-scroll px-4 gap-6 md:gap-10 md:h-[34rem] mt-2 '>
+            {products.map((e,i) => (
+              <div className='grid min-w-[16rem] md:h-[30rem] bg-white rounded-md overflow-hidden '>
+                  <div className='rounded-md w-full h-[18rem] md:h-[24rem]'>
+
+                  <img className='h-full w-full object-cover ' src={urlFor(e.image && e.image[0])} />
+                  </div>
+                  <div>
+                  <p className='self-center text-centermy-auto font-sans md:text-lg'>{e.name}</p>
+                  <p>$ {e.price}</p>
+                  </div>
+              </div>
+            ))}
+          </div>
         </div>
+       
       </div>
       {/* <InstagramPosts /> */}
       <FooterBanner />
-    </div>
+    </>
   )
 }
 

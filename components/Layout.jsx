@@ -1,22 +1,42 @@
-import React from 'react'
+
 import Head from 'next/head'
 import Navbar from './Navbar'
 import Footer from './Footer'
+import React, { useState, useEffect } from 'react'
 
 const Layout = ({ children }) => {
+    const [scrollDown, setScrollDown] = useState(false)
+
+    let lastScrollTop = 0;
+
+    const handleScroll = () => {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop <= lastScrollTop || scrollTop <= 140) {
+            setScrollDown(true);
+        } else {
+            setScrollDown(false);
+        }
+        lastScrollTop = scrollTop;
+    };
+
+    useEffect(() => {
+        setScrollDown(true);
+        window.addEventListener("scroll", handleScroll);
+    }, []);
+
     return (
-        <div className='font-body z-99 bg-[#ebd8de] '>
+        <div className='flex-column w-full  font-body  bg-[#ebd8de] '>
             <Head>
                 <title>Celeste Cake Shop!</title>
 
             </Head>
-            <header >
+            <header className={scrollDown ? 'visible duration-200 ease-in' : 'invisible'}>
                 <Navbar />
             </header>
-            <main className='w-full min-h-screen mx-auto  '>
+            <main className=' min-h-screen mx-auto  '>
                 {children}
             </main>
-            <footer>
+            <footer className=''>
                 <Footer />
             </footer>
         </div>
