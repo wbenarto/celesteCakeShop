@@ -29,8 +29,8 @@ module.exports = {
       'body': ['Raleway'],
       'nav': ['Caveat'],
       'hero': ['Nanum Myeongjo'],
-      'futura' : ['futura-pt'],
-      'mont': ['Montserrat']
+      'mont': ['Montserrat'],
+      'aug' : ['August']
     }
   },
 }

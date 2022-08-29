@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=BIZ+UDMincho&family=Caveat&family=Montserrat:wght@100;300;400;500;600;800&family=Nanum+Myeongjo:wght@700&family=Poiret+One&family=Raleway:wght@200;400&display=swap');
-@import url("https://use.typekit.net/ilq4tag.css");
+
+@font-face {
+  font-family: 'August';
+  src: url('../public/fonts/august.ttf')
+}
 
 html,
 body,
