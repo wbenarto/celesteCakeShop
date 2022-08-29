@@ -7,7 +7,7 @@ const FooterBanner = () => {
     return (
         <div className=' md:h-[34rem] w-full bg-white  md:flex '>
             <div className=' grid w-full h-[20rem]  md:w-1/2 text-center  '>
-                <div className='my-auto px-8 md:px-14 '>
+                <div className='my-auto px-8 md:px-14 text-gray-600 '>
 
                     <h3 className='pb-4 text-2xl md:text-6xl font-display'>Contact Us</h3>
                     <p className='pb-4'>Email us for any inquiries. Follow us on Instagram! </p>

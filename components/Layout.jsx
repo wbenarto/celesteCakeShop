@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
     }, []);
 
     return (
-        <div className='flex-column w-full  font-body  bg-[#ebd8de] '>
+        <div className='flex-column w-full  font-body  bg-[#fff0f5] '>
             <Head>
                 <title>Celeste Cake Shop!</title>
 

@@ -3,6 +3,7 @@ import { Product, FooterBanner, HeroBanner, InstagramPosts } from '../components
 import Link from 'next/link'
 import { client } from '../lib/client'
 import { urlFor } from '../lib/client'
+import {AiOutlineArrowRight} from 'react-icons/ai'
 
 const Home = ({bannerData, products}) => {
   // console.log(bannerData, products)
@@ -18,17 +19,22 @@ const Home = ({bannerData, products}) => {
         </h1>
       </div>
    
-        <div className=' px-8 flex-column   h-full my-4  md:gap-10 md:max-w-[1200px] md:min-h-[30rem] md:mx-auto  md:flex '>
-          <div className='w-full md:w-1/2 '>
-            <img src='/images/bday1.jpg' alt='' className='border-4  border-white  object-cover' ></img>
+        <div className=' flex-column   h-full   md:gap-10  md:h-[38rem] overflow-hidden md:mx-auto  md:flex '>
+          <div className='w-full  md:w-1/2 h-full '>
+            <img src='/images/bday1.jpg' alt='' className='object-cover object-center h-full w-full' ></img>
           </div>
-          <div className='w-full z-2 h-auto mb-4 md:w-1/2 md:h-full md:my-auto  float-right p-4  '>
-            <h2 className='text-white text-2xl font-hero font-semibold  md:text-5xl'>Custom Cake Order</h2>
-            <p className='py-4 md:py-10 md:text-lg text-xs '>We take Custom Design Cake pre-orders for your special occassion. Send us your design! </p>
-            <p className='font-bold text-sm pb-4'>Made especially for you</p>
+          <div className='w-full z-2 h-auto mb-4 md:w-1/2 md:h-full md:my-auto md:grid float-right p-4  '>
+            <div className='md:my-auto w-[80%] mx-auto'>
+            <h2 className='text-gray-500 text-2xl text-center font-hero font-semibold  md:text-4xl'>CUSTOM CAKE ORDER</h2>
+            <p className='font-aug text-lg text-center md:text-4xl pb-4'>Made especially for you</p>
+            <p className='py-4 md:py-10  mx-auto md:text-lg text-xs '>We take Custom Design Cake pre-orders for your special occassion. Send us your design! </p>
+            
             <Link href='/menu/custom'>
-            <button className=' bg-red-300 w-24 h-8 text-sm md:w-[150px] md:h-14  border-2 rounded-md mt-4 text-center flex justify-center text-white items-center' type='button'>Order Here</button>
+            <button className=' bg-red-300 w-40 h-10 gap-2 md:w-[150px] hover:animate-wiggle md:h-14 rounded-full mt-4 text-center flex justify-center text-white items-center' type='button'>ORDER HERE <AiOutlineArrowRight className='text-lg'/></button>
             </Link>
+
+            </div>
+            
           </div>
         </div>
 
@@ -50,7 +56,7 @@ const Home = ({bannerData, products}) => {
       
       <div className='grid px-8 min-h-full h-[36rem] md:h-[44rem] text-center mx-auto md:max-w-[1200px]'>
         <div className=' my-auto  overflow-hidden'>
-           <h2 className=' text-white py-4 text-2xl  font-hero font-semibold md:text-5xl'>Other Baked Goods</h2>
+           <h2 className=' text-gray-500 py-4 text-2xl  font-hero font-semibold md:text-5xl md:py-8'>OTHER BAKED GOODS</h2>
           <div className='h-[26rem] py-4  flex overflow-x-scroll px-4 gap-6 md:gap-10 md:h-[34rem] mt-2 '>
             {products.map((e,i) => (
               <div className='grid min-w-[16rem] md:h-[30rem] bg-white rounded-md overflow-hidden '>
