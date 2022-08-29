@@ -56,7 +56,7 @@ const Home = ({bannerData, products}) => {
       
       <div className='grid px-8 min-h-full h-[36rem] md:h-[44rem] text-center mx-auto md:max-w-[1200px]'>
         <div className=' my-auto  overflow-hidden'>
-           <h2 className=' text-gray-500 py-4 text-2xl  font-hero font-semibold md:text-5xl md:py-8'>OTHER BAKED GOODS</h2>
+           <h2 className=' text-gray-500 py-4 text-2xl  font-hero font-semibold md:text-4xl md:py-8'>OTHER BAKED GOODS</h2>
           <div className='h-[26rem] py-4  flex overflow-x-scroll px-4 gap-6 md:gap-10 md:h-[34rem] mt-2 '>
             {products.map((e,i) => (
               <div className='grid min-w-[16rem] md:h-[30rem] bg-white rounded-md overflow-hidden '>
