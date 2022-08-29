@@ -20,13 +20,18 @@ body,
 
 }
 
+::-webkit-scrollbar {
+  width: 4px;
+}
+
 ::-webkit-scrollbar-track-piece {
-  background-color: blue;
+  display: none;
 }
 
 ::-webkit-scrollbar-thumb {
-  width: 2px;
-  background-color: white;
+
+  background-color: gray;
+  border-radius: 20px;
 }
 
 #map {
