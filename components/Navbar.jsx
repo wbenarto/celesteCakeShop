@@ -1,36 +1,20 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { AiOutlineShopping } from 'react-icons/ai'
 import { Cart } from './'
 import { useStateContext } from '../context/StateContext'
-import { useEffect } from 'react'
+
 
 const Navbar = () => {
     const { showCart, setShowCart, totalQuantities } = useStateContext()
     const [scrollDown, setScrollDown] = useState(false)
 
-    let lastScrollTop = 0;
-
-    const handleScroll = () => {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollTop <= lastScrollTop || scrollTop <= 140) {
-            setScrollDown(true);
-        } else {
-            setScrollDown(false);
-        }
-        lastScrollTop = scrollTop;
-    };
-
-    useEffect(() => {
-        setScrollDown(true);
-        window.addEventListener("scroll", handleScroll);
-    }, []);
 
 
     return (
 
 
-        <div className={scrollDown ? 'absolute top-0 left-0 w-full h-20 flex duration-200 ease-in bg-[rgba(0,0,0,0.1)] text-white justify-center gap-10 md:gap-20 font-hero' : 'translate-y-[-150%] duration-200 ease-out invisible'}>
+        <div className='fixed z-9999 top-0 left-0 w-full h-20 flex  bg-[rgba(0,0,0,0.4)] text-white justify-center gap-10 md:gap-20 font-hero'>
             <Link href='/'>
                 <button className='text-sm md:text-lg'>
                     <p className='font-body tracking-wider'>HOME</p>

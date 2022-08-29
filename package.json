@@ -20,7 +20,8 @@
     "react-dom": "18.1.0",
     "react-hot-toast": "^2.3.0",
     "react-icons": "^4.4.0",
-    "stripe": "^10.2.0"
+    "stripe": "^10.2.0",
+    "tailwind-scrollbar-hide": "^1.1.7"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.18.6",
