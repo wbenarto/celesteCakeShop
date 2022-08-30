@@ -1,12 +1,38 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Product, FooterBanner, HeroBanner, InstagramPosts } from '../components'
 import Link from 'next/link'
 import { client } from '../lib/client'
 import { urlFor } from '../lib/client'
 import {AiOutlineArrowRight} from 'react-icons/ai'
+import {gsap} from 'gsap'
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
 
 const Home = ({bannerData, products}) => {
   // console.log(bannerData, products)
+  gsap.registerPlugin(ScrollTrigger)
+  const midSec = useRef(null)
+
+  
+  // useEffect(() => {
+  //   gsap.to("#thirdCircle", {
+  //     x: 100,
+  //     duration: 5,
+  //     scrollTrigger: {
+  //       trigger: "#thirdCircle",
+  //       markers: true,
+
+  //     }
+  //   });
+  // }, []);
+  // useEffect(()=>{
+  //   gsap.to(midSec.current, {scrollTrigger: {
+  //     trigger:midSec.current,
+  //     markers: true,
+  //     start: "top center",
+  //     end: 'bottom top'
+  //   }, x:100 ,scale:1.5, duration:2, ease:'power2.easeIn'})
+    
+  // }, [])
   return (
     <>
 
@@ -14,14 +40,14 @@ const Home = ({bannerData, products}) => {
       <div className='h-[12rem] w-full text-[#324d67] grid content-center text-center bg-white overflow-hidden '>
       {/* <div className='bg-[url("/images/bday1.jpg")] bg-fixed bg-cover bg-center bg-no-repeat w-full h-screen '></div> */}
 
-        <h1 className='self-center  md:text-3xl lg:text-4xl font-aug tracking-widest '>
+        <h1 ref={midSec} className='midSec self-center  md:text-3xl lg:text-4xl font-aug tracking-widest '>
           Baked with the finest natural ingredients. 
         </h1>
       </div>
    
-        <div className=' flex-column   h-full   md:gap-10  md:h-[38rem] overflow-hidden md:mx-auto  md:flex '>
-          <div className='w-full  md:w-1/2 h-full '>
-            <img src='/images/bday1.jpg' alt='' className='object-cover object-center h-full w-full' ></img>
+        <div className=' flex-column   h-full   md:gap-10  md:h-[38rem] xl:px-48 overflow-hidden md:mx-auto  md:flex '>
+          <div className='w-full  md:w-1/2 h-full thirdCircle'>
+            <img src='/images/bday1.jpg' alt='' className=' object-cover object-center h-full w-full' ></img>
           </div>
           <div className='w-full z-2 h-auto mb-4 md:w-1/2 md:h-full md:my-auto md:grid float-right p-4  '>
             <div className='md:my-auto w-[80%] mx-auto'>
