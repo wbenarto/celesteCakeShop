@@ -7,14 +7,13 @@ import { useStateContext } from '../context/StateContext'
 
 const Navbar = () => {
     const { showCart, setShowCart, totalQuantities } = useStateContext()
-    const [scrollDown, setScrollDown] = useState(false)
 
 
 
     return (
 
 
-        <div className='fixed z-9999 top-0 left-0 w-full h-20 flex  bg-[rgba(0,0,0,0.4)] text-white justify-center gap-10 md:gap-20 font-hero'>
+        <div className='fixed top-0 left-0 w-full h-20 flex  bg-[rgba(0,0,0,0.4)] text-white justify-center gap-10 md:gap-20 font-hero'>
             <Link href='/'>
                 <button className='text-sm md:text-lg'>
                     <p className='font-body tracking-wider'>HOME</p>

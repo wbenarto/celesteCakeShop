@@ -1,18 +1,25 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import Link from 'next/link'
+import { gsap } from 'gsap'
 
 import { urlFor } from '../lib/client'
 
 const HeroBanner = () => {
+    const boxRef = useRef()
+    console.log(boxRef)
+
+    useEffect(() => {
+        gsap.fromTo('.move', { y: '100%', opacity: 0 }, { y: 0, duration: .5, delay: 1, opacity: 1 })
+    }, [])
     return (
 
         <div className=' z-0 w-full h-screen flex justify-center items-center  bg-[url("/images/home.jpg")] md:bg-fixed bg-center bg-cover md:bg-[length:full_100%] max-h-screen '>
             {/* <img className=' h-screen object-cover     ' src='/images/flower.jpg'></img> */}
             {/* <div className='absolute w-full h-screen bg-[rgba(0,0,0,0.5)] z-[1]'></div> */}
             <div className='bg-[rgba(0,0,0,0.3)] flex items-center justify-center w-full h-full my-auto text-center'>
-                <div>
-                    <h1 className='text-5xl md:text-5xl lg:text-7xl font-hero tracking-widest text-white'>CELESTE</h1>
-                    <p className='text-white font-aug text-2xl md:text-4xl '>Cake Design</p>
+                <div >
+                    <h1 ref={boxRef} className='move text-5xl md:text-5xl lg:text-7xl font-hero tracking-widest text-white'>CELESTE</h1>
+                    <p ref={boxRef} className='move text-white font-aug text-2xl md:text-4xl '>Cake Design</p>
 
                 </div>
 

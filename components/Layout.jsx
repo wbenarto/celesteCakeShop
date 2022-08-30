@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
                 <title>Celeste Cake Shop!</title>
 
             </Head>
-            <header className={scrollDown ? 'visible duration-200 ease-in' : 'invisible'}>
+            <header className={scrollDown ? 'visible duration-500 ease-in transition-all' : 'invisible transition-all'}>
                 <Navbar />
             </header>
             <main className=' min-h-screen mx-auto  '>
