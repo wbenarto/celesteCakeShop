@@ -45,13 +45,13 @@ const Home = ({bannerData, products}) => {
         </h1>
       </div>
    
-        <div className=' flex-column   h-full   md:gap-10  md:h-[38rem] xl:px-48 overflow-hidden md:mx-auto  md:flex '>
-          <div className='w-full  md:w-1/2 h-full thirdCircle'>
+        <div className=' flex-column md:gap-10  h-[44rem] xl:px-48 overflow-hidden md:mx-auto  md:flex '>
+          <div className='w-full h-[22rem] md:h-full md:w-1/2 thirdCircle'>
             <img src='/images/bday1.jpg' alt='' className=' object-cover object-center h-full w-full' ></img>
           </div>
-          <div className='w-full z-2 h-auto mb-4 md:w-1/2 md:h-full md:my-auto md:grid float-right p-4  '>
-            <div className='md:my-auto w-[80%] mx-auto'>
-            <h2 className='text-gray-500 text-2xl text-center font-hero font-semibold  md:text-4xl'>CUSTOM CAKE ORDER</h2>
+          <div className='w-full z-2 h-[22rem] md:h-full md:w-1/2  my-auto grid float-right p-4  '>
+            <div className='my-auto w-[80%] mx-auto'>
+            <h2 className='text-gray-500 text-2xl text-center font-hero font-semibold  md:text-3xl'>CUSTOM CAKE ORDER</h2>
             <p className='font-aug text-lg text-center md:text-4xl pb-4'>Made especially for you</p>
             <p className='py-4 md:py-10  mx-auto md:text-lg text-xs '>We take Custom Design Cake pre-orders for your special occassion. Send us your design! </p>
             
@@ -80,9 +80,9 @@ const Home = ({bannerData, products}) => {
         </div> */}
       
       
-      <div className='grid px-8 min-h-full h-[36rem] md:h-[44rem] text-center mx-auto md:max-w-[1200px]'>
-        <div className=' my-auto  overflow-hidden'>
-           <h2 className=' text-gray-500 py-4 text-2xl  font-hero font-semibold md:text-4xl md:py-8'>OTHER BAKED GOODS</h2>
+      <div className='grid px-8 min-h-full h-[44rem] text-center mx-auto md:max-w-[1200px]'>
+        <div className=' my-auto overflow-hidden'>
+           <h2 className=' text-gray-500  text-2xl  font-hero font-semibold md:text-3xl md:py-8'>OTHER BAKED GOODS</h2>
           <div className='h-[26rem] py-4  flex overflow-x-scroll px-4 gap-6 md:gap-10 md:h-[34rem] mt-2 '>
             {products.map((e,i) => (
               <div className='grid min-w-[16rem] md:h-[30rem] bg-white rounded-md overflow-hidden '>

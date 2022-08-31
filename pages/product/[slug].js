@@ -17,8 +17,11 @@ const ProductDetails = ({ product, products }) => {
   }
 
   return (
-    <div>
-      <div className="md:flex gap-20 px-4 md:m-10 justify-center text-[#324d67]">
+    <div className='bg-white'>
+      <div className='w-full h-[14rem] md:h-[20rem] bg-[url("/images/IMG_4188.jpg")]  bg-bottom md:bg-center md:bg-fixed bg-cover flex justify-center items-center'>
+                <div className='bg-[rgba(0,0,0,0.5)] flex justify-center items-center  w-full h-full'><h1 className='font-aug text-center text-5xl mb-4 text-white font-bold tracking-wide '>Product Detail </h1></div>
+        </div>
+      <div className="md:flex gap-20 p-4  justify-center text-[#324d67]">
         <div>
           <div className="">
             <img src={urlFor(image && image[index])} className="w-full md:w-[300px] md:h-[400px]" />
