@@ -6,7 +6,10 @@ import {Product} from '../../components/'
 const menu = ({products}) => {
     // console.log(products)
   return (
-    <div className='min-h-full pt-[80px] bg-white sm:px-14py-4 '>
+    <div className='min-h-full  bg-white sm:px-14py-4 '>
+         <div className='w-full h-[24rem] md:h-[32rem] bg-[url("/images/IMG_9544_jpg.jpg")]  bg-bottom md:bg-bottom md:bg-fixed bg-cover flex justify-center items-center'>
+                <div className='bg-[rgba(0,0,0,0.5)] flex justify-center items-center  w-full h-full'><h1 className='font-aug text-5xl mb-4 text-white font-bold tracking-wide '>Celeste Shop</h1></div>
+        </div>
         <div className='pt-10 flex-column border-2 h-40 overflow-hidden text-center justify-center'>
             {/* <img src='/images/bday1.jpg' className='w-full h-full absolute object-contain' ></img> */}
             <p className='py-2 font-bold text-xl'>Custom Design Your Cake</p>
