@@ -3,36 +3,63 @@ import Link from 'next/link'
 import { AiOutlineShopping } from 'react-icons/ai'
 import { Cart } from './'
 import { useStateContext } from '../context/StateContext'
+import { gsap } from 'gsap/dist/gsap'
 
 
 const Navbar = () => {
     const { showCart, setShowCart, totalQuantities } = useStateContext()
 
+    let t1 = gsap.timeline();
+
+    useEffect(() => {
+        gsap.fromTo(".navLink", {
+
+            opacity: 0,
+            y: -800,
+
+        }, {
+            y: 0,
+            opacity: 1,
+            ease: 'ease-in',
+            stagger: .1,
+            duration: 1,
+        })
+    }
+        , [])
 
 
     return (
 
 
-        <div className='fixed top-0 left-0 w-full h-20 flex  bg-[rgba(0,0,0,0.4)] text-white justify-center gap-10 md:gap-20 font-hero'>
+        <div className='fixed top-0 left-0 w-full h-20 flex  text-white justify-center items-center gap-3 md:gap-20 font-hero'>
             <Link href='/'>
-                <button className='text-sm md:text-lg'>
-                    <p className='font-body tracking-wider'>HOME</p>
-                </button>
+                <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
+                    <button className='text-sm text-white  font-bold'>
+                        <p className='font-body tracking-wider navLink'>HOME</p>
+                    </button>
+                </div>
+
             </Link>
             <Link href='/about'>
-                <button className='text-sm md:text-lg '>
-                    <p className='font-body tracking-wider'>FLAVORS</p>
-                </button>
+                <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
+                    <button className='text-sm text-white font-bold  '>
+                        <p className='font-body tracking-wider navLink'>FLAVORS</p>
+                    </button>
+                </div>
             </Link>
             <Link href='/menu/custom'>
-                <button className='text-sm md:text-lg'>
-                    <p className='font-body tracking-wider'>ORDER</p>
-                </button>
+                <div className=' items-center flex px-4 py-4 h-10 navLink rounded-full'>
+                    <button className='text-sm text-white font-bold '>
+                        <p className='font-body tracking-wider navLink'>ORDER</p>
+                    </button>
+                </div>
             </Link>
             <Link href='/menu'>
-                <button className='text-sm md:text-lg'>
-                    <p className='font-body tracking-wider'>SHOP</p>
-                </button>
+                <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
+                    <button className='text-sm text-white font-bold'>
+                        <p className='font-body tracking-wider navLink'>SHOP</p>
+                    </button>
+                </div>
             </Link>
 
 
