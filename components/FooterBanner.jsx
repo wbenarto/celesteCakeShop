@@ -6,11 +6,11 @@ import { AiFillInstagram, AiFillMail } from 'react-icons/ai'
 const FooterBanner = () => {
     return (
         <div className=' md:h-[34rem] w-full bg-white  md:flex '>
-            <div className=' grid w-full h-[20rem]  md:w-1/2 text-center  '>
+            <div className=' grid w-full h-[20rem] md:h-full md:w-1/2 text-center  '>
                 <div className='my-auto px-8 md:px-14 text-gray-600 '>
 
-                    <h3 className='pb-4 text-2xl md:text-6xl font-display'>Contact Us</h3>
-                    <p className='pb-4'>Email us for any inquiries. Follow us on Instagram! </p>
+                    <h3 className='pb-8 md:pb-14  text-2xl md:text-3xl font-display'>Contact Us</h3>
+                    <p className='pb-8 md:pb-14'>Email us for any inquiries. Follow us on Instagram! </p>
 
                     <div className='flex hover:cursor-pointer items-center py-4 '>
                         <Link passHref={true} href='https://www.instagram.com/celestecakeshop/'>
