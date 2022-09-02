@@ -57,7 +57,7 @@ const custom = () => {
                 <input className='flex w-full p-2 border-b-2 bg-transparent' id='imageURL' type='text' name='imageURL'/>
             </div>
             <div className='flex-column justify-center flex py-4'>
-                <button className='border-2 border-gray-400 rounded-md p-3 hover:bg-white  hover:transition-all  text-gray-500'>Submit</button>
+                <button className=' bg-red-300 w-40 h-10 gap-2 md:w-[150px] hover:animate-wiggle md:h-14 rounded-full mt-4 text-center flex justify-center text-white items-center' type='button'>SUBMIT </button>
             </div>
         </form> 
 

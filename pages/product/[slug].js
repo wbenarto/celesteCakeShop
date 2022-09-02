@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-icons/ai';
-
+import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar, AiFillCaretDown } from 'react-icons/ai';
 import { client, urlFor } from '../../lib/client';
 import { Product } from '../../components';
 import { useStateContext } from '../../context/StateContext';
@@ -9,6 +8,14 @@ const ProductDetails = ({ product, products }) => {
   const { image, name, details, price } = product;
   const [index, setIndex] = useState(0);
   const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
+
+  const [sizeOpen, setSizeOpen] = useState(false)
+  const [fondantOpen, setFondantOpen ] = useState(false)
+  const [baseOpen, setBaseOpen] = useState(false)
+
+  const [size, setSize] = useState('MD')
+  const [fondant, setFondant] = useState('')
+  const [base, setBase] = useState('')
 
   const handleBuyNow = () => {
     onAdd(product, qty);
@@ -25,37 +32,75 @@ const ProductDetails = ({ product, products }) => {
         <div className="sm:col-span-3 my-auto">
           <img src={urlFor(image && image[index])} className="w-full rounded-md " />
         </div>
-        <div className='h-[26rem] mt-4 bg-[#fff0f5] rounded-lg p-4 sm:h-auto sm:col-span-5 md:col-span-5 sm:mt-0 '>
+        <div className='h-[26rem] mt-4 bg-[rgba(240,240,240,0.97)] drop-shadow-lg bg-p rounded-lg p-4 sm:h-auto sm:col-span-5 md:col-span-5 sm:mt-0 '>
           <div className='text-gray-500 border-b-2 border-gray-600 pb-10'>
             <h1 className='text-2xl p-2 font-bold sm:text-3xl md:text-5xl border-gray-600 border-b-2 md:py-8'>{name}</h1>
             <p className='sm:text-2xl min-h-[8rem] p-2 md:py-8'>{details}</p>
-            <div className='flex justify-evenly sm:justify-center sm:gap-20  h-[6rem]  '>
-              <div className='w-[6rem] h-full text-center p-1  border-gray-600 border-2'>
-                
-              <p className='p-1 font-[800]'>BASE</p>
+            <div className='flex justify-between sm:justify-center sm:gap-20  h-[6rem]'>
 
+              {/* Base Flavor */}
+              <div className='relative w-[6rem] h-full grid text-center my-auto  border-gray-600 border-2'>
+              
+                <button onClick={()=>setBaseOpen(!baseOpen)} className='mx-auto flex items-center justify-center' >
+                  <p className='p-1 text-sm font-bold'>BASE</p><AiFillCaretDown  />
+                </button>
+
+                <div className={baseOpen ? 'grid absolute mt-8 z-99 bg-white left-0 origin-top-right rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none  top-0' : "hidden" }>
+                  <div className='w-40 z-99 h-10  grid grid-cols-5 hover:bg-gray-200'><button className='col-span-4 text-xs '>CLASSIC VANILLA</button><div className='col-span-1 self-center'>1</div></div>
+                  <div className='w-40 z-99 h-10  grid grid-cols-5 hover:bg-gray-200'><button className='col-span-4 text-xs'>DARK CHOCOLATE</button><div className='col-span-1 self-center'>2</div></div>
+                  <div className='w-40 z-99 h-10  grid grid-cols-5 hover:bg-gray-200'><button className='col-span-4 text-xs'>MOCHA DELIGHT</button><div className='col-span-1 self-center'>3</div></div>
+                </div>
+                  <div className='bg-red-400 w-[2.5rem] h-[2.5rem] rounded-full mx-auto'></div>
+              </div>
+       
+              {/* <div className='w-[6rem] h-full text-center p-1 grid border-gray-600 border-2'>
+
+              <div className='flex items-center justify-center'>
+              <p className='p-1 text-sm font-bold'>BASE</p><AiFillCaretDown />
+          
+              </div>  
               <div className='bg-amber-700 w-[2.5rem] h-[2.5rem] rounded-full mx-auto'></div>
-              </div>
-              <div className='w-[6rem] h-full text-center p-1  border-gray-600 border-2'>
-                
-              <p className='p-1 font-bold'>SIZE</p>
+              </div> */}
 
-              <p className='text-3xl p-2 font-bold'>MD</p>
+
+              {/* Size */}
+              <div className='relative w-[6rem] h-full text-center p-1 grid border-gray-600 border-2'>
+              
+              <button onClick={()=>setSizeOpen(!sizeOpen)} className='mx-auto flex items-center justify-center' >
+                <p className='p-1 text-sm font-bold'>SIZE</p><AiFillCaretDown  />
+              </button>
+
+              <div className={sizeOpen ? 'grid absolute mt-8 z-99 bg-white left-0 origin-top-right rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none  top-0' : "hidden" }>
+                  <div className='w-40 z-99 h-10  grid grid-cols-5 hover:bg-gray-200'><button className='col-span-3 text-xs'>Small</button><p className='col-span-2 self-center'>$65</p></div>
+                  <div className='w-40 z-99 h-10  grid grid-cols-5 hover:bg-gray-200'><button className='col-span-3 text-xs'>Medium</button><p className='col-span-2 self-center'>$90</p></div>
+                  <div className='w-40 z-99 h-10  grid grid-cols-5 hover:bg-gray-200'><button className='col-span-3 text-xs'>Large</button><p className='col-span-2 self-center'>$120</p></div>
+                </div>
+                <p className='text-3xl  font-bold'>{size}</p>
               </div>
 
-              <div className='w-[6rem] h-full text-center p-1  border-gray-600 border-2'>
-                
-              <p className='p-1 font-bold'>FONDANT</p>
 
-              <div className='bg-red-400 w-[2.5rem] h-[2.5rem] rounded-full mx-auto'></div>
+              {/* Fondant Flavor */}
+              <div className='relative w-[6rem] h-full grid text-center my-auto  border-gray-600 border-2'>
+              
+                <button onClick={()=>setFondantOpen(!fondantOpen)} className='mx-auto flex items-center justify-center' >
+                  <p className='p-1 text-sm font-bold'>FONDANT</p><AiFillCaretDown  />
+                </button>
+
+                <div className={fondantOpen ? 'grid absolute mt-8 z-99 bg-white right-0 origin-top-right rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none  top-0' : "hidden" }>
+                  <div className='w-40 z-99 h-10  grid grid-cols-5 hover:bg-gray-200'><button className='col-span-4 text-xs '>SALTED CARAMEL FROSTING</button><div className='col-span-1 self-center'>1</div></div>
+                  <div className='w-40 z-99 h-10  grid grid-cols-5 hover:bg-gray-200'><button className='col-span-4 text-xs'>RED VELVET FONDANT</button><div className='col-span-1 self-center'>2</div></div>
+                  <div className='w-40 z-99 h-10  grid grid-cols-5 hover:bg-gray-200'><button className='col-span-4 text-xs'>LEMON CHEESE LAYER</button><div className='col-span-1 self-center'>3</div></div>
+                </div>
+                  <div className='bg-red-400 w-[2.5rem] h-[2.5rem] rounded-full mx-auto'></div>
               </div>
+       
 
             </div>
           </div>
           <div className='mb-0 p-2 mt-2 h-[4rem] flex gap-2 md:mt-8 '>
-            <p className='w-1/4 text-left my-auto text-3xl font-bold md:text-4xl'>${price}</p>
-            <button className='w-3/4 h-full  bg-green-200 rounded-full grid '>
-              <p className=' my-auto font-bold text-center ' onClick={() => onAdd(product, 1)}>ADD TO CART</p>
+            <p className='w-1/4 text-center my-auto text-3xl font-bold md:text-4xl'>${price}</p>
+            <button className='w-3/4 h-full  bg-green-200  drop-shadow-lg rounded-full grid '>
+              <p className=' my-auto font-bold text-center' onClick={() => onAdd(product, 1)}>ADD TO CART</p>
             </button>
            
           </div>
@@ -117,7 +162,7 @@ const ProductDetails = ({ product, products }) => {
       </div>
 
       <div className="w-full  pb-8 text-center  bg-white overflow-hidden">
-          <h2 className='sm:text-2xl font-hero py-4  mb-4' >OTHER BAKED GOODS</h2>
+          <h2 className='sm:text-2xl font-hero py-4 text-gray-500 mb-4' >OTHER BAKED GOODS</h2>
           <div className="w-full animate-slide hover:pause">
             <div className=" flex gap-2 md:gap-10">
               {products.map((item) => (
