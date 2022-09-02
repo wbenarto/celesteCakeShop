@@ -26,7 +26,7 @@ const menu = ({products}) => {
                 <p>COOKIES</p>
                 
             </div> */}
-            <div className='w-full h-full px-4 grid mt-8 gap-2 md:gap-10 grid-cols-2 lg:grid-cols-4'>
+            <div className='w-full h-full px-4 grid mt-8 gap-2 md:gap-10 grid-cols-2 lg:grid-cols-3'>
             
                 {products.length ? products?.map((e)=>(
                     <Product product={e} key={e.id} />
