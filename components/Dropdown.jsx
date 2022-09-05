@@ -13,7 +13,7 @@ function classNames(...classes) {
     return (
         <Menu
                 as="div"
-                className="relative flex py-2 items-center md:w-[24rem] border-red-200 border-b-2"
+                className="flex py-2 items-center md:w-[24rem] border-red-200 border-b-2"
               >
                 
                   <p className="p-1 text-sm w-24 font-bold">{title} :</p>
