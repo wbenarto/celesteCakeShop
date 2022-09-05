@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@googlemaps/js-api-loader": "^1.14.3",
     "@headlessui/react": "^1.6.6",
     "@sanity/client": "^3.3.3",
     "@sanity/image-url": "^1.0.1",
