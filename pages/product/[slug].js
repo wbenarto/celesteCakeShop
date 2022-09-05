@@ -87,16 +87,16 @@ const ProductDetails = ({ product, products }) => {
               />
 
               {/* Message */}
-              <div className="flex py-2 items-center md:w-[24rem] border-red-200 border-b-2">
+              <div className="flex py-2 items-center  border-red-200 border-b-2">
                 <p className="p-1 text-sm w-24 font-bold">Birthday Message: </p>
                 <input
                   type="text"
-                  className="px-2 flex items-center justify-between w-full md:w-[16rem] bg-gray-100 rounded-md h-10 text-sm md:text-base"
+                  className="px-2 flex items-center justify-between w-full  bg-white rounded-md h-10 text-sm md:text-base"
                   onChange={(e) => setMessage(e.target.value)}
                 />
-                {message.length >= 20 ? (
-                  <p className="absolute text-sm text-center w-full mt-24">
-                    Message must be less than 20 characters
+                {message.length >= 30 ? (
+                  <p className="absolute text-sm text-center mx-auto bg-red-200 mt-24">
+                    Message must be less than 30 characters
                   </p>
                 ) : (
                   <></>
@@ -112,7 +112,7 @@ const ProductDetails = ({ product, products }) => {
             <button className="w-3/4 h-full  bg-green-200  rounded-full grid ">
               <p
                 className=" my-auto font-bold text-center"
-                onClick={() => onAdd(product, 1)}
+                onClick={() => onAdd(product, 1, base, fondant, message)}
               >
                 ADD TO CART
               </p>
@@ -121,11 +121,11 @@ const ProductDetails = ({ product, products }) => {
         </div>
       </div>
 
-      <div className="w-full  pb-8 text-center  bg-white overflow-hidden">
-        <h2 className="sm:text-2xl font-hero py-4 text-gray-500 mb-4">
+      <div className="w-full  pb-8 text-center px-4  bg-white overflow-hidden">
+        <h2 className="sm:text-2xl font-hero py-4  text-gray-500 mb-4">
           OTHER BAKED GOODS
         </h2>
-        <div className="w-full animate-slide hover:pause">
+        <div className="w-full overflow-x-scroll hover:pause">
           <div className=" flex gap-2 md:gap-10">
             {products.map((item) => (
               <Product key={item._id} product={item} />

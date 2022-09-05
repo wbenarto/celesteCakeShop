@@ -11,6 +11,7 @@ import getStripe from '../lib/getStripe';
 const Cart = () => {
     const cartRef = useRef();
     const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuanitity, onRemove } = useStateContext();
+    console.log(cartItems)
 
     const handleCheckout = async () => {
         const stripe = await getStripe();
@@ -33,7 +34,7 @@ const Cart = () => {
     }
 
     return (
-        <div className="absolute z-444 right-0 w-[14rem] md:w-[24rem] h-full" ref={cartRef}>
+        <div className="absolute  right-0 w-[14rem] sm:w-[24rem] h-full" ref={cartRef}>
             <div className="h-screen w-full float-right bg-gray-800">
                 <button
                     type="button"
@@ -54,12 +55,15 @@ const Cart = () => {
 
                 <div className="w-full  overflow-hidden ">
                     {cartItems.length >= 1 && cartItems.map((item) => (
-                        <div className="w-full flex px-4 " key={item._id}>
-                            <img src={urlFor(item?.image[0])} className="h-14 md:h-24" />
+                        <div className="w-full flex px-4 my-2 " key={item._id}>
+                            <img src={urlFor(item?.image[0])} className="h-14 md:h-24 my-auto" />
                             <div className="flex w-full justify-between items-center">
                                 <div className="text-xs">
                                     <p className='md:text-xl px-2 md:px-4'>{item.name}</p>
                                     <p className='md:text-lg px-2 md:px-4'>${item.price}</p>
+                                    <p className='md:text-lg px-2 md:px-4'>Base: {item.base}</p>
+                                    <p className='md:text-lg px-2 md:px-4'>Fondant: {item.fondant}</p>
+                                    <p className='md:text-lg px-2 md:px-4'>Message: {item.message}</p>
                                 </div>
                                 <div className="">
                                     <button
