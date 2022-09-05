@@ -54,8 +54,8 @@ const ProductDetails = ({ product, products }) => {
             className="w-full rounded-md "
           />
         </div>
-        <div className="mt-4 bg-[rgba(240,240,240,0.97)] drop-shadow-lg bg-p rounded-lg p-4 sm:h-[auto] sm:col-span-5 md:col-span-5 sm:mt-0 ">
-          <div className="relative text-gray-500  pb-10">
+        <div className="mt-4 bg-[rgba(240,240,240,0.97)]  bg-p rounded-lg p-4 sm:h-[auto] sm:col-span-5 md:col-span-5 sm:mt-0 ">
+          <div className=" text-gray-500  pb-10">
             <h1 className="text-2xl p-2 font-bold sm:text-3xl md:text-5xl border-gray-600 border-b-2 md:py-8">
               {name}
             </h1>
@@ -87,7 +87,7 @@ const ProductDetails = ({ product, products }) => {
               />
 
               {/* Message */}
-              <div className="relative flex py-2 items-center md:w-[24rem] border-red-200 border-b-2">
+              <div className="flex py-2 items-center md:w-[24rem] border-red-200 border-b-2">
                 <p className="p-1 text-sm w-24 font-bold">Birthday Message: </p>
                 <input
                   type="text"
@@ -109,7 +109,7 @@ const ProductDetails = ({ product, products }) => {
             <p className="w-1/4 text-center my-auto text-3xl font-bold md:text-4xl">
               ${price}
             </p>
-            <button className="w-3/4 h-full  bg-green-200  drop-shadow-lg rounded-full grid ">
+            <button className="w-3/4 h-full  bg-green-200  rounded-full grid ">
               <p
                 className=" my-auto font-bold text-center"
                 onClick={() => onAdd(product, 1)}
