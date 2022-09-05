@@ -13,7 +13,7 @@ function classNames(...classes) {
     return (
         <Menu
                 as="div"
-                className="flex py-2 items-center md:w-[24rem] border-red-200 border-b-2"
+                className="flex py-2 items-center  border-red-200 border-b-2"
               >
                 
                   <p className="p-1 text-sm w-24 font-bold">{title} :</p>
@@ -28,7 +28,7 @@ function classNames(...classes) {
                   leaveFrom="transform opacity-100 scale-100"
                   leaveTo="transform opacity-0 scale-95"
                 >
-                  <Menu.Items className="absolute right-0 z-10 mt-32 w-full origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                  <Menu.Items className="absolute z-0 right-0 mr-10 md:mr-6 mt-32 w-1/2 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div className="">
                         {options.map((e, i)=>(
                             <Menu.Item key={i} onClick={()=>handleSelection(e, title)}>
@@ -55,7 +55,7 @@ function classNames(...classes) {
                   </Menu.Items>
                 </Transition>
 
-                <Menu.Button className="px-2 flex items-center justify-between w-full md:w-[16rem] bg-gray-100 rounded-md h-10 text-sm md:text-base"><p>{selection} </p><AiFillCaretDown /></Menu.Button>
+                <Menu.Button className="px-2 flex items-center justify-between w-full  bg-white rounded-md h-10 text-sm md:text-base"><p>{selection} </p><AiFillCaretDown /></Menu.Button>
               </Menu>
     )
 
