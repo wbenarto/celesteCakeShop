@@ -87,7 +87,7 @@ const ProductDetails = ({ product, products }) => {
               />
 
               {/* Message */}
-              <div className="flex py-2 items-center  border-red-200 border-b-2">
+              <div className="flex py-2 items-center ">
                 <p className="p-1 text-sm w-24 font-bold">Birthday Message: </p>
                 <input
                   type="text"
