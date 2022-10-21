@@ -6,7 +6,7 @@ import { Product } from "../../components/";
 const menu = ({ products }) => {
   // console.log(products)
   return (
-    <div className="min-h-full  bg-white sm:px-14 py-4 ">
+    <div className="min-h-full  bg-white">
       <div className='w-full h-[24rem] md:h-[32rem] bg-[url("/images/IMG_9544_jpg.jpg")]  bg-bottom md:bg-bottom md:bg-fixed bg-cover flex justify-center items-center'>
         <div className="bg-[rgba(0,0,0,0.5)] flex justify-center items-center  w-full h-full">
           <h1 className="font-aug text-5xl mb-4 text-white font-bold tracking-wide ">
