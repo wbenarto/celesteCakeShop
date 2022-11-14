@@ -1,6 +1,9 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 function about() {
+
+    const [baseFlavor, setBaseFlavor] = useState(false)
+    const [layerFlavor, setLayerFlavor] = useState(false)
     return (
         <div className='text-center  '>
 
@@ -43,7 +46,7 @@ function about() {
                     
                 </div>
             </div>
-            <div className='h-auto py-10'>
+            <div onClick={()=>setBaseFlavor(!baseFlavor)} className={baseFlavor ? 'h-auto py-10' : 'h-[5rem] overflow-hidden'}>
                 <h2 className='pt-4 pb-4'>Pick Base Flavor:</h2>
                 {/* <h1 className='my-8 font-hero text-gray-600 text-lg md:text-4xl'>BASE</h1> */}
                 <div className='w-full  md:max-w-[900px] mx-auto  grid '>
@@ -82,7 +85,7 @@ function about() {
                 </div>
                 <p></p>
             </div>
-            <div className='h-auto bg-white py-10'>
+            <div onClick={()=>setLayerFlavor(!layerFlavor)} className={layerFlavor ? 'h-auto py-10' : 'h-[5rem] overflow-hidden'}>
                 <h2 className='pt-4 pb-4'>Pick Layer Option:</h2>
                 {/* <h1 className='my-8 font-hero text-gray-600 text-lg md:text-4xl'>BASE</h1> */}
                 <div className='w-full  md:max-w-[900px] mx-auto  grid '>
