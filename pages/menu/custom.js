@@ -35,64 +35,81 @@ const custom = () => {
         </div>
       </div>
 
-      <div className="px-4  w-full md:w-[900px] mx-auto ">
-        <h1 className="p-8 md:py-10 border-b-2 font-hero border-gray-500 text-gray-500 rounded-md text-center font-bold text-xl md:text-2xl">
+      <div className="px-4  w-full md:w-[900px] mx-auto bg-white ">
+        <h1 className="p-8 md:py-10 border-b-2 font-hero border-gray-500 text-gray-500 text-center font-bold text-xl md:text-2xl">
           Custom Cake Order
         </h1>
         <form className=" gap-4   " onSubmit={handleOnSubmit}>
           <div className="flex-column py-2">
-            <label className="flex pb-2" htmlFor="name">
+            <label className="flex pb-2 font-bold text-gray-600" htmlFor="name">
               Name
             </label>
             <input
-              className="flex w-full p-2 border-b-2 bg-transparent"
+              className="flex w-full p-2 border-2 rounded-md bg-gray-100"
               id="name"
               type="text"
               name="name"
+              placeholder="Name"
             />
           </div>
           <div className="flex-column py-2">
-            <label className="flex pb-2" htmlFor="email">
+            <label className="flex pb-2 font-bold text-gray-600" htmlFor="email">
               Email
             </label>
             <input
-              className="flex w-full p-2 border-b-2 bg-transparent"
+              className="flex w-full p-2 border-2 rounded-md bg-gray-100"
               id="email"
               type="text"
               name="email"
+              placeholder="Email"
             />
           </div>
           <div className="flex-column py-2">
-            <label className="flex pb-2" htmlFor="name">
+            <label className="flex pb-2 font-bold text-gray-600" htmlFor="phone">
+              Phone
+            </label>
+            <input
+              className="flex w-full p-2 border-2 rounded-md bg-gray-100"
+              id="phone"
+              type="number"
+              name="phone"
+              placeholder="Phone"
+            />
+          </div>
+          <div className="flex-column py-2">
+            <label className="flex pb-2 font-bold text-gray-600" htmlFor="name">
               Pickup Date
             </label>
             <input
-              className="flex w-full p-2 border-b-2 bg-transparent"
+              className="flex w-full p-2 border-2 rounded-md bg-gray-100 "
               id="date"
               type="text"
               name="date"
+              placeholder="Pickup Date"
             />
           </div>
           <div className="flex-column py-2">
-            <label className="flex pb-2" htmlFor="description">
+            <label className="flex pb-2 font-bold text-gray-600" htmlFor="description">
               Description
             </label>
             <input
-              className="flex w-full p-2 border-b-2 bg-transparent"
+              className="flex w-full min-h-32 p-2 border-2 rounded-md bg-gray-100 overflow-wrap "
               id="description"
               type="text"
               name="description"
+              placeholder="Description or Questions"
             />
           </div>
           <div className="flex-column py-2">
-            <label className="flex pb-2" htmlFor="imageURL">
+            <label className="flex pb-2  font-bold text-gray-600" htmlFor="imageURL">
               Sample Image URL
             </label>
             <input
-              className="flex w-full p-2 border-b-2 bg-transparent"
+              className="flex w-full p-2 border-2 rounded-md bg-gray-100 "
               id="imageURL"
               type="text"
               name="imageURL"
+              placeholder="Insert Image URL"
             />
           </div>
           <div className="flex-column justify-center flex py-4">
