@@ -1,8 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import { useRouter } from "next/router";
 import { toast } from "react-hot-toast";
 
 const custom = () => {
+  const [imageUpload, setImageUpload] = useState(null)
   const router = useRouter();
   async function handleOnSubmit(e) {
     e.preventDefault();
@@ -14,11 +15,14 @@ const custom = () => {
       formData[field.name] = field.value;
     });
 
+    console.log(formData)
+    console.log(imageUpload)
     try {
-      await fetch("/api/mail", {
+      const res = await fetch("/api/mail", {
         method: "POST",
         body: JSON.stringify(formData),
       });
+      console.log(await res.json())
       toast.success("Thank you for your order!");
       router.push("/menu");
     } catch (err) {
@@ -110,6 +114,12 @@ const custom = () => {
               type="text"
               name="imageURL"
               placeholder="Insert Image URL"
+            />
+            <input
+              type="file"
+              onChange={(event) => {
+                setImageUpload(event.target.files[0]);
+              }}
             />
           </div>
           <div className="flex-column justify-center flex py-4">
