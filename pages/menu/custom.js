@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import { useRouter } from "next/router";
 import { toast } from "react-hot-toast";
+import { client } from "../../lib/client";
 
 const custom = () => {
   const [imageUpload, setImageUpload] = useState(null)
@@ -17,6 +18,23 @@ const custom = () => {
 
     console.log(formData)
     console.log(imageUpload)
+    // try {
+    //   const result = await fetch("/api/sanity", {
+    //     method: "POST",
+    //     body: JSON.stringify({
+    //       customer: formData.name,
+    //       email: formData.email,
+    //       phone: formData.phone,
+    //       pickupDate: formData.date,
+    //       description: formData.description,
+    //       imageUrl: formData.imageURL,
+    //     })
+    //   })
+    //   console.log(result)
+      
+    // } catch (err) {
+    //   console.log(err)
+    // }
     try {
       const res = await fetch("/api/mail", {
         method: "POST",
