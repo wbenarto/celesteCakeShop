@@ -18,6 +18,24 @@ const custom = () => {
 
     console.log(formData)
     console.log(imageUpload)
+    try {
+      const result = await fetch("/api/sanity", {
+        method: "POST",
+        body: JSON.stringify({
+          customer: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          pickupDate: formData.date,
+          description: formData.description,
+          imageUrl: formData.imageURL,
+        })
+      })
+      
+      console.log('Result after fetch' , result)
+      
+    } catch (err) {
+      console.log(err)
+    }
     // try {
     //   const result = await fetch("/api/sanity", {
     //     method: "POST",
@@ -30,22 +48,23 @@ const custom = () => {
     //       imageUrl: formData.imageURL,
     //     })
     //   })
-    //   console.log(result)
+      
+    //   console.log('Result after fetch' , result)
       
     // } catch (err) {
     //   console.log(err)
     // }
-    try {
-      const res = await fetch("/api/mail", {
-        method: "POST",
-        body: JSON.stringify(formData),
-      });
-      console.log(await res.json())
-      toast.success("Thank you for your order!");
-      router.push("/menu");
-    } catch (err) {
-      console.log(err);
-    }
+    // try {
+    //   const res = await fetch("/api/mail", {
+    //     method: "POST",
+    //     body: JSON.stringify(formData),
+    //   });
+    //   console.log(await res.json())
+    //   toast.success("Thank you for your order!");
+    //   router.push("/menu");
+    // } catch (err) {
+    //   console.log(err);
+    // }
   }
   return (
     <div className="grid bg-[#fff0f5]  w-full mx-auto">
