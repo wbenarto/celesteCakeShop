@@ -1,12 +1,16 @@
-import client from "../../lib/client";
+import {client} from "../../lib/client";
 
-export default async function handler(req, res) {
+export default async function sanity(req, res) {
+  console.log('api/sanity')
   switch (req.method) {
     case "POST":
       //this JSON arrives as a string,
       //so we turn it into a JS object with JSON.parse()
       const newOrder = await JSON.parse(req.body);
       //then use the Sanity client to create a new todo doc
+      console.log('API SANITY')
+      console.log(client)
+      console.log(req)
       try {
         await client
           .create({
