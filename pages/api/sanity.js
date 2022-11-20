@@ -16,10 +16,9 @@ export default async function sanity(req, res) {
           .create({
             _type: "orders",
             customer: newOrder.customer,
-            isCompleted: false,
             createdAt: new Date().toISOString(),
             email: newOrder.email,
-            phone: newOrder.phone,
+            phone: Number(newOrder.phone),
             pickupDate: newOrder.pickupDate,
             description: newOrder.description,
             imageUrl: newOrder.imageUrl,
