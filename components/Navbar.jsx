@@ -43,14 +43,14 @@ const Navbar = () => {
             <Link href='/about'>
                 <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
                     <button className='text-xs text-white font-bold  '>
-                        <p className='font-body tracking-wider navLink'>FLAVORS</p>
+                        <p className='font-body tracking-wider navLink'>HOW TO</p>
                     </button>
                 </div>
             </Link>
             <Link href='/menu/custom'>
                 <div className=' items-center flex px-4 py-4 h-10 navLink rounded-full'>
                     <button className='text-xs text-white font-bold '>
-                        <p className='font-body tracking-wider navLink'>ORDER</p>
+                        <p className='font-body tracking-wider navLink'>CUSTOM ORDER</p>
                     </button>
                 </div>
             </Link>

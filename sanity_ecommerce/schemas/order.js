@@ -34,6 +34,11 @@ export default {
         type: 'text',
       },
       {
+        name: 'createdAt',
+        title:'Created At',
+        type:'text'
+      },
+      {
         name: 'image',
         title: 'Image',
         type: 'array',

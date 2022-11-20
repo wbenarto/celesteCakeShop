@@ -13,6 +13,9 @@ const custom = () => {
 
     Array.from(e.currentTarget.elements).forEach((field) => {
       if (!field.name) return;
+      if (field == 'phone') {
+        formData[field.name] = Number(field.value)
+      }
       formData[field.name] = field.value;
     });
 
