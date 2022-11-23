@@ -1,4 +1,7 @@
 import {client} from "../../lib/client";
+import {basename} from 'path'
+import {createReadStream} from 'fs'
+
 
 export default async function sanity(req, res) {
   console.log('api/sanity')
@@ -11,6 +14,27 @@ export default async function sanity(req, res) {
       console.log('API SANITY')
       console.log(client)
       console.log(req)
+      try {
+        await client.assets.upload('image', createReadStream(newOrder.imageFile), {
+          filename: basename(imageFile)
+        })
+        .then(imageAsset => {
+          return client.patch('some-doc-id')
+          .set({
+            theImageField: {
+              _type: 'image',
+              asset: {
+                _type: 'reference',
+                _ref: imageAsset._id
+              }
+            }
+          }).commit()
+        })
+        .then(()=>console.log("done!"))
+      } catch (err) {
+        console.log(err)
+        res.status(500).json({ msg: "Check console for error message"})
+      }
       try {
         await client
           .create({

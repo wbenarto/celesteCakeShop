@@ -1,26 +1,58 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import { useRouter } from "next/router";
 import { toast } from "react-hot-toast";
 import { client } from "../../lib/client";
 
 const custom = () => {
   const [imageUpload, setImageUpload] = useState(null)
+  const [base64, setBase64] = useState(null)
   const router = useRouter();
+
+  const getBase64 = (file) => {
+
+    console.log('get base function ', file)
+
+    return new Promise((resolve, reject)=> {
+      let reader = new FileReader()
+      reader.readAsDataURL(file)
+  
+      reader.onload = () => {
+        setBase64(reader.result)
+        resolve(reader.result)
+      }
+
+      reader.onerror = ((error) => {
+        reject(error)
+      })
+    })
+    
+
+  }
+
   async function handleOnSubmit(e) {
     e.preventDefault();
 
     const formData = {};
-
     Array.from(e.currentTarget.elements).forEach((field) => {
+   
       if (!field.name) return;
+      
+      formData[field.name] = field.value;
       if (field == 'phone') {
         formData[field.name] = Number(field.value)
       }
-      formData[field.name] = field.value;
+      if (field.name == 'imageFile') {
+        console.log(field.name)
+        console.log(base64)
+        formData[field.name] = base64
+        console.log(formData)
+      }
+      
     });
 
     console.log(formData)
     console.log(imageUpload)
+
     try {
       const result = await fetch("/api/sanity", {
         method: "POST",
@@ -30,7 +62,7 @@ const custom = () => {
           phone: formData.phone,
           pickupDate: formData.date,
           description: formData.description,
-          imageUrl: formData.imageURL,
+          imageUrl: formData.imageFile,
         })
       })
       
@@ -39,36 +71,23 @@ const custom = () => {
     } catch (err) {
       console.log(err)
     }
-    // try {
-    //   const result = await fetch("/api/sanity", {
-    //     method: "POST",
-    //     body: JSON.stringify({
-    //       customer: formData.name,
-    //       email: formData.email,
-    //       phone: formData.phone,
-    //       pickupDate: formData.date,
-    //       description: formData.description,
-    //       imageUrl: formData.imageURL,
-    //     })
-    //   })
-      
-    //   console.log('Result after fetch' , result)
-      
-    // } catch (err) {
-    //   console.log(err)
-    // }
-    // try {
-    //   const res = await fetch("/api/mail", {
-    //     method: "POST",
-    //     body: JSON.stringify(formData),
-    //   });
-    //   console.log(await res.json())
-    //   toast.success("Thank you for your order!");
-    //   router.push("/menu");
-    // } catch (err) {
-    //   console.log(err);
-    // }
+
+
+    try {
+      console.log(formData)
+      const res = await fetch("/api/mail", {
+        method: "POST",
+        body: JSON.stringify(formData),
+      });
+      console.log(await res.json())
+      toast.success("Thank you for your order!");
+      router.push("/menu");
+    } catch (err) {
+      console.log(err);
+    }
   }
+
+    
   return (
     <div className="grid bg-[#fff0f5]  w-full mx-auto">
       <div className='w-full h-[24rem] md:h-[32rem] bg-[url("/images/IMG_4188.jpg")]  bg-bottom md:bg-center md:bg-fixed bg-cover flex justify-center items-center'>
@@ -157,8 +176,11 @@ const custom = () => {
             />
             <input
               type="file"
-              onChange={(event) => {
-                setImageUpload(event.target.files[0]);
+              name='imageFile'
+              onChange={async (event) => {
+                let convertImage = await getBase64(event.target.files[0])
+                console.log(convertImage)
+                // setImageUpload(event.target.files[0]);
               }}
             />
           </div>
