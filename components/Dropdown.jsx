@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment , useState} from "react";
 import { Menu, Transition } from "@headlessui/react";
 import {
     AiFillCaretDown,
@@ -8,17 +8,21 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
   }
 
-  const Dropdown = ({title, options, selection, handleSelection}) => {
+const Dropdown = ({title, options, selection, handleSelection, name}) => {
+  const [cur, setCur] = useState(selection)
+
+  const handleClick = (e, title) => {
+    handleSelection(e, title)
+    setCur(e)
+  }
 
     return (
         <Menu
                 as="div"
                 className="flex py-2 items-center "
+                name="testname"
               >
-                
-                  <p className="p-1 text-sm w-24 font-bold">{title} :</p>
-                  
-                
+                  <p className="p-1 text-sm text-gray-400 w-24 font-bold">{title} :</p>
                 <Transition
                   as={Fragment}
                   enter="transition ease-out duration-100"
@@ -31,14 +35,14 @@ function classNames(...classes) {
                   <Menu.Items className="absolute z-0 right-0 mr-10 md:mr-6 mt-32 w-1/2 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div className="">
                         {options.map((e, i)=>(
-                            <Menu.Item key={i} onClick={()=>handleSelection(e, title)}>
+                            <Menu.Item key={i} onClick={()=>handleClick(e, title)}>
                             {({ active }) => (
                               <div>
                                 <p
                                 className={classNames(
                                   active
-                                    ? "bg-gray-100 text-gray-900"
-                                    : "text-gray-700",
+                                    ? "bg-gray-100 text-gray-900 "
+                                    : "text-gray-400",
                                   "block px-4 py-2 text-sm"
                                 )}
                               >
@@ -55,7 +59,7 @@ function classNames(...classes) {
                   </Menu.Items>
                 </Transition>
 
-                <Menu.Button className="px-2 flex items-center justify-between w-full  bg-white rounded-md h-10 text-sm md:text-base"><p>{selection} </p><AiFillCaretDown /></Menu.Button>
+                <Menu.Button name={name} value={cur} className="px-2 flex border-2 border-gray-200 items-center justify-between w-full  bg-white rounded-md h-10 text-sm md:text-base"><p>{selection} </p><AiFillCaretDown /></Menu.Button>
               </Menu>
     )
 
