@@ -20,6 +20,9 @@ function about() {
                     <br />
 
                     We accept custom design cake orders for your special occasion. Orders are pick-up only in Orlando but will be able to deliver within 5 miles radius from the shop. 
+                    <br />
+                    <br />
+                    We require 50% deposit for all custom orders. 
                     <h1 className='font-aug text-5xl py-12 font-black text-gray-600'>How To Order</h1>
                     <p>Send in your design and get a quote for your custom cake order here:</p>
 
