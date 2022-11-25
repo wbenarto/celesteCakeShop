@@ -45,6 +45,10 @@ export default async function sanity(req, res) {
             phone: Number(newOrder.phone),
             pickupDate: newOrder.pickupDate,
             description: newOrder.description,
+            size: newOrder.size,
+            baseFlavor: newOrder.baseFlavor,
+            outerFlavor: newOrder.outerFlavor,
+            fillingFlavor: newOrder.fillingFlavor,
             imageUrl: newOrder.imageUrl,
           })
           .then((res) => {

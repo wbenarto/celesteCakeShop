@@ -6,12 +6,16 @@ export default async (req, res) => {
   const body = JSON.parse(req.body);
   console.log(body)
 
-  const image64 = body.imageFile.replace('data:image/jpeg;base64,', '')
+  // const image64 = body.imageFile.replace(`data:image/jpeg;base64,`, '')
+  const image64 = body.imageFile.split('base64')[1]
   const message = `
     Name: ${body.name}\r\n
     Email: ${body.email}\r\n
     Pick Up Date and Time : ${body.date}\r\n
     Order Description: ${body.description}\r\n
+    Base Flavor : ${body.baseFlavor}\r\n
+    Outer Flavor: ${body.outerFlavor}\r\n
+    fillingFlavor: ${body.fillingFlavor}\r\n
     ImageURL:
     <img src="${body.imageFile}" alt='image not avail'></img>
     <img src="${image64}" alt='image not avail img64'></img>

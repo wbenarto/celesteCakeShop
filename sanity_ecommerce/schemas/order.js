@@ -4,6 +4,11 @@ export default {
     type: 'document',
     fields: [
       {
+        name: 'createdAt',
+        title:'Created At',
+        type:'text'
+      },
+      {
         name: 'customer',
         title: 'Customer Name',
         type: 'string',
@@ -29,14 +34,29 @@ export default {
         type: 'text',
       },
       {
-        name: 'imageUrl',
-        title: 'Image URL',
+        name: 'size',
+        title: 'Size',
         type: 'text',
       },
       {
-        name: 'createdAt',
-        title:'Created At',
-        type:'text'
+        name: 'baseFlavor',
+        title: 'Base Flavor',
+        type: 'text',
+      },
+      {
+        name: 'outerFlavor',
+        title: 'Outer Flavor',
+        type: 'text',
+      },
+      {
+        name: 'fillingFlavor',
+        title: 'Filling Flavor',
+        type: 'text',
+      },
+      {
+        name: 'imageUrl',
+        title: 'Image URL',
+        type: 'text',
       },
       {
         name: 'image',
