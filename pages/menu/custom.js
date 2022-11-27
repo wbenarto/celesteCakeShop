@@ -97,7 +97,7 @@ const custom = () => {
           size: formData.size,
           baseFlavor: formData.baseFlavor,
           outerFlavor: formData.outerFlavor,
-          fillingFlavor: formData.filling,
+          fillingFlavor: formData.fillingFlavor,
           imageUrl: formData.imageFile,
         })
       })

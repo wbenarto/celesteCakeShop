@@ -3,7 +3,7 @@ import Link from "next/link";
 import { client } from "../lib/client";
 
 const menu = ({ orders }) => {
-  // console.log(products)
+  console.log(orders)
   return (
     <div className="min-h-full  bg-white">
       <div className='w-full h-[24rem] md:h-[32rem] bg-[url("/images/IMG_9544_jpg.jpg")]  bg-bottom md:bg-bottom md:bg-fixed bg-cover flex justify-center items-center'>
@@ -13,26 +13,25 @@ const menu = ({ orders }) => {
           </h1>
         </div>
       </div>
-      <div className="pt-10 flex-column border-2 overflow-hidden text-center justify-center">
+      <div className="px-4 flex-column border-2 overflow-hidden text-center justify-center  ">
         {/* <img src='/images/bday1.jpg' className='w-full h-full absolute object-contain' ></img> */}
         <p className="py-2 font-bold text-xl">ORDERS</p>
         {orders.map((e,i)=>(
-            <div className=' w-full h-[14rem] flex '>
-
-                <img  className='w-40 h-full' src={e.imageUrl}/>
-                <div>
-                    <div className='flex'>
-                        <p className='w-[30%]'>Name: </p>
-                        <p className='w-full bg-red-100'>{e.customer}</p>
-                    </div>
-               
-                <p>{e.pickupDate}</p>
+            <div className=' mx-auto  my-2 flex max-w-[700px] justify-between text-xs sm:text-md'>
+              <div className='text-left w-1/3 text-xs sm:text-md'>
+                <p>{e.customer}</p>
                 <p>{e.email}</p>
                 <p>{e.phone}</p>
+              </div>
+              <div className='text-left w-1/2'>
                 <p>{e.pickupDate}</p>
+                <p>{e.size}</p>
                 <p>{e.description}</p>
-
-                </div>
+                <p>{e.baseFlavor}</p>
+                <p>{e.outerFlavor}</p>
+                <p>{e.fillingFlavor}</p>
+              </div>
+                
             </div>
         ))}
       </div>
