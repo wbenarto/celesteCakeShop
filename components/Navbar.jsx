@@ -31,7 +31,7 @@ const Navbar = () => {
     return (
 
 
-        <div className='fixed z-999 top-0 left-0 w-full h-20 flex  text-white justify-center items-center  md:gap-20 font-hero'>
+        <div className='fixed z-999 top-0 shadow-xl bg-gray-700 bg-opacity-30 left-0 w-full h-20 flex  text-white justify-center items-center  md:gap-20 font-hero'>
             <Link href='/'>
                 <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
                     <button className='text-xs text-white  font-bold'>
