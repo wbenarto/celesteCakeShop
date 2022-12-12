@@ -5,33 +5,33 @@ import Footer from './Footer'
 import React, { useState, useEffect } from 'react'
 
 const Layout = ({ children }) => {
-    const [scrollDown, setScrollDown] = useState(false)
+    // const [scrollDown, setScrollDown] = useState(false)
 
-    let lastScrollTop = 0;
+    // let lastScrollTop = 0;
 
-    const handleScroll = () => {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollTop <= lastScrollTop || scrollTop <= 140) {
-            setScrollDown(true);
-        } else {
-            setScrollDown(false);
-        }
-        lastScrollTop = scrollTop;
-    };
+    // const handleScroll = () => {
+    //     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    //     if (scrollTop <= lastScrollTop || scrollTop <= 140) {
+    //         setScrollDown(true);
+    //     } else {
+    //         setScrollDown(false);
+    //     }
+    //     lastScrollTop = scrollTop;
+    // };
 
-    useEffect(() => {
-        setScrollDown(true);
-        window.addEventListener("scroll", handleScroll);
-    }, []);
+    // useEffect(() => {
+    //     setScrollDown(true);
+    //     window.addEventListener("scroll", handleScroll);
+    // }, []);
 
     return (
-        <div className='flex-column w-full  font-body  bg-[#fff0f5] '>
+        <div className='flex-column w-full  font-body   '>
             <Head>
                 <title>Celeste Cake Shop!</title>
 
             </Head>
-            <header className={scrollDown ? 'visible duration-5000 ease-in transition-all' : 'invisible  y-[-100] ease-in  transition-all'}>
-                <Navbar />
+            <header className={ 'duration-5000 ease-in transition-all' }>
+                <Navbar  />
             </header>
             <main className=' min-h-screen mx-auto  '>
                 {children}

@@ -20,7 +20,7 @@ const menu = ({ products }) => {
 
         <Link href="/menu/custom">
           <button
-            className="bg-red-300 w-24 h-10 md:w-[150px] md:h-14 mx-auto border-2 rounded-md text-center flex justify-center text-white items-center animate-bounce"
+            className="bg-red-300 w-24 h-10 md:w-[150px] md:h-14 mx-auto border-2 rounded-md text-center flex justify-center text-white items-center "
             type="button"
           >
             <p>Get a Quote</p>
