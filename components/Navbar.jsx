@@ -1,13 +1,34 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { AiOutlineShopping } from 'react-icons/ai'
+import { GiHamburgerMenu } from 'react-icons/gi'
 import { Cart } from './'
 import { useStateContext } from '../context/StateContext'
 import { gsap } from 'gsap/dist/gsap'
 
 
 const Navbar = () => {
+    
+    const [scrollDown, setScrollDown] = useState(false)
+    const [hamburgerOn, setHamburgerOn] = useState(false)
+
+    let lastScrollTop = 0;
+
+    const handleScroll = () => {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop <= lastScrollTop || scrollTop <= 140) {
+            setScrollDown(true);
+        } else {
+            setScrollDown(false);
+        }
+        lastScrollTop = scrollTop;
+    };
     const { showCart, setShowCart, totalQuantities } = useStateContext()
+
+    useEffect(() => {
+        setScrollDown(true);
+        window.addEventListener("scroll", handleScroll);
+    }, []);
 
     let t1 = gsap.timeline();
 
@@ -27,45 +48,50 @@ const Navbar = () => {
     }
         , [])
 
-
+    useEffect(() => {
+        gsap.fromTo('.move', { y: '100%', opacity: 0, z:0 }, { y: 0, duration: .5, delay: 1, opacity: 1 ,z:0 })
+        gsap.fromTo('.movedown', { y: '-100%', opacity: 0, z:0 }, { y: 0, duration: .5, delay: 1, opacity: 1 ,z:0 })
+    }, [])
     return (
+        <>
 
-
-        <div className='fixed z-999 top-0 shadow-xl bg-gray-700 bg-opacity-30 left-0 w-full h-20 flex  text-white justify-center items-center  md:gap-20 font-hero'>
+        <div className={scrollDown ? 
+        'fixed z-999 top-0   invisible sm:visible left-0 w-full h-20 flex  text-invert bg-white justify-center items-center  md:gap-20 font-hero duration-500 transition-all' : 
+        'fixed z-999 top-0 shadow-xl invisible sm:visible bg-black bg-opacity-70 left-0 w-full h-0 mt-[-10px] flex  text-white justify-center items-center  md:gap-20 font-hero duration-500 transition-all'}>
             <Link href='/'>
                 <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
-                    <button className='text-xs text-white  font-bold'>
-                        <p className='font-body tracking-wider navLink'>HOME</p>
+                    <button className='text-xs text-black  font-bold'>
+                        <p className='movedown font-body text-xs md:tracking-widest navLink'>HOME</p>
                     </button>
                 </div>
 
             </Link>
             <Link href='/about'>
                 <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
-                    <button className='text-xs text-white font-bold  '>
-                        <p className='font-body tracking-wider navLink'>HOW TO</p>
+                    <button className='text-xs text-black font-bold  '>
+                        <p className='movedown font-body md:tracking-widest navLink'>HOW TO</p>
                     </button>
                 </div>
             </Link>
             <Link href='/menu/custom'>
                 <div className=' items-center flex px-4 py-4 h-10 navLink rounded-full'>
-                    <button className='text-xs text-white font-bold '>
-                        <p className='font-body tracking-wider navLink'>CUSTOM ORDER</p>
+                    <button className='text-xs text-black font-bold '>
+                        <p className='movedown font-body md:tracking-widest navLink'>CUSTOM ORDER</p>
                     </button>
                 </div>
             </Link>
             <Link href='/menu'>
                 <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
-                    <button className='text-xs text-white font-bold'>
-                        <p className='font-body tracking-wider navLink'>SHOP</p>
+                    <button className='text-xs text-black font-bold'>
+                        <p className='movedown font-body md:tracking-widest navLink'>SHOP</p>
                     </button>
                 </div>
             </Link>
             
             <div className='md:absolute flex  my-auto   md:right-0 md:mr-4 navLink'>
                 <button type=''
-                    className='my-auto'
-                    onClick={() => setShowCart(true)}>
+                    className='move my-auto'
+                    onClick={() => setShowCart(!showCart)}>
 
                     <span className='absolute text-xs mt-[-8px] text-green-300  w-4 h-4  rounded-full text-center font-bold'>{totalQuantities > 0 ? totalQuantities : '0'}</span>
                     <AiOutlineShopping className='md:text-3xl '/>
@@ -75,6 +101,60 @@ const Navbar = () => {
 
             {showCart && <Cart />}
         </div>
+
+        <div className='sm:invisible fixed z-999 top-0 h-14 w-full flex items-center px-8 justify-between'>
+
+                <Link href='/'>
+                    <h1 className={hamburgerOn ? 'movedown invert text-base font-hero tracking-widest text-white duration-300 transition all' :  'movedown  text-base font-hero tracking-widest text-white duration-500 transition-all'}>CÉLESTE</h1>
+                    </Link>
+                <div className={hamburgerOn ? 'movedown text-xl text-white invert' : 'movedown text-xl text-white' } onClick={() => setHamburgerOn(!hamburgerOn)}><GiHamburgerMenu /></div>
+        </div>
+        
+        {hamburgerOn ? (
+            <div className='top-0 mt-0 h-full  transition-all duration-500 text-white'>
+            <div className='py-12'>
+                
+                <Link href='/about'>
+                    <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
+                        <button className='text-xs text-black font-bold  '>
+                            <p className='move font-body tracking-widest navLink'>HOW TO</p>
+                        </button>
+                    </div>
+                </Link>
+                <Link href='/menu/custom'>
+                    <div className=' items-center flex px-4 py-4 h-10 navLink rounded-full'>
+                        <button className='text-xs text-black font-bold '>
+                            <p className='move font-body tracking-widest navLink'>CUSTOM ORDER</p>
+                        </button>
+                    </div>
+                </Link>
+                <Link href='/menu'>
+                    <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
+                        <button className='text-xs text-black font-bold'>
+                            <p className='move font-body tracking-widest navLink'>SHOP</p>
+                        </button>
+                    </div>
+                </Link>
+                <div className='flex px-4  my-auto  navLink'>
+                    <button type=''
+                        className='move my-auto'
+                        onClick={() => setShowCart(!showCart)}>
+                        <span className='absolute text-xs mt-[-8px] text-green-400  w-4 h-4  rounded-full text-center font-bold'>{totalQuantities > 0 ? totalQuantities : '0'}</span>
+                        <AiOutlineShopping className='text-black md:text-3xl '/>
+                    </button>
+                </div>
+            
+                
+            </div>
+            {showCart && <Cart showCart={showCart}/>}
+       
+            </div>
+        ) : (
+            <div className='h-0 transition-all duration-500'>
+              
+            </div>
+        )}
+        </>
 
     )
 }
