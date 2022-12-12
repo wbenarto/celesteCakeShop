@@ -106,51 +106,57 @@ const Navbar = () => {
 
                 <Link href='/'>
                     <h1 className={hamburgerOn ? 'movedown invert text-base font-hero tracking-widest text-white duration-300 transition all' :  'movedown  text-base font-hero tracking-widest text-white duration-500 transition-all'}>CÉLESTE</h1>
-                    </Link>
+                </Link>
                 <div className={hamburgerOn ? 'movedown text-xl text-white invert' : 'movedown text-xl text-white' } onClick={() => setHamburgerOn(!hamburgerOn)}><GiHamburgerMenu /></div>
         </div>
         
         {hamburgerOn ? (
-            <div className='top-0 mt-0 h-full  transition-all duration-500 text-white'>
-            <div className='py-12'>
+            <div className='fixed top-0 mt-0 h-[24rem] w-full transition-all duration-500 bg-white text-white'>
                 
-                <Link href='/about'>
-                    <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
-                        <button className='text-xs text-black font-bold  '>
-                            <p className='move font-body tracking-widest navLink'>HOW TO</p>
-                        </button>
-                    </div>
-                </Link>
-                <Link href='/menu/custom'>
-                    <div className=' items-center flex px-4 py-4 h-10 navLink rounded-full'>
-                        <button className='text-xs text-black font-bold '>
-                            <p className='move font-body tracking-widest navLink'>CUSTOM ORDER</p>
-                        </button>
-                    </div>
-                </Link>
-                <Link href='/menu'>
-                    <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
-                        <button className='text-xs text-black font-bold'>
-                            <p className='move font-body tracking-widest navLink'>SHOP</p>
-                        </button>
-                    </div>
-                </Link>
-                <div className='flex px-4  my-auto  navLink'>
-                    <button type=''
-                        className='move my-auto'
-                        onClick={() => setShowCart(!showCart)}>
-                        <span className='absolute text-xs mt-[-8px] text-green-400  w-4 h-4  rounded-full text-center font-bold'>{totalQuantities > 0 ? totalQuantities : '0'}</span>
-                        <AiOutlineShopping className='text-black md:text-3xl '/>
-                    </button>
+                <div className='sm:invisible fixed z-999 top-0 h-14 w-full flex items-center px-8 justify-between'>
+
+                    <Link href='/'>
+                        <h1 className={hamburgerOn ? 'movedown invert text-base font-hero tracking-widest text-white duration-300 transition all' :  'movedown  text-base font-hero tracking-widest text-white duration-500 transition-all'}>CÉLESTE</h1>
+                    </Link>
+                    <div className={hamburgerOn ? 'movedown text-xl text-white invert' : 'movedown text-xl text-white' } onClick={() => setHamburgerOn(!hamburgerOn)}><GiHamburgerMenu /></div>
                 </div>
-            
+                <div className='py-20 px-10'>
                 
+                    <Link href='/about'>
+                        <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
+                            <button className='text-base text-black font-bold  '>
+                                <p className='move font-body tracking-widest navLink'>HOW TO</p>
+                            </button>
+                        </div>
+                    </Link>
+                    <Link href='/menu/custom'>
+                        <div className=' items-center flex px-4 py-4 h-10 navLink rounded-full'>
+                            <button className='text-base text-black font-bold '>
+                                <p className='move font-body tracking-widest navLink'>CUSTOM ORDER</p>
+                            </button>
+                        </div>
+                    </Link>
+                    <Link href='/menu'>
+                        <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
+                            <button className='text-base text-black font-bold'>
+                                <p className='move font-body tracking-widest navLink'>SHOP</p>
+                            </button>
+                        </div>
+                    </Link>
+                    <div className='flex px-4 py-4 my-auto  navLink'>
+                        <button type=''
+                            className='move my-auto'
+                            onClick={() => setShowCart(!showCart)}>
+                            <span className='absolute text-base mt-[-8px] text-green-400  w-4 h-4  rounded-full text-center font-bold'>{totalQuantities > 0 ? totalQuantities : '0'}</span>
+                            <AiOutlineShopping className='text-black text-3xl md:text-3xl '/>
+                        </button>
+                    </div>
             </div>
             {showCart && <Cart showCart={showCart}/>}
        
             </div>
         ) : (
-            <div className='h-0 transition-all duration-500'>
+            <div className='absolute top-0 h-0 transition-all duration-500'>
               
             </div>
         )}

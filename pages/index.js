@@ -76,7 +76,7 @@ const Home = ({bannerData, products}) => {
       <div className='bg-[url("/images/IMG_9544_jpg.jpg")]  bg-cover md:px-20 flex-column md:gap-10 h-[14rem] md:h-[32rem] xl:px-48 overflow-hidden mx-auto items-center justify-center flex '>
           
           
-            <div className='my-auto w-[80%] md:w-full mx-auto bg-[rgba(0,0,0,0.5)] p-4'>
+            <div className='my-auto w-[80%] rounded-md md:w-full mx-auto bg-[rgba(0,0,0,0.5)] p-4'>
               <h2 className='text-red-200 text-4xl text-center font-mont font-semibold w-full md:text-6xl'>Joy baked into every bite.</h2>
               <p className='text-white font-hero text-base text-center md:text-2xl pt-4 md:pt-10 '>Happy to see you. Happier to serve you.</p>
 
