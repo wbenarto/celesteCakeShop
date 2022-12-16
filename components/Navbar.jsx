@@ -56,11 +56,11 @@ const Navbar = () => {
         <>
 
         <div className={scrollDown ? 
-        'fixed z-999 top-0   invisible sm:visible left-0 w-full h-20 flex  text-invert bg-white justify-center items-center  md:gap-20 font-hero duration-500 transition-all' : 
-        'fixed z-999 top-0 shadow-xl invisible sm:visible bg-black bg-opacity-70 left-0 w-full h-0 mt-[-10px] flex  text-white justify-center items-center  md:gap-20 font-hero duration-500 transition-all'}>
+        'fixed z-999 top-0   invisible sm:visible left-0 w-full h-20 bg-red-200 bg-opacity-60 flex text-white bg-transparent justify-center items-center  md:gap-20 font-hero duration-500 transition-all' : 
+        'fixed z-999 top-0 shadow-xl invisible sm:visible  left-0 w-full h-0 mt-[-100px] flex  text-white justify-center items-center  md:gap-20 font-hero duration-500 transition-all'}>
             <Link href='/'>
                 <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
-                    <button className='text-xs text-black  font-bold'>
+                    <button className='text-xs   font-bold'>
                         <p className='movedown font-body text-xs md:tracking-widest navLink'>HOME</p>
                     </button>
                 </div>
@@ -68,21 +68,25 @@ const Navbar = () => {
             </Link>
             <Link href='/about'>
                 <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
-                    <button className='text-xs text-black font-bold  '>
+                    <button className='text-xs  font-bold  '>
                         <p className='movedown font-body md:tracking-widest navLink'>HOW TO</p>
                     </button>
                 </div>
             </Link>
+            <div className=' w-24 h-24 items-center flex px-4 top-10 navLink rounded-full'>
+                <img src='/images/celestewhite.png' /> 
+
+            </div>
             <Link href='/menu/custom'>
                 <div className=' items-center flex px-4 py-4 h-10 navLink rounded-full'>
-                    <button className='text-xs text-black font-bold '>
+                    <button className='text-xs  font-bold '>
                         <p className='movedown font-body md:tracking-widest navLink'>CUSTOM ORDER</p>
                     </button>
                 </div>
             </Link>
             <Link href='/menu'>
                 <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
-                    <button className='text-xs text-black font-bold'>
+                    <button className='text-xs  font-bold'>
                         <p className='movedown font-body md:tracking-widest navLink'>SHOP</p>
                     </button>
                 </div>
@@ -124,21 +128,21 @@ const Navbar = () => {
                 
                     <Link href='/about'>
                         <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
-                            <button className='text-base text-black font-bold  '>
+                            <button onClick={()=>setHamburgerOn(false)} className='text-base text-black font-bold  '>
                                 <p className='move font-body tracking-widest navLink'>HOW TO</p>
                             </button>
                         </div>
                     </Link>
-                    <Link href='/menu/custom'>
+                    <Link href='/menu/custom' >
                         <div className=' items-center flex px-4 py-4 h-10 navLink rounded-full'>
-                            <button className='text-base text-black font-bold '>
+                            <button onClick={()=>setHamburgerOn(false)} className='text-base text-black font-bold '>
                                 <p className='move font-body tracking-widest navLink'>CUSTOM ORDER</p>
                             </button>
                         </div>
                     </Link>
                     <Link href='/menu'>
                         <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
-                            <button className='text-base text-black font-bold'>
+                            <button onClick={()=> setHamburgerOn(false)} className='text-base text-black font-bold'>
                                 <p className='move font-body tracking-widest navLink'>SHOP</p>
                             </button>
                         </div>
