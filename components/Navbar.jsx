@@ -58,36 +58,38 @@ const Navbar = () => {
         <div className={scrollDown ? 
         'fixed z-999 top-0   invisible sm:visible left-0 w-full h-20 bg-red-200 bg-opacity-60 flex text-white bg-transparent justify-center items-center  md:gap-20 font-hero duration-500 transition-all' : 
         'fixed z-999 top-0 shadow-xl invisible sm:visible  left-0 w-full h-0 mt-[-100px] flex  text-white justify-center items-center  md:gap-20 font-hero duration-500 transition-all'}>
-            <Link href='/'>
-                <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
-                    <button className='text-xs   font-bold'>
-                        <p className='movedown font-body text-xs md:tracking-widest navLink'>HOME</p>
-                    </button>
-                </div>
-
-            </Link>
             <Link href='/about'>
                 <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
                     <button className='text-xs  font-bold  '>
-                        <p className='movedown font-body md:tracking-widest navLink'>HOW TO</p>
+                        <p className='movedown font-body md:tracking-widest2 navLink'>ABOUT</p>
                     </button>
                 </div>
             </Link>
-            <div className=' w-24 h-24 items-center flex px-4 top-10 navLink rounded-full'>
-                <img src='/images/celestewhite.png' /> 
-
-            </div>
             <Link href='/menu/custom'>
                 <div className=' items-center flex px-4 py-4 h-10 navLink rounded-full'>
-                    <button className='text-xs  font-bold '>
-                        <p className='movedown font-body md:tracking-widest navLink'>CUSTOM ORDER</p>
+                    <button className='text-xs font-bold '>
+                        <p className='movedown font-body md:tracking-widest2 navLink'>CUSTOM CAKES</p>
+                    </button>
+                </div>
+            </Link>
+            <Link href='/'>
+                <div className=' w-40 h-40 items-center flex px-4 mt-12 navLink rounded-full'>
+                    <button className='text-xs  font-bold'>
+                        <img src='/images/celestewhite.png' /> 
                     </button>
                 </div>
             </Link>
             <Link href='/menu'>
                 <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
                     <button className='text-xs  font-bold'>
-                        <p className='movedown font-body md:tracking-widest navLink'>SHOP</p>
+                        <p className='movedown font-body md:tracking-widest2 navLink'>GALLERY</p>
+                    </button>
+                </div>
+            </Link>
+            <Link href='/contact'>
+                <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
+                    <button className='text-xs   font-bold'>
+                        <p className='movedown font-body text-xs md:tracking-widest2 navLink'>CONTACT</p>
                     </button>
                 </div>
             </Link>
@@ -109,7 +111,7 @@ const Navbar = () => {
         <div className='sm:invisible fixed z-999 top-0 h-14 w-full flex items-center px-8 justify-between'>
 
                 <Link href='/'>
-                    <h1 className={hamburgerOn ? 'movedown invert text-base font-hero tracking-widest text-white duration-300 transition all' :  'movedown  text-base font-hero tracking-widest text-white duration-500 transition-all'}>CÉLESTE</h1>
+                    <h1 className={hamburgerOn ? 'movedown invert text-base font-hero tracking-widest text-white duration-300 transition all' :  'movedown  text-base font-hero tracking-widest text-white duration-500 transition-all'}>CELESTE</h1>
                 </Link>
                 <div className={hamburgerOn ? 'movedown text-xl text-white invert' : 'movedown text-xl text-white' } onClick={() => setHamburgerOn(!hamburgerOn)}><GiHamburgerMenu /></div>
         </div>
@@ -120,7 +122,7 @@ const Navbar = () => {
                 <div className='sm:invisible fixed z-999 top-0 h-14 w-full flex items-center px-8 justify-between'>
 
                     <Link href='/'>
-                        <h1 className={hamburgerOn ? 'movedown invert text-base font-hero tracking-widest text-white duration-300 transition all' :  'movedown  text-base font-hero tracking-widest text-white duration-500 transition-all'}>CÉLESTE</h1>
+                        <h1 className={hamburgerOn ? 'movedown invert text-base font-hero tracking-widest text-white duration-300 transition all' :  'movedown  text-base font-hero tracking-widest text-white duration-500 transition-all'}>CELESTE</h1>
                     </Link>
                     <div className={hamburgerOn ? 'movedown text-xl text-white invert' : 'movedown text-xl text-white' } onClick={() => setHamburgerOn(!hamburgerOn)}><GiHamburgerMenu /></div>
                 </div>
