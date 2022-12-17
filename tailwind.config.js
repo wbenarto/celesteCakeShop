@@ -5,8 +5,18 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    letterSpacing: {
+      tightest: '-.075em',
+      tighter: '-.05em',
+      tight: '-.025em',
+      normal: '0',
+      wide: '.025em',
+      wider: '.05em',
+      widest: '.1em',
+      widest2: '.25em',
+    },
     screens: {
-      sm: "500px",
+      sm: "450px",
       md: [
         // Sidebar appears at 768px, so revert to `sm:` styles between 768px
         // and 868px, after which the main content area is wide enough again to

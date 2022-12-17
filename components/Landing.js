@@ -3,9 +3,10 @@ import { Product, FooterBanner, HeroBanner, InstagramPosts } from '../components
 import Link from 'next/link'
 import { client } from '../lib/client'
 import {AiOutlineArrowRight} from 'react-icons/ai'
+import {FaBirthdayCake} from 'react-icons/fa'
+import { GiCupcake, GiStairsCake } from 'react-icons/gi'
 import {gsap} from 'gsap'
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
-
 
 const Landing = ({bannerData, products}) => {
     gsap.registerPlugin(ScrollTrigger)
@@ -18,40 +19,55 @@ const Landing = ({bannerData, products}) => {
       <div className='h-[12rem] w-full text-[#324d67] grid content-center text-center bg-white overflow-hidden '>
       {/* <div className='bg-[url("/images/bday1.jpg")] bg-fixed bg-cover bg-center bg-no-repeat w-full h-screen '></div> */}
 
-        <h1 ref={midSec} className='midSec self-center  md:text-3xl lg:text-4xl font-aug tracking-widest '>
+        <h1 ref={midSec} className='midSec self-center text-2xl md:text-3xl lg:text-4xl font-aug tracking-widest '>
           Baked with the finest natural ingredients. 
         </h1>
       </div>
-   
-        <div className='bg-[url("/images/pinkwave.svg")] bg-no-repeat sm:bg-repeat object-cover md:px-20 flex-column md:gap-10 h-[44rem] md:h-[32rem] xl:px-48 overflow-hidden md:mx-auto md:justify-center md:flex '>
-          <div className='w-full px-10 md:px-0 h-[22rem] md:h-3/7 md:my-auto md:w-2/3 thirdCircle '>
-            <img src='/images/IMG_4196.PNG' alt='' className=' object-contain object-center h-full w-full' ></img>
-          </div>
-          <div className='w-full h-[22rem] md:h-full md:w-1/2  my-auto grid float-right p-4  '>
-          
-            <div className='my-auto w-[80%] md:w-full mx-auto '>
-              <p className='font-mont text-2xl text-red-400 font-semibold text-center md:text-4xl pb-10 md:pb-10'>Bring a smile to your celebration, meeting, or event with our baked treats.</p>
 
-              {/* <h2 className='text-gray-500 text-2xl text-center font-hero font-semibold  md:text-3xl'>CUSTOM CAKE ORDER</h2>
-              <p className='font-aug text-lg text-center md:text-4xl pb-4'>Made especially for you</p>
-              <p className='py-4 md:py-10  mx-auto md:text-lg text-xs '>We take Custom Design Cake pre-orders for your special occassion. Send us your design! </p>
-               */}
-              <Link href='/menu/custom'>
-              <button className=' bg-red-300 text-xs md:text-sm mx-auto w-40 h-10 gap-2 md:w-[150px] md:hover:animate-wiggle md:h-14 rounded-full mt-4 text-center flex justify-center text-white items-center' type='button'>ORDER HERE <AiOutlineArrowRight className='text-lg'/></button>
-              </Link>
-
+      {/* What we offer FIRST SECTION*/}
+      <div className='bg-[url("/images/pinkwave.svg")] bg-no-repeat sm:bg-repeat object-cover flex-column md:gap-4 h-[48rem] sm:h-[42rem]  overflow-hidden md:mx-auto md:justify-center md:flex md:px-32'>
+        {/* Left */}
+    
+        <div className='my-auto px-6 md:px-0 md:w-full mx-auto py-10 justify-center'>
+          <h1 className='font-mont text-2xl text-gray-600 font-semibold text-left md:text-4xl'>We offer Custom Designed Cakes for every occasion</h1>
+          <p className='md:text-xl font-medium text-gray-600 py-4'>Send us your design! Then choose your base, fondant, and filling flavors from our delicious options  </p>
+          <div className='w-full '>
+            <div className='flex gap-2 py-2 px-4'>
+              <div className='text-white w-14 h-14 md:w-20 md:h-20 bg-[#f5b2ca] rounded-md '><FaBirthdayCake className='w-full h-full p-2'/></div>
+              <div>
+                <h1 className='font-bold md:p-2 my-auto md:text-xl'>Birthday Cake</h1>
+                <p className='md:px-2 my-auto'>Single Layer cake </p>
+              </div>
             </div>
-            
+            <div className='flex gap-2 py-2 px-4'>
+              <div className='text-white w-14 h-14 md:w-20 md:h-20 bg-[#f5b2ca] rounded-md '><GiStairsCake className='w-full h-full p-2'/></div>
+              <div>
+                <h1 className='font-bold md:p-2 my-auto md:text-xl'>Wedding Cake</h1>
+                <p className='md:px-2 my-auto'>Multi tier cake</p>
+              </div>
+            </div>
+            <div className='flex gap-2 py-2 px-4'>
+              <div className='text-white w-14 h-14 md:w-20 md:h-20 bg-[#f5b2ca] rounded-md '><GiCupcake className='w-full h-full p-2'/></div>
+              <div>
+                <h1 className='font-bold md:p-2 my-auto md:text-xl'>Cupcakes</h1>
+                <p className='md:px-2 my-auto'>Custom cupcakes by the dozen</p>
+              </div>
+            </div>
           </div>
+          {/* <Link href='/menu/custom'>
+          <button className=' bg-red-300 text-xs md:text-sm mx-auto w-40 h-10 gap-2 md:w-[150px] md:hover:animate-wiggle md:h-14 rounded-full mt-4 text-center flex justify-center text-white items-center' type='button'>ORDER HERE <AiOutlineArrowRight className='text-lg'/></button>
+          </Link> */}
         </div>
-
-        <div className='h-[12rem] w-full text-[#324d67] grid content-center text-center bg-[url("/images/pinkwave_2.svg")] overflow-hidden '>
-      {/* <div className='bg-[url("/images/bday1.jpg")] bg-fixed bg-cover bg-center bg-no-repeat w-full h-screen '></div> */}
-
-        <h1 className='self-center md:text-3xl lg:text-4xl font-aug  tracking-widest '>
-          We do delivery within one mile of our pick up spot. 
-        </h1>
+        
+       
+        {/* Right */}
+        <div className=' h-1/2 md:w-full mt-[-40px] md:mt-0 md:h-full thirdCircle '>
+          <img src='/images/IMG_4196.PNG' alt='' className=' object-contain object-center h-full w-full' ></img>
+        </div>
       </div>
+
+        {/* <div className='h-[12rem] w-full text-[#324d67] grid content-center text-center bg-[url("/images/pinkwave_2.svg")] overflow-hidden '>
+        </div> */}
       <div className='bg-[url("/images/IMG_9544_jpg.jpg")]  bg-cover my-auto flex-column md:gap-10 h-[20rem] md:h-[32rem] xl:px-48 overflow-hidden mx-auto items-center justify-center flex '>
           
           
