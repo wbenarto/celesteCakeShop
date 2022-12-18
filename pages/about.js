@@ -23,6 +23,8 @@ function about() {
                     <br />
                     <br />
                     We require 50% deposit for all custom orders. 
+                    <br />
+                    Please allow minimum 2 weeks to place a custom order.
                     <h1 className='font-aug text-5xl py-12 font-black text-gray-600'>How To Order</h1>
                     <p>Send in your design and get a quote for your custom cake order here:</p>
 
