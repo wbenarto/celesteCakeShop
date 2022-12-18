@@ -56,7 +56,7 @@ const Navbar = () => {
         <>
 
         <div className={scrollDown ? 
-        'fixed z-999 top-0   invisible sm:visible left-0 w-full h-20 bg-red-200 bg-opacity-60 flex text-white bg-transparent justify-center items-center  md:gap-20 font-hero duration-500 transition-all' : 
+        'fixed z-999 top-0   invisible sm:visible left-0 w-full h-24 bg-[rgba(0,0,0,0.1)] bg-opacity-60 flex text-white  justify-center items-center  md:gap-20 font-hero duration-500 transition-all' : 
         'fixed z-999 top-0 shadow-xl invisible sm:visible  left-0 w-full h-0 mt-[-100px] flex  text-white justify-center items-center  md:gap-20 font-hero duration-500 transition-all'}>
             <Link href='/about'>
                 <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
@@ -73,7 +73,7 @@ const Navbar = () => {
                 </div>
             </Link>
             <Link href='/'>
-                <div className=' w-40 h-40 items-center flex px-4 mt-12 navLink rounded-full'>
+                <div className=' w-32 h-32 items-center flex px-4 mt-2 navLink rounded-full'>
                     <button className='text-xs  font-bold'>
                         <img src='/images/celestewhite.png' /> 
                     </button>
@@ -108,7 +108,7 @@ const Navbar = () => {
             {showCart && <Cart />}
         </div>
 
-        <div className='sm:invisible fixed z-999 top-0 h-14 w-full flex items-center px-8 justify-between'>
+        <div className='sm:invisible bg-[rgba(0,0,0,0.1)] fixed z-999 top-0 h-14 w-full flex items-center px-8 justify-between'>
 
                 <Link href='/'>
                     <h1 className={hamburgerOn ? 'movedown invert text-base font-hero tracking-widest text-white duration-300 transition all' :  'movedown  text-base font-hero tracking-widest text-white duration-500 transition-all'}>CELESTE</h1>

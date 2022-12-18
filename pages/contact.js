@@ -1,7 +1,7 @@
 import React from 'react'
 import dynamic from "next/dynamic";
 
-const NoSsr = dynamic(()=> import("../components/About"), {
+const NoSsr = dynamic(()=> import("../components/Contact"), {
   ssr: false,
 })
 const Home = () => {
