@@ -16,7 +16,7 @@ const Landing = ({bannerData, products}) => {
     <>
 
       <HeroBanner />
-      <div className='h-[12rem] w-full text-[#324d67] grid content-center text-center bg-white overflow-hidden '>
+      <div className='h-[12rem] w-full text-[#324d67] grid content-center text-center bg-gray-200 overflow-hidden '>
       {/* <div className='bg-[url("/images/bday1.jpg")] bg-fixed bg-cover bg-center bg-no-repeat w-full h-screen '></div> */}
 
         <h1 ref={midSec} className='midSec self-center text-2xl md:text-3xl lg:text-4xl font-aug tracking-widest '>
@@ -68,8 +68,15 @@ const Landing = ({bannerData, products}) => {
 
         {/* <div className='h-[12rem] w-full text-[#324d67] grid content-center text-center bg-[url("/images/pinkwave_2.svg")] overflow-hidden '>
         </div> */}
-      
-      <div className=' bg-[#f5b2ca] border-t-2 border-gray-400 flex-column md:gap-4 h-[38rem] sm:h-[42rem]  overflow-hidden md:mx-auto md:justify-center md:flex md:px-32'>
+      <div className='h-[12rem] w-full text-[#324d67] grid content-center text-center bg-gray-200 overflow-hidden '>
+      {/* <div className='bg-[url("/images/bday1.jpg")] bg-fixed bg-cover bg-center bg-no-repeat w-full h-screen '></div> */}
+
+        <h1 ref={midSec} className='midSec self-center text-2xl md:text-3xl lg:text-4xl font-aug tracking-widest '>
+          Personalized baked goods for you and your loved ones. 
+        </h1>
+      </div>
+
+      <div className=' bg-[#f5b2ca] flex-column md:gap-4 h-[38rem] sm:h-[42rem]  overflow-hidden md:mx-auto md:justify-center md:flex md:px-32'>
         <div className=' rounded-md my-auto px-6 md:px-0 md:w-1/3 mx-auto py-12 justify-center'>
           
           <h1 className='font-mont text-2xl text-white font-semibold text-left md:text-4xl'>Recently Purchased</h1>
