@@ -9,12 +9,17 @@ const ProductDetails = ({ product, products }) => {
   const { image, name, details, price } = product;
   const [index, setIndex] = useState(0);
   const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
-  const baseOptions = ["Classic Vanilla", "Dark Chocolate", "Mocha Delight"];
-  const sizeOptions = ["Small", "Medium", "Large"];
+  const baseOptions = ["Classic Vanilla", "Chocolate", "Red Velvet", "Funfetti", "Lemon", "Strawberry", "Ube", "Biscoff"];
+  const sizeOptions = ["6in - Small", "8in - Medium", "10in - Large", "12in - Extra Large"];
   const fondantOptions = [
-    "Salted Caramel Frosting",
-    "Red Velvel Fondant",
-    "Lemon Cheese Layer",
+    "Fondant Layer - Vanilla",
+    "Swiss Meringue Buttercream - Vanilla",
+    "Swiss Meringue Buttercream - Chocolate",
+    "Swiss Meringue Buttercream - Strawberry",
+    "Swiss Meringue Buttercream - Lemon",
+    "Swiss Meringue Buttercream - Ube",
+    "Swiss Meringue Buttercream - Biscoff",
+    "Swiss Meringue Buttercream - Cream Cheese"
   ];
   const [size, setSize] = useState(sizeOptions[0]);
   const [base, setBase] = useState(baseOptions[0]);
@@ -63,12 +68,12 @@ const ProductDetails = ({ product, products }) => {
 
             <div className="grid">
               {/* Size*/}
-              {/* <Dropdown
+              <Dropdown
                 options={sizeOptions}
                 title="Size"
                 selection={size}
                 handleSelection={handleSelection}
-              /> */}
+              />
 
               {/* Base */}
               <Dropdown
@@ -88,7 +93,7 @@ const ProductDetails = ({ product, products }) => {
 
               {/* Message */}
               <div className="flex py-2 items-center ">
-                <p className="p-1 text-sm w-24 font-bold">Birthday Message: </p>
+                <p className="p-1 text-sm w-24 text-gray-400 font-bold">Birthday Message: </p>
                 <input
                   type="text"
                   className="px-2 flex items-center justify-between w-full  bg-white rounded-md h-10 text-sm md:text-base"
@@ -105,16 +110,16 @@ const ProductDetails = ({ product, products }) => {
             </div>
           </div>
 
-          <div className="mb-0 p-2 mt-2 border-t-2 border-gray-600 h-[4rem] flex gap-2 md:mt-8 ">
-            <p className="w-1/4 text-center my-auto text-3xl font-bold md:text-4xl">
+          <div className="mb-0 p-2 mt-2 border-t-2 border-gray-600 h-[4rem] justify-center flex gap-2 md:mt-8 ">
+            {/* <p className="w-1/4 text-center my-auto text-3xl font-bold md:text-4xl">
               ${price}
-            </p>
+            </p> */}
             <button className="w-3/4 h-full  bg-green-200  rounded-full grid ">
               <p
                 className=" my-auto font-bold text-center"
                 onClick={() => onAdd(product, 1, base, fondant, message)}
               >
-                ADD TO CART
+                GET A QUOTE
               </p>
             </button>
           </div>
