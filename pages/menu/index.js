@@ -27,7 +27,7 @@ const menu = ({ products }) => {
           </button>
         </Link>
       </div>
-      <div className="h-full  md:px-24 lg:px-48 ">
+      <div className="h-full  md:px-4 xl:px-48 ">
         {/* <div className='w-full h-14 px-4 flex justify-between items-center'>
                 <p>ALL</p>
                 <p>CAKES</p>

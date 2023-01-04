@@ -125,7 +125,7 @@ const custom = () => {
 
     
   return (
-    <div className="grid bg-[#fff0f5]  w-full mx-auto">
+    <div className="grid bg-white  w-full mx-auto">
       <div className='w-full h-[24rem] md:h-[32rem] bg-[url("/images/IMG_4188.jpg")]  bg-bottom md:bg-center md:bg-fixed bg-cover flex justify-center items-center'>
         <div className="bg-[rgba(0,0,0,0.5)] flex justify-center items-center  w-full h-full">
           <h1 className="font-aug text-5xl mb-4 text-white font-bold tracking-wide ">
@@ -134,7 +134,7 @@ const custom = () => {
         </div>
       </div>
 
-      <div className="px-4  w-full md:w-[900px] mx-auto bg-white ">
+      <div className="px-4  w-full md:w-[900px] mx-auto bg-gray-100 ">
         <h1 className="p-8 md:py-10 border-b-2 font-mont border-gray-500 text-gray-500 text-center text-xl md:text-2xl">
           Custom Cake Order
         </h1>
@@ -182,6 +182,7 @@ const custom = () => {
             <label className="flex my-4 pb-2 font-bold text-gray-600" htmlFor="name">
               Order Details
             </label>
+            <p className='text-gray-500'>Please allow 2 weeks to place custom order cakes</p>
             <input
               className="flex w-full p-2 border-2 rounded-md  "
               id="date"
