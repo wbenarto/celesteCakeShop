@@ -99,7 +99,7 @@ const Landing = ({bannerData, products}) => {
             </p>
             </div>
           </div>
-          <div className=' h-[20rem] min-w-[14rem] sm:w-[14rem] md:w-[20rem] md:h-[26rem] rounded-md p-2 md:p-2 bg-white '>
+          <div className=' h-[20rem] min-w-[14rem] sm:w-[14rem] md:w-[20rem] md:h-[26rem] rounded-md p-2 md:p-2 bg-white shadow-xl '>
             <div className='h-[70%] w-full bg-yellow-200 rounded-lg mb-1 overflow-hidden '>
               <img className='object-cover object-bottom w-full h-full' src='/images/IMG_4188.jpg' />
             </div>
@@ -112,7 +112,7 @@ const Landing = ({bannerData, products}) => {
             </p>
             </div>
           </div>
-          <div className=' h-[20rem] min-w-[14rem] sm:w-[14rem] md:w-[20rem] md:h-[26rem] rounded-md p-2 md:p-2 bg-white '>
+          <div className=' h-[20rem] min-w-[14rem] sm:w-[14rem] md:w-[20rem] md:h-[26rem] rounded-md p-2 md:p-2 bg-white shadow-xl '>
             <div className='h-[70%] w-full bg-yellow-200 rounded-lg mb-1 overflow-hidden '>
               <img className='object-cover object-bottom w-full h-full' src='/images/IMG_0818_jpg.jpg' />
             </div>
