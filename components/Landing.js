@@ -130,7 +130,7 @@ const Landing = ({bannerData, products}) => {
         </div>
       </div>
       
-      <div className='bg-[url("/images/IMG_9544_jpg.jpg")]  bg-cover my-auto flex-column md:gap-10 h-[20rem] md:h-[32rem] xl:px-48 overflow-hidden mx-auto items-center justify-center flex '>
+      <div className='bg-[url("/images/IMG_9544_jpg.jpg")]  bg-cover my-auto flex-column md:gap-10 h-[20rem] md:h-[32rem]  overflow-hidden mx-auto items-center justify-center flex '>
           
           
             <div className='bg-[rgba(0,0,0,0.5)] w-full h-full justify-center items-center flex'>
