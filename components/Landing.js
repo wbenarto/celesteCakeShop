@@ -76,7 +76,7 @@ const Landing = ({bannerData, products}) => {
         </h1>
       </div>
 
-      <div className=' bg-[url("/images/pinkwave.svg")] flex-column md:gap-4 sm:h-[40rem] md:h-[44rem]  overflow-hidden lg:mx-auto lg:justify-center lg:flex sm:px-4 lg:px-24'>
+      <div className=' bg-[url("/images/pinkwave.svg")] flex-column md:gap-4 h-[40rem] md:h-[46rem]  overflow-hidden lg:mx-auto lg:justify-center lg:flex sm:px-4 lg:px-24'>
         <div className=' rounded-md my-auto px-6 lg:px-0 lg:w-1/3 mx-auto py-12 justify-center '>
           
           <h1 className='font-mont text-2xl text-gray-600 font-semibold text-left md:text-4xl'>Recently Purchased</h1>
@@ -87,8 +87,8 @@ const Landing = ({bannerData, products}) => {
         </div>
         <div className='px-2 h-1/1 w-full thirdCircle overflow-x-scroll flex items-center gap-2 md:justify-center sm:justify-between '>
           <div className=' h-[20rem] min-w-[14rem] sm:w-[14rem] md:w-[20rem] md:h-[26rem] rounded-md p-2 md:p-2 bg-white shadow-xl '>
-            <div className='h-[70%] w-full bg-yellow-200 rounded-lg mb-1 overflow-hidden '>
-              <img className='object-cover object-bottom w-full h-full' src='/images/IMG_9544_jpg.jpg' />
+            <div className='h-[70%] w-full rounded-lg mb-1 overflow-hidden  '>
+              <img className='object-cover object-bottom w-full h-full hover:scale-150 transition ' src='/images/IMG_9544_jpg.jpg' />
             </div>
             <div className='w-full h-[30%] p-1'>
             <h1 className='text-xs font-bold md:text-xl pb-0.5 md:py-2'>
@@ -100,8 +100,8 @@ const Landing = ({bannerData, products}) => {
             </div>
           </div>
           <div className=' h-[20rem] min-w-[14rem] sm:w-[14rem] md:w-[20rem] md:h-[26rem] rounded-md p-2 md:p-2 bg-white shadow-xl '>
-            <div className='h-[70%] w-full bg-yellow-200 rounded-lg mb-1 overflow-hidden '>
-              <img className='object-cover object-bottom w-full h-full' src='/images/IMG_4188.jpg' />
+            <div className='h-[70%] w-full rounded-lg mb-1 overflow-hidden '>
+              <img className='object-cover object-bottom w-full h-full hover:scale-150 transition ' src='/images/IMG_4188.jpg' />
             </div>
             <div className='w-full h-[30%] p-1'>
             <h1 className='text-xs font-bold md:text-xl pb-0.5 md:py-2'>
@@ -113,8 +113,8 @@ const Landing = ({bannerData, products}) => {
             </div>
           </div>
           <div className=' h-[20rem] min-w-[14rem] sm:w-[14rem] md:w-[20rem] md:h-[26rem] rounded-md p-2 md:p-2 bg-white shadow-xl '>
-            <div className='h-[70%] w-full bg-yellow-200 rounded-lg mb-1 overflow-hidden '>
-              <img className='object-cover object-bottom w-full h-full' src='/images/IMG_0818_jpg.jpg' />
+            <div className='h-[70%] w-full rounded-lg mb-1 overflow-hidden '>
+              <img className='object-cover object-bottom w-full h-full hover:scale-150 transition ' src='/images/IMG_0818_jpg.jpg' />
             </div>
             <div className='w-full h-[30%] p-1'>
             <h1 className='text-xs font-bold md:text-xl pb-0.5 md:py-2'>
