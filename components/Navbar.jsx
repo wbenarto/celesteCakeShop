@@ -73,7 +73,7 @@ const Navbar = () => {
                 </div>
             </Link>
             <Link href='/'>
-                <div className=' w-32 h-32 items-center flex px-4 mt-2 navLink rounded-full'>
+                <div className=' w-24 h-24 items-center flex px-4 mt-2 navLink rounded-full'>
                     <button className='text-xs  font-bold'>
                         <img src='/images/celestewhite.png' /> 
                     </button>
@@ -117,7 +117,7 @@ const Navbar = () => {
         </div>
         
         {hamburgerOn ? (
-            <div className='fixed top-0 mt-0 h-[24rem] w-full transition-all duration-500 bg-red-100 text-white'>
+            <div className='fixed top-0 mt-0 h-[24rem] w-full transition-all duration-500 bg-red-100 text-white z-10'>
                 
                 <div className='sm:invisible fixed z-999 top-0 h-14 w-full flex items-center px-8 justify-between'>
 
