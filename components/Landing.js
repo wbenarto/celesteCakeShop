@@ -88,7 +88,7 @@ const Landing = ({bannerData, products}) => {
         <div className='px-2 h-1/1 w-full thirdCircle overflow-x-scroll flex items-center gap-2 md:justify-center sm:justify-between '>
           <div className=' h-[20rem] min-w-[14rem] sm:w-[14rem] md:w-[20rem] md:h-[26rem] rounded-md p-2 md:p-2 bg-white shadow-xl '>
             <div className='h-[70%] w-full rounded-lg mb-1 overflow-hidden  '>
-              <img className='object-cover object-bottom w-full h-full hover:scale-150 transition ' src='/images/IMG_9544_jpg.jpg' />
+              <img className='object-cover object-bottom w-full h-full hover:scale-150 transition duration-1000' src='/images/IMG_9544_jpg.jpg' />
             </div>
             <div className='w-full h-[30%] p-1'>
             <h1 className='text-xs font-bold md:text-xl pb-0.5 md:py-2'>
@@ -101,7 +101,7 @@ const Landing = ({bannerData, products}) => {
           </div>
           <div className=' h-[20rem] min-w-[14rem] sm:w-[14rem] md:w-[20rem] md:h-[26rem] rounded-md p-2 md:p-2 bg-white shadow-xl '>
             <div className='h-[70%] w-full rounded-lg mb-1 overflow-hidden '>
-              <img className='object-cover object-bottom w-full h-full hover:scale-150 transition ' src='/images/IMG_4188.jpg' />
+              <img className='object-cover object-bottom w-full h-full hover:scale-150 transition duration-1000 ' src='/images/IMG_4188.jpg' />
             </div>
             <div className='w-full h-[30%] p-1'>
             <h1 className='text-xs font-bold md:text-xl pb-0.5 md:py-2'>
@@ -114,7 +114,7 @@ const Landing = ({bannerData, products}) => {
           </div>
           <div className=' h-[20rem] min-w-[14rem] sm:w-[14rem] md:w-[20rem] md:h-[26rem] rounded-md p-2 md:p-2 bg-white shadow-xl '>
             <div className='h-[70%] w-full rounded-lg mb-1 overflow-hidden '>
-              <img className='object-cover object-bottom w-full h-full hover:scale-150 transition ' src='/images/IMG_0818_jpg.jpg' />
+              <img className='object-cover object-bottom w-full h-full hover:scale-150 transition duration-1000 ' src='/images/IMG_0818_jpg.jpg' />
             </div>
             <div className='w-full h-[30%] p-1'>
             <h1 className='text-xs font-bold md:text-xl pb-0.5 md:py-2'>
