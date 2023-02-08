@@ -7,7 +7,7 @@ import { urlFor } from '../lib/client'
 const HeroBanner = () => {
 
     useEffect(() => {
-        gsap.fromTo('.move', { y: '100%', opacity: 0, z:0 }, { y: 0, duration: .5, delay: 1, opacity: 1 ,z:0 })
+        gsap.fromTo('.move', { y: '100%', opacity: 0, zIndex:1 }, { y: 0, duration: .5, delay: 1, opacity: 1 ,zIndex:1})
     }, [])
     return (
 

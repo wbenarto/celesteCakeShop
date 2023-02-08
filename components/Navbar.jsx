@@ -49,47 +49,53 @@ const Navbar = () => {
         , [])
 
     useEffect(() => {
-        gsap.fromTo('.move', { y: '100%', opacity: 0, z:0 }, { y: 0, duration: .5, delay: 1, opacity: 1 ,z:0 })
-        gsap.fromTo('.movedown', { y: '-100%', opacity: 0, z:0 }, { y: 0, duration: .5, delay: 1, opacity: 1 ,z:0 })
+        gsap.fromTo('.move', { y: '100%', opacity: 0, zIndex:0 }, { y: 0, duration: .5, delay:0, opacity: 1 ,zIndex:0})
+        gsap.fromTo('.movedown', { y: '-100%', opacity: 0, zIndex:0 }, { y: 0, duration: .5, delay: 1, opacity: 1 ,zIndex:0})
     }, [])
     return (
         <>
 
         <div className={scrollDown ? 
-        'fixed z-999 top-0   invisible sm:visible left-0 w-full h-24 bg-[rgba(0,0,0,0.1)] bg-opacity-60 flex text-white  justify-center items-center  lg:gap-20 font-hero duration-500 transition-all' : 
-        'fixed z-999 top-0 shadow-xl invisible sm:visible  left-0 w-full h-0 mt-[-100px] flex  text-white justify-center items-center  lg:gap-20 font-hero duration-500 transition-all'}>
+        'fixed z-10 top-0   invisible sm:visible left-0 w-full h-24 bg-[#F48CAA]  flex  justify-center items-center gap-10 lg:gap-24 font-hero duration-500 transition-all' : 
+        'fixed z-10 top-0 shadow-xl invisible sm:visible  left-0 w-full h-0 mt-[-100px] flex  justify-center items-center gap-10 lg:gap-24 font-hero duration-500 transition-all'}>
+             <Link href='/'>
+                <div className=' items-center flex px-4 py-4 h-10 navLink rounded-full'>
+                    <button className='text-xs font-bold '>
+                        <p className='movedown font-mont md:tracking-widest navLink'>HOME</p>
+                    </button>
+                </div>
+                {/* <div className=' w-24 h-24 items-center flex px-4 mt-2 navLink rounded-full'>
+                    <button className='text-xs  font-bold'>
+                        <img src='/images/celestewhite.png' /> 
+                    </button>
+                </div> */}
+            </Link>
             <Link href='/about'>
                 <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
                     <button className='text-xs  font-bold  '>
-                        <p className='movedown font-body md:tracking-widest2 navLink'>ABOUT</p>
+                        <p className='movedown font-mont md:tracking-widest navLink'>ABOUT</p>
                     </button>
                 </div>
             </Link>
             <Link href='/menu/custom'>
                 <div className=' items-center flex px-4 py-4 h-10 navLink rounded-full'>
                     <button className='text-xs font-bold '>
-                        <p className='movedown font-body md:tracking-widest2 navLink'>CUSTOM CAKES</p>
+                        <p className='movedown font-mont md:tracking-widest navLink'>CUSTOM CAKES</p>
                     </button>
                 </div>
             </Link>
-            <Link href='/'>
-                <div className=' w-24 h-24 items-center flex px-4 mt-2 navLink rounded-full'>
-                    <button className='text-xs  font-bold'>
-                        <img src='/images/celestewhite.png' /> 
-                    </button>
-                </div>
-            </Link>
+           
             <Link href='/menu'>
                 <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
                     <button className='text-xs  font-bold'>
-                        <p className='movedown font-body md:tracking-widest2 navLink'>GALLERY</p>
+                        <p className='movedown font-mont md:tracking-widest navLink'>GALLERY</p>
                     </button>
                 </div>
             </Link>
             <Link href='/contact'>
                 <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
                     <button className='text-xs   font-bold'>
-                        <p className='movedown font-body text-xs md:tracking-widest2 navLink'>CONTACT</p>
+                        <p className='movedown font-mont text-xs md:tracking-widest navLink'>CONTACT</p>
                     </button>
                 </div>
             </Link>
