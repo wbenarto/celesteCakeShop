@@ -16,7 +16,7 @@ const Landing = ({bannerData, products}) => {
     <>
 
       <HeroBanner />
-      <div className='h-[12rem] w-full text-[#324d67] grid content-center text-center bg-gray-100 overflow-hidden '>
+      <div className='h-[12rem] w-full text-[#324d67] grid content-center text-center bg-white overflow-hidden '>
       {/* <div className='bg-[url("/images/bday1.jpg")] bg-fixed bg-cover bg-center bg-no-repeat w-full h-screen '></div> */}
 
         <h1 ref={midSec} className='midSec self-center text-2xl md:text-3xl lg:text-4xl font-aug text-red-500  tracking-widest '>
@@ -29,8 +29,8 @@ const Landing = ({bannerData, products}) => {
         {/* Left */}
     
         <div className='my-auto px-6 md:px-0 md:w-full mx-auto py-12 justify-center'>
-          <h1 className='font-mont text-2xl text-gray-600 font-semibold text-left md:text-4xl'>We offer Custom Designed Cakes for every occasion</h1>
-          <p className='md:text-xl font-medium text-gray-600 py-4'>Send us your design! Then choose your base, fondant, and filling flavors from our delicious options  </p>
+          <h1 className='font-mont text-2xl text-black font-semibold text-left md:text-4xl'>We offer Custom Designed Cakes for every occasion</h1>
+          <p className='md:text-xl font-medium text-black py-4'>Send us your design! Then choose your base, fondant, and filling flavors from our delicious options  </p>
           <div className='w-full '>
             <div className='flex gap-2 py-2 px-4'>
               <div className='text-white w-14 h-14 md:w-20 md:h-20 bg-[#f5b2ca] rounded-md '><FaBirthdayCake className='w-full h-full p-2'/></div>
@@ -68,7 +68,7 @@ const Landing = ({bannerData, products}) => {
 
         {/* <div className='h-[12rem] w-full text-[#324d67] grid content-center text-center bg-[url("/images/pinkwave_2.svg")] overflow-hidden '>
         </div> */}
-      <div className='h-[12rem] w-full text-[#324d67] grid content-center text-center bg-gray-100 overflow-hidden '>
+      <div className='h-[12rem] w-full text-[#324d67] grid content-center text-center bg-white overflow-hidden '>
       {/* <div className='bg-[url("/images/bday1.jpg")] bg-fixed bg-cover bg-center bg-no-repeat w-full h-screen '></div> */}
 
         <h1 ref={midSec} className='midSec self-center text-2xl md:text-3xl lg:text-4xl text-red-500  font-aug tracking-widest '>
@@ -79,7 +79,7 @@ const Landing = ({bannerData, products}) => {
       <div className=' bg-[url("/images/pinkwave.svg")] flex-column md:gap-4 h-[40rem] md:h-[46rem]  overflow-hidden lg:mx-auto lg:justify-center lg:flex sm:px-4 lg:px-24'>
         <div className=' rounded-md my-auto px-6 lg:px-0 lg:w-1/3 mx-auto py-12 justify-center '>
           
-          <h1 className='font-mont text-2xl text-gray-600 font-semibold text-left md:text-4xl'>Recently Purchased</h1>
+          <h1 className='font-mont text-2xl text-black font-semibold text-left md:text-4xl'>Recently Purchased</h1>
           <p className='text-grey-600 py-4'>We aim to have unique designed cake for all our patrons, so no cakes are built the same</p>
           <Link href='/menu'>
             <button className=' bg-red-300 text-xs md:text-sm mx-auto w-40 h-10 gap-2 md:w-[150px] md:hover:animate-wiggle md:h-14 rounded-full mt-4 text-center flex justify-center text-white items-center' type='button'>See Gallery <AiOutlineArrowRight className='text-lg'/></button>
