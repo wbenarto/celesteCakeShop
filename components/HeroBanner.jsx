@@ -11,7 +11,7 @@ const HeroBanner = () => {
     }, [])
     return (
 
-        <div className=' w-full h-[90vh] flex justify-center items-center max-h-screen '>
+        <div className='z-0 w-full h-screen flex justify-center items-center max-h-screen sticky top-0'>
             <div className=' flex bg-[url("/images/home.jpg")] md:bg-fixed bg-center bg-cover md:bg-[length:full_100%] items-center justify-center w-full h-full my-auto text-center'>
                 <div className='bg-[rgba(138,138,138,0.3)] w-full h-full justify-center items-center flex'>
                     <div className='w-full mt-28  items-center '>
