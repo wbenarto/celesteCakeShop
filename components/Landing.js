@@ -118,7 +118,7 @@ const Landing = ({bannerData, products}) => {
       <div className='z-1 relative bg-[url("/images/IMG_9544_jpg.jpg")]  bg-cover my-auto flex-column md:gap-10 h-[20rem] md:h-[32rem]  overflow-hidden mx-auto items-center justify-center flex '>
             <div className='bg-[rgba(0,0,0,0.5)] w-full h-full justify-center items-center flex'>
                 <div>
-                    <h2 className='text-[#F48CAA] text-4xl text-center font-mont font-bold w-full lg:text-6xl'>Joy baked into every bite.</h2>
+                    <h2 className='text-[#F48CAA] text-4xl text-center font-mont w-full lg:text-6xl'>Joy baked into every bite.</h2>
                 </div>
             </div>
         </div>
