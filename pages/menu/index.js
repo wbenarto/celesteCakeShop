@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { client } from "../../lib/client";
 import { Product } from "../../components/";
+import {AiOutlineArrowRight} from 'react-icons/ai'
 
 const menu = ({ products }) => {
   // console.log(products)
@@ -20,10 +21,10 @@ const menu = ({ products }) => {
 
         <Link href="/menu/custom">
           <button
-            className="bg-red-300 w-24 h-10 md:w-[150px] md:h-14 mx-auto border-2 rounded-md text-center flex justify-center text-white items-center "
+            className="bg-[#F48CAA] text-sm md:text-base w-32 h-10 md:w-[180px] md:h-14 mx-auto border-2 gap-2 rounded-full text-center flex justify-center text-white items-center "
             type="button"
           >
-            <p>Get a Quote</p>
+            <p>Get a Quote</p><AiOutlineArrowRight className='text-lg'/>
           </button>
         </Link>
       </div>
@@ -35,7 +36,7 @@ const menu = ({ products }) => {
                 <p>COOKIES</p>
                 
             </div> */}
-        <div className="w-full mx-auto h-full px-4 grid mt-8 gap-2 md:gap-10 grid-cols-2 lg:grid-cols-3 lg:max-w-[1200px]">
+        <div className="w-full mx-auto h-full px-4 grid mt-8 gap-2 md:gap-10 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:max-w-[1200px]">
           {products.length ? (
             products?.map((e) => <Product product={e} key={e.id} />)
           ) : (

@@ -134,13 +134,13 @@ const custom = () => {
         </div>
       </div>
 
-      <div className="px-4  w-full md:w-[900px] mx-auto bg-gray-100 ">
-        <h1 className="p-8 md:py-10 border-b-2 font-mont border-gray-500 text-gray-500 text-center text-xl md:text-2xl">
+      <div className="px-4  w-full md:w-[900px] mx-auto ">
+        <h1 className="p-8 md:py-10 border-b-2 font-mont border-black text-black text-center text-xl md:text-2xl">
           Custom Cake Order
         </h1>
         <form className=" gap-4   " onSubmit={handleOnSubmit}>
           <div className="flex-column py-2">
-            <label className="flex my-4 pb-2 font-bold text-gray-600" htmlFor="name">
+            <label className="flex my-4 pb-2 font-bold text-black" htmlFor="name">
               Customer Information
             </label>
             <input
@@ -153,7 +153,7 @@ const custom = () => {
             />
           </div>
           <div className="flex-column py-2">
-            {/* <label className="flex pb-2 font-bold text-gray-600" htmlFor="email">
+            {/* <label className="flex pb-2 font-bold text-black" htmlFor="email">
               Email
             </label> */}
             <input
@@ -166,7 +166,7 @@ const custom = () => {
             />
           </div>
           <div className="flex-column py-2">
-            {/* <label className="flex pb-2 font-bold text-gray-600" htmlFor="phone">
+            {/* <label className="flex pb-2 font-bold text-black" htmlFor="phone">
               Phone
             </label> */}
             <input
@@ -179,10 +179,10 @@ const custom = () => {
             />
           </div>
           <div className="flex-column py-2">
-            <label className="flex my-4 pb-2 font-bold text-gray-600" htmlFor="name">
+            <label className="flex my-4 pb-2 font-bold text-black" htmlFor="name">
               Order Details
             </label>
-            <p className='text-gray-500'>Please allow 2 weeks to place custom order cakes</p>
+            <p className='text-black'>Please allow 2 weeks to place custom order cakes</p>
             <input
               className="flex w-full p-2 border-2 rounded-md  "
               id="date"
@@ -193,7 +193,7 @@ const custom = () => {
             />
           </div>
           <div className="flex-column py-2">
-            {/* <label className="flex pb-2 font-bold text-gray-600" htmlFor="description">
+            {/* <label className="flex pb-2 font-bold text-black" htmlFor="description">
               Description
             </label> */}
             <input
@@ -272,7 +272,7 @@ const custom = () => {
           </div>
           <div className="flex-column justify-center flex py-4">
             <button
-              className=" bg-red-300 w-40 h-10 gap-2 md:w-[150px] hover:animate-wiggle md:h-14 rounded-sm mt-4 text-center flex justify-center text-white items-center"
+              className=" bg-[#F48CAA] w-40 h-10 gap-2 md:w-[150px] hover:animate-wiggle md:h-14 rounded-full mt-4 text-center flex justify-center text-white items-center"
               type="submit"
             >
               SUBMIT{" "}
