@@ -59,9 +59,9 @@ const ProductDetails = ({ product, products }) => {
             className="w-full rounded-md "
           />
         </div>
-        <div className="mt-4 bg-[rgba(240,240,240,0.97)]  bg-p rounded-lg p-4 sm:h-[auto] sm:col-span-5 md:col-span-5 sm:mt-0 ">
-          <div className=" text-gray-500  pb-10">
-            <h1 className="text-2xl p-2 font-bold sm:text-3xl md:text-5xl border-gray-600 border-b-2 md:py-8">
+        <div className="mt-4  rounded-lg p-4 sm:h-[auto] sm:col-span-5 md:col-span-5 sm:mt-0 ">
+          <div className=" text-black  pb-10">
+            <h1 className="text-2xl p-2 font-bold sm:text-3xl md:text-5xl text-[#F48CAA] border-gray-600 border-b-2 md:py-8">
               {name}
             </h1>
             <p className="sm:text-2xl min-h-[8rem] p-2 md:py-8">{details}</p>
@@ -96,7 +96,7 @@ const ProductDetails = ({ product, products }) => {
                 <p className="p-1 text-sm w-24 text-gray-400 font-bold">Birthday Message: </p>
                 <input
                   type="text"
-                  className="px-2 flex items-center justify-between w-full  bg-white rounded-md h-10 text-sm md:text-base"
+                  className="px-2 flex items-center justify-between w-full border-gray-200 border-2 bg-white rounded-md h-10 text-sm md:text-base"
                   onChange={(e) => setMessage(e.target.value)}
                 />
                 {message.length >= 30 ? (
@@ -114,9 +114,9 @@ const ProductDetails = ({ product, products }) => {
             {/* <p className="w-1/4 text-center my-auto text-3xl font-bold md:text-4xl">
               ${price}
             </p> */}
-            <button className="w-3/4 h-full  bg-green-200  rounded-full grid ">
+            <button className="w-3/4 h-full  bg-[#F48CAA]  rounded-full grid ">
               <p
-                className=" my-auto font-bold text-center"
+                className=" my-auto font-bold text-white text-center"
                 onClick={() => onAdd(product, 1, base, fondant, message)}
               >
                 GET A QUOTE

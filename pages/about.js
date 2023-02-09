@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import Link from "next/link";
+import {AiOutlineArrowRight} from 'react-icons/ai'
 
 function about() {
     const [size, setSize] = useState(false)
@@ -31,10 +32,10 @@ function about() {
                     <div className='mt-10'>
                     <Link  href="/menu/custom">
                         <button
-                            className="bg-red-300 w-24 h-10 md:w-[150px] md:h-14 mx-auto border-2 rounded-md text-center flex justify-center text-white items-center animate-bounce"
+                            className="bg-[#F48CAA] w-32 h-10 md:w-[180px] md:h-14 mx-auto border-2 gap-2 rounded-full text-center flex justify-center text-white items-center animate-bounce"
                             type="button"
                         >
-                            <p>Get a Quote</p>
+                            <p>Get a Quote</p><AiOutlineArrowRight className='text-lg'/>
                         </button>
                     </Link>
                     </div>
