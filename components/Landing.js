@@ -22,7 +22,7 @@ const Landing = ({bannerData, products}) => {
   </div> */}
 
       {/* What we offer FIRST SECTION*/}
-      <div className='bg-no-repeat sm:bg-repeat object-cover flex-column md:gap-4 h-[48rem] sm:h-[42rem]  overflow-hidden md:mx-auto md:justify-center md:flex md:max-w-[1200px]'>
+      <div className='z-1 relative bg-white flex-column md:gap-4 h-[48rem] sm:h-[42rem]  overflow-hidden md:mx-auto md:justify-center md:flex md:px-20 lg:px-40 '>
         {/* Left */}
         <div className='my-auto px-6 md:px-0 md:w-full mx-auto py-12 justify-center'>
           <h1 className='font-mont text-2xl text-black font-semibold text-left md:text-4xl'>We offer Custom Designed Cakes for every occasion</h1>
@@ -58,16 +58,16 @@ const Landing = ({bannerData, products}) => {
         </div>
       </div>
 
-      <div className='h-[6rem] md:h-[12rem] w-full grid content-center text-center bg-[#F48CAA] text-white overflow-hidden '>
+      <div className='z-10 relative h-[6rem] md:h-[12rem] w-full grid content-center text-center bg-[#F48CAA] text-white overflow-hidden '>
         <h1 ref={midSec} className='midSec self-center text-base md:text-3xl lg:text-4xl tracking-widest font-aug '>
           Personalized baked goods for you and your loved ones. 
         </h1>
       </div>
 
-      <div className='flex-column md:gap-4 h-[40rem] md:h-[46rem]  overflow-hidden lg:mx-auto lg:justify-center lg:flex sm:px-4  md:max-w-[1200px]'>
+      <div className='z-1 relative bg-white flex-column md:gap-4 h-[40rem] md:h-[46rem] overflow-hidden lg:mx-auto lg:justify-center lg:flex sm:px-4 md:px-20 lg:px-40'>
         <div className=' rounded-md my-auto px-6 lg:px-0 lg:w-1/3 mx-auto py-12 justify-center '>
           <h1 className='font-mont text-2xl text-black font-semibold text-left md:text-4xl'>Recently Purchased</h1>
-          <p className='text-grey-600 py-4'>We aim to have unique designed cake for all our patrons, so no cakes are built the same</p>
+          <p className='text-black py-4'>We aim to have unique designed cake for all our patrons, so no cakes are built the same</p>
           <Link href='/menu'>
             <button className=' bg-[#F48CAA] text-xs md:text-sm mx-auto w-40 h-10 gap-2 md:w-[150px] md:hover:animate-wiggle md:h-14 rounded-full mt-4 text-center flex justify-center text-white items-center' type='button'>See Gallery <AiOutlineArrowRight className='text-lg'/></button>
           </Link> 
@@ -115,12 +115,10 @@ const Landing = ({bannerData, products}) => {
         </div>
       </div>
       
-      <div className='bg-[url("/images/IMG_9544_jpg.jpg")]  bg-cover my-auto flex-column md:gap-10 h-[20rem] md:h-[32rem]  overflow-hidden mx-auto items-center justify-center flex '>
-          
-          
+      <div className='z-1 relative bg-[url("/images/IMG_9544_jpg.jpg")]  bg-cover my-auto flex-column md:gap-10 h-[20rem] md:h-[32rem]  overflow-hidden mx-auto items-center justify-center flex '>
             <div className='bg-[rgba(0,0,0,0.5)] w-full h-full justify-center items-center flex'>
                 <div>
-                    <h2 className='text-[#F48CAA] text-4xl text-center font-mont font-bold w-full md:text-6xl'>Joy baked into every bite.</h2>
+                    <h2 className='text-[#F48CAA] text-4xl text-center font-mont font-bold w-full lg:text-6xl'>Joy baked into every bite.</h2>
                 </div>
             </div>
         </div>

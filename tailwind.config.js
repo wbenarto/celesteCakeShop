@@ -25,7 +25,7 @@ module.exports = {
         { min: "668px", max: "767px" },
         { min: "868px" },
       ],
-      lg: "1100px",
+      lg: "1200px",
       xl: "1600px",
     },
     fontWeight: {
