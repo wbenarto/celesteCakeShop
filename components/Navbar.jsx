@@ -49,7 +49,7 @@ const Navbar = () => {
         , [])
 
     useEffect(() => {
-        gsap.fromTo('.move', { y: '100%', opacity: 0, zIndex:0 }, { y: 0, duration: .5, delay:0, opacity: 1 ,zIndex:0})
+        gsap.fromTo('.move', { y: '100%', opacity: 0, zIndex:0 }, { y: 0, duration: .5, delay:1, opacity: 1 ,zIndex:0})
         gsap.fromTo('.movedown', { y: '-100%', opacity: 0, zIndex:0 }, { y: 0, duration: .5, delay: 1, opacity: 1 ,zIndex:0})
     }, [])
     return (
@@ -60,21 +60,21 @@ const Navbar = () => {
         'fixed z-10 top-0 shadow-xl invisible sm:visible  left-0 w-full h-0 mt-[-100px] flex  justify-center items-center gap-10 lg:gap-24 font-hero duration-500 transition-all'}>
             <Link href='/'>
                 <div className=' items-center flex px-4 py-4 h-10 navLink rounded-full'>
-                    <button className='text-sm font-bold '>
+                    <button className='text-sm font-semibold text-white'>
                         <p className='movedown font-mont md:tracking-widest navLink'>HOME</p>
                     </button>
                 </div>
             </Link>
             <Link href='/about'>
                 <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
-                    <button className='text-sm  font-bold  '>
+                    <button className='text-sm  font-semibold text-white '>
                         <p className='movedown font-mont md:tracking-widest navLink'>ABOUT</p>
                     </button>
                 </div>
             </Link>
             <Link href='/menu/custom'>
                 <div className=' items-center flex px-4 py-4 h-10 navLink rounded-full'>
-                    <button className='text-sm font-bold '>
+                    <button className='text-sm font-semibold text-white '>
                         <p className='movedown font-mont md:tracking-widest navLink'>CUSTOM CAKES</p>
                     </button>
                 </div>
@@ -82,14 +82,14 @@ const Navbar = () => {
            
             <Link href='/menu'>
                 <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
-                    <button className='text-sm  font-bold'>
+                    <button className='text-sm  font-semibold text-white'>
                         <p className='movedown font-mont md:tracking-widest navLink'>GALLERY</p>
                     </button>
                 </div>
             </Link>
             <Link href='/contact'>
                 <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
-                    <button className='text-sm   font-bold'>
+                    <button className='text-sm font-semibold text-white'>
                         <p className='movedown font-mont md:tracking-widest navLink'>CONTACT</p>
                     </button>
                 </div>
@@ -112,47 +112,47 @@ const Navbar = () => {
         <div className='sm:invisible bg-[#F48CAA] fixed z-10 top-0 h-14 w-full flex items-center px-8 justify-between'>
 
                 <Link href='/'>
-                    <h1 className='movedown text-base font-semibold font-mont tracking-widest text-black duration-300 transition all' >CELESTE</h1>
+                    <h1 className='movedown text-base font-semibold font-mont tracking-widest text-white duration-300 transition all' >CELESTE</h1>
                 </Link>
-                <div className='movedown text-xl text-black' onClick={() => setHamburgerOn(!hamburgerOn)}><GiHamburgerMenu /></div>
+                <div className='movedown text-xl text-white' onClick={() => setHamburgerOn(!hamburgerOn)}><GiHamburgerMenu /></div>
         </div>
         
         {hamburgerOn ? (
-            <div className='fixed top-0 mt-0 h-[24rem] w-full transition-all duration-500 bg-[#F48CAA] font-semibold text-black z-10'>
+            <div className='fixed top-0 mt-0 h-[24rem] w-full transition-all duration-200 bg-[#F48CAA] font-semibold text-white z-10'>
                 
                 <div className='sm:invisible fixed z-999 top-0 h-14 w-full flex items-center px-8 justify-between'>
 
                     <Link href='/'>
-                        <h1 className='movedown  text-base font-mont tracking-widest text-black duration-300 transition all'>CELESTE</h1>
+                        <h1 className='movedown  text-base font-mont tracking-widest text-white duration-300 transition all'>CELESTE</h1>
                     </Link>
-                    <div className='movedown text-xl text-black' onClick={() => setHamburgerOn(!hamburgerOn)}><GiHamburgerMenu /></div>
+                    <div className='movedown text-xl text-white' onClick={() => setHamburgerOn(!hamburgerOn)}><GiHamburgerMenu /></div>
                 </div>
-                <div className='py-20 px-10 '>
+                <div className='py-20 px-10'>
                 
                     <Link href='/about'>
                         <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
-                            <button onClick={()=>setHamburgerOn(false)} className='text-base text-black font-bold  '>
+                            <button onClick={()=>setHamburgerOn(false)} className='text-base text-white font-bold  '>
                                 <p className='move font-body tracking-widest navLink'>ABOUT</p>
                             </button>
                         </div>
                     </Link>
                     <Link href='/menu/custom' >
                         <div className=' items-center flex px-4 py-4 h-10 navLink rounded-full'>
-                            <button onClick={()=>setHamburgerOn(false)} className='text-base text-black font-bold '>
+                            <button onClick={()=>setHamburgerOn(false)} className='text-base text-white font-bold '>
                                 <p className='move font-body tracking-widest navLink'>CUSTOM CAKES</p>
                             </button>
                         </div>
                     </Link>
                     <Link href='/menu'>
                         <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
-                            <button onClick={()=> setHamburgerOn(false)} className='text-base text-black font-bold'>
+                            <button onClick={()=> setHamburgerOn(false)} className='text-base text-white font-bold'>
                                 <p className='move font-body tracking-widest navLink'>GALLERY</p>
                             </button>
                         </div>
                     </Link>
                     <Link href='/contact'>
                         <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
-                            <button onClick={()=> setHamburgerOn(false)} className='text-base text-black font-bold'>
+                            <button onClick={()=> setHamburgerOn(false)} className='text-base text-white font-bold'>
                                 <p className='move font-body tracking-widest navLink'>CONTACT</p>
                             </button>
                         </div>
@@ -162,7 +162,7 @@ const Navbar = () => {
                             className='move my-auto'
                             onClick={() => setShowCart(!showCart)}>
                             <span className='absolute text-base mt-[-8px] text-green-400  w-4 h-4  rounded-full text-center font-bold'>{totalQuantities > 0 ? totalQuantities : '0'}</span>
-                            <AiOutlineShopping className='text-black text-3xl md:text-3xl '/>
+                            <AiOutlineShopping className='text-white text-3xl md:text-3xl '/>
                         </button>
                     </div> */}
             </div>
