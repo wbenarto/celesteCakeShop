@@ -15,7 +15,7 @@ const HeroBanner = () => {
             <div className=' flex bg-[url("/images/home.jpg")] md:bg-fixed bg-center bg-cover md:bg-[length:full_100%] items-center justify-center w-full h-full my-auto text-center'>
                 <div className='bg-[rgba(138,138,138,0.3)] w-full h-full justify-center items-center flex'>
                     <div className='w-full mt-28  items-center '>
-                        <h1 className='move text-4xl md:text-6xl font-mont tracking-widest2 text-black'>CELESTE</h1>
+                        <h1 className='move text-4xl md:text-6xl font-mont tracking-widest2 text-white'>CELESTE</h1>
                         <p className='move text-red-600 font-aug font-bold text-2xl md:text-4xl '>Cake Design</p>
                     </div>
                     
