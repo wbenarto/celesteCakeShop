@@ -14,6 +14,7 @@ module.exports = {
       wider: '.05em',
       widest: '.1em',
       widest2: '.25em',
+      widest3: '.5em'
     },
     screens: {
       sm: "450px",

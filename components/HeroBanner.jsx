@@ -11,23 +11,18 @@ const HeroBanner = () => {
     }, [])
     return (
 
-        <div className=' w-full h-[80vh] flex justify-center items-center   max-h-screen '>
-            {/* <img className=' h-screen object-cover     ' src='/images/flower.jpg'></img> */}
-            {/* <div className='absolute w-full h-screen bg-[rgba(0,0,0,0.5)] z-[1]'></div> */}
+        <div className=' w-full h-[90vh] flex justify-center items-center max-h-screen '>
             <div className=' flex bg-[url("/images/home.jpg")] md:bg-fixed bg-center bg-cover md:bg-[length:full_100%] items-center justify-center w-full h-full my-auto text-center'>
                 <div className='bg-[rgba(138,138,138,0.3)] w-full h-full justify-center items-center flex'>
-                    <div className='w-full h-1/3 mt-20 '>
-                        <h1 className='move text-5xl md:text-5xl z-1 lg:text-6xl font-mont font-semibold tracking-widest text-black'>CELESTE</h1>
+                    <div className='w-full mt-28  items-center '>
+                        <h1 className='move text-4xl md:text-6xl font-mont tracking-widest2 text-black'>CELESTE</h1>
                         <p className='move text-red-600 font-aug font-bold text-2xl md:text-4xl '>Cake Design</p>
-                        <p className='move text-sm  mt-10 w-[90%] mx-auto  leading-relaxed text-black tracking-widest sm:w-[60%] sm:text-base '>Custom design cakes for any special occasion. Located in the heart of Orlando. Open for orders.</p>
                     </div>
                     
 
                 </div>
 
             </div>
-            {/* <div className=' w-full z-0 h-screen bg-[url("/images/flower.jpg")] bg-cover max-h-screen'>where</div> */}
-
         </div>
 
     )

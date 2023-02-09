@@ -14,18 +14,15 @@ const Landing = ({bannerData, products}) => {
   
   return (
     <>
-
       <HeroBanner />
-      <div className='h-[12rem] w-full text-[#324d67] grid content-center text-center bg-white overflow-hidden '>
-      {/* <div className='bg-[url("/images/bday1.jpg")] bg-fixed bg-cover bg-center bg-no-repeat w-full h-screen '></div> */}
-
+      {/*<div className='h-[12rem] w-full text-[#324d67] grid content-center text-center bg-white overflow-hidden '>
         <h1 ref={midSec} className='midSec self-center text-2xl md:text-3xl lg:text-4xl font-aug text-red-500  tracking-widest '>
           Baked with the finest natural ingredients. 
         </h1>
-      </div>
+  </div> */}
 
       {/* What we offer FIRST SECTION*/}
-      <div className='bg-[url("/images/pinkwave.svg")] bg-no-repeat sm:bg-repeat object-cover flex-column md:gap-4 h-[48rem] sm:h-[42rem]  overflow-hidden md:mx-auto md:justify-center md:flex md:px-32'>
+      <div className='bg-no-repeat sm:bg-repeat object-cover flex-column md:gap-4 h-[48rem] sm:h-[42rem]  overflow-hidden md:mx-auto md:justify-center md:flex md:px-32'>
         {/* Left */}
     
         <div className='my-auto px-6 md:px-0 md:w-full mx-auto py-12 justify-center'>
@@ -66,17 +63,13 @@ const Landing = ({bannerData, products}) => {
         </div>
       </div>
 
-        {/* <div className='h-[12rem] w-full text-[#324d67] grid content-center text-center bg-[url("/images/pinkwave_2.svg")] overflow-hidden '>
-        </div> */}
-      <div className='h-[12rem] w-full text-[#324d67] grid content-center text-center bg-white overflow-hidden '>
-      {/* <div className='bg-[url("/images/bday1.jpg")] bg-fixed bg-cover bg-center bg-no-repeat w-full h-screen '></div> */}
-
-        <h1 ref={midSec} className='midSec self-center text-2xl md:text-3xl lg:text-4xl text-red-500  font-aug tracking-widest '>
+      <div className='h-[12rem] w-full grid content-center text-center bg-[#f5b2ca] overflow-hidden '>
+        <h1 ref={midSec} className='midSec self-center text-2xl md:text-3xl lg:text-4xl font-aug '>
           Personalized baked goods for you and your loved ones. 
         </h1>
       </div>
 
-      <div className=' bg-[url("/images/pinkwave.svg")] flex-column md:gap-4 h-[40rem] md:h-[46rem]  overflow-hidden lg:mx-auto lg:justify-center lg:flex sm:px-4 lg:px-24'>
+      <div className='flex-column md:gap-4 h-[40rem] md:h-[46rem]  overflow-hidden lg:mx-auto lg:justify-center lg:flex sm:px-4 lg:px-24'>
         <div className=' rounded-md my-auto px-6 lg:px-0 lg:w-1/3 mx-auto py-12 justify-center '>
           
           <h1 className='font-mont text-2xl text-black font-semibold text-left md:text-4xl'>Recently Purchased</h1>
@@ -125,8 +118,6 @@ const Landing = ({bannerData, products}) => {
             </p>
             </div>
           </div>
-          
-          
         </div>
       </div>
       
@@ -135,47 +126,11 @@ const Landing = ({bannerData, products}) => {
           
             <div className='bg-[rgba(0,0,0,0.5)] w-full h-full justify-center items-center flex'>
                 <div>
-                    <h2 className='text-red-200 text-4xl text-center font-mont font-semibold w-full md:text-6xl'>Joy baked into every bite.</h2>
-                    <p className='text-white font-hero text-base text-center md:text-2xl pt-4 md:pt-10 '>Happy to see you. Happier to serve you.</p>
-
+                    <h2 className='text-[#f5b2ca] text-4xl text-center font-mont font-bold w-full md:text-6xl'>Joy baked into every bite.</h2>
                 </div>
-
-              {/* <h2 className='text-gray-500 text-2xl text-center font-hero font-semibold  md:text-3xl'>CUSTOM CAKE ORDER</h2>
-              <p className='font-aug text-lg text-center md:text-4xl pb-4'>Made especially for you</p>
-              <p className='py-4 md:py-10  mx-auto md:text-lg text-xs '>We take Custom Design Cake pre-orders for your special occassion. Send us your design! </p>
-               */}
-            
             </div>
-            
         </div>
-        {/* <div className='w-full z-2 bg-white border-white border-2 h-[12rem] overflow-hidden'>
-          
-         
-           <img src='/images/cupcake.jpg' className='fixed contrast-50 w-full h-full object-cover object-center '></img> 
-           <div className='bg-[url("/images/cupcake.jpg")] bg-fixed bg-cover bg-center bg-no-repeat min-w-full h-screen '></div> 
-        </div> */}
-      
-      
-      {/* <div className='grid px-8 min-h-full h-[44rem] text-center mx-auto md:max-w-[1200px]'>
-        <div className=' my-auto overflow-hidden'>
-           <h2 className=' text-gray-500  text-2xl  font-hero font-semibold md:text-3xl md:py-8'>OTHER BAKED GOODS</h2>
-          <div className='h-[26rem] py-4  flex overflow-x-scroll px-4 gap-6 md:gap-10 md:h-[34rem] mt-2 '>
-            {products.map((e,i) => (
-              <div className='grid min-w-[16rem] md:h-[30rem] bg-white rounded-md overflow-hidden '>
-                  <div className='rounded-md w-full h-[18rem] md:h-[24rem]'>
-
-                  <img className='h-full w-full object-cover ' src={urlFor(e.image && e.image[0])} />
-                  </div>
-                  <div>
-                  <p className='self-center text-centermy-auto font-sans md:text-lg'>{e.name}</p>
-                  <p>$ {e.price}</p>
-                  </div>
-              </div>
-            ))}
-          </div>
-        </div>
-       
-      </div> */}
+    
       {/* <InstagramPosts /> */}
       <FooterBanner />
     </>
