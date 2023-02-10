@@ -22,7 +22,7 @@ const Landing = ({bannerData, products}) => {
   </div> */}
 
       {/* What we offer FIRST SECTION*/}
-      <div className='z-1 relative bg-white flex-column md:gap-4 h-[48rem] sm:h-[42rem]  overflow-hidden md:mx-auto md:justify-center md:flex md:px-20 lg:px-40 '>
+      <div className='z-10 relative bg-white flex-column md:gap-4 h-[48rem] sm:h-[42rem]  overflow-hidden md:mx-auto md:justify-center md:flex md:px-20 lg:px-40 xl:px-[14rem]'>
         {/* Left */}
         <div className='my-auto px-6 md:px-0 md:w-full mx-auto py-12 justify-center'>
           <h1 className='font-mont text-2xl text-black font-semibold text-left md:text-4xl'>We offer Custom Designed Cakes for every occasion</h1>
@@ -64,8 +64,8 @@ const Landing = ({bannerData, products}) => {
         </h1>
       </div>
 
-      <div className='z-1 relative bg-white flex-column md:gap-4 h-[40rem] md:h-[46rem] overflow-hidden lg:mx-auto lg:justify-center lg:flex sm:px-4 md:px-20 lg:px-40'>
-        <div className=' rounded-md my-auto px-6 lg:px-0 lg:w-1/3 mx-auto py-12 justify-center '>
+      <div className='z-10 relative bg-white flex-column md:gap-4 h-[40rem] md:h-[46rem] overflow-hidden lg:mx-auto lg:justify-center lg:flex sm:px-4 md:px-20 lg:px-40'>
+        <div className='rounded-md my-auto px-6 lg:px-0 lg:w-1/3 mx-auto py-12 justify-center '>
           <h1 className='font-mont text-2xl text-black font-semibold text-left md:text-4xl'>Recently Purchased</h1>
           <p className='text-black py-4'>We aim to have unique designed cake for all our patrons, so no cakes are built the same</p>
           <Link href='/menu'>
@@ -115,7 +115,7 @@ const Landing = ({bannerData, products}) => {
         </div>
       </div>
       
-      <div className='z-1 relative bg-[url("/images/IMG_9544_jpg.jpg")]  bg-cover my-auto flex-column md:gap-10 h-[20rem] md:h-[32rem]  overflow-hidden mx-auto items-center justify-center flex '>
+      <div className='z-10 relative bg-[url("/images/IMG_9544_jpg.jpg")]  bg-cover my-auto flex-column md:gap-10 h-[20rem] md:h-[32rem]  overflow-hidden mx-auto items-center justify-center flex '>
             <div className='bg-[rgba(0,0,0,0.5)] w-full h-full justify-center items-center flex'>
                 <div>
                     <h2 className='text-[#F48CAA] text-4xl text-center font-mont w-full lg:text-6xl'>Joy baked into every bite.</h2>
