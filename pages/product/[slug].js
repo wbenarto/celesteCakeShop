@@ -4,11 +4,14 @@ import { client, urlFor } from "../../lib/client";
 import { Product } from "../../components";
 import { useStateContext } from "../../context/StateContext";
 import Dropdown from "../../components/Dropdown";
+import { toast } from "react-hot-toast";
+import { useRouter } from "next/router";
 
 const ProductDetails = ({ product, products }) => {
   const { image, name, details, price } = product;
   const [index, setIndex] = useState(0);
   const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
+  const router = useRouter();
   const baseOptions = ["Classic Vanilla", "Chocolate", "Red Velvet", "Funfetti", "Lemon", "Strawberry", "Ube", "Biscoff"];
   const sizeOptions = ["6in - Small", "8in - Medium", "10in - Large", "12in - Extra Large"];
   const fondantOptions = [
@@ -21,21 +24,59 @@ const ProductDetails = ({ product, products }) => {
     "Swiss Meringue Buttercream - Biscoff",
     "Swiss Meringue Buttercream - Cream Cheese"
   ];
+  const fillingsOptions = [
+    "Strawberry",
+    "Raspberry",
+    "Lemon"
+  ]
   const [size, setSize] = useState(sizeOptions[0]);
   const [base, setBase] = useState(baseOptions[0]);
   const [fondant, setFondant] = useState(fondantOptions[0]);
+  const [fillings, setFillings] = useState(fillingsOptions[0]);
   const [message, setMessage] = useState("");
+  const [email, setEmail] = useState('')
 
-  console.log(message);
   const handleSelection = (e, title) => {
     if (title == "Size") {
       setSize(e);
     } else if (title == "Base") {
       setBase(e);
-    } else if (title == "Fondant") {
+    } else if (title == "Fondant / Buttercream") {
       setFondant(e);
+    } else if (title == "Fillings") {
+      setFillings(e)
     }
   };
+
+  const onInputChange = (e) => {
+    setEmail(e.target.value)
+  }
+
+  const sendMail = async () => {
+
+
+    const formData={ 
+      "size" : size, 
+      "baseFlavor" : base,
+      "outerFlavor": fondant,
+      "fillingFlavor": fillings,
+      "email": email,
+      "cakeDesign" : name
+
+    }
+    try {
+      console.log(formData)
+      const res = await fetch("/api/mail2", {
+        method: "POST",
+        body: JSON.stringify(formData),
+      });
+      console.log(await res.json())
+      toast.success("Thank you for your order inquiry!");
+      router.push("/menu");
+    } catch (err) {
+      console.log(err);
+    }
+  }
 
   const handleBuyNow = () => {
     onAdd(product, qty);
@@ -60,13 +101,13 @@ const ProductDetails = ({ product, products }) => {
           />
         </div>
         <div className="mt-4  rounded-lg p-4 sm:h-[auto] sm:col-span-5 md:col-span-5 sm:mt-0 ">
-          <div className=" text-black  pb-10">
+          <div className=" text-black  pb-4">
             <h1 className="text-2xl p-2 font-bold sm:text-3xl md:text-5xl text-[#F48CAA] border-gray-600 border-b-2 md:py-8">
               {name}
             </h1>
-            <p className="sm:text-2xl min-h-[8rem] p-2 md:py-8">{details}</p>
+            <p className="sm:text-2xl p-2 md:py-8">{details}</p>
 
-            <div className="grid">
+            <div className="grid bg-gray-200">
               {/* Size*/}
               <Dropdown
                 options={sizeOptions}
@@ -86,13 +127,33 @@ const ProductDetails = ({ product, products }) => {
               {/* Fondant Flavor */}
               <Dropdown
                 options={fondantOptions}
-                title="Fondant"
+                title="Fondant / Buttercream"
                 selection={fondant}
                 handleSelection={handleSelection}
               />
 
+              {/* Fillings Flavor */}
+              <Dropdown
+                options={fillingsOptions}
+                title="Fillings"
+                selection={fillings}
+                handleSelection={handleSelection}
+              />
+              <p className='text-gray-400 text-center text-xs mt-[-5px]'>* Fillings are additional cost</p>
+              <div className="flex-column p-4">
+                <input
+                  className="flex w-full p-2 border-2 rounded-md "
+                  id="email"
+                  type="text"
+                  name="email"
+                  placeholder="Email"
+                  onChange={onInputChange}
+                  required
+                />
+              </div>
+              
               {/* Message */}
-              <div className="flex py-2 items-center ">
+              {/* <div className="flex py-2 items-center ">
                 <p className="p-1 text-sm w-24 text-gray-400 font-bold">Birthday Message: </p>
                 <input
                   type="text"
@@ -106,7 +167,7 @@ const ProductDetails = ({ product, products }) => {
                 ) : (
                   <></>
                 )}
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -114,10 +175,12 @@ const ProductDetails = ({ product, products }) => {
             {/* <p className="w-1/4 text-center my-auto text-3xl font-bold md:text-4xl">
               ${price}
             </p> */}
-            <button className="w-3/4 h-full  bg-[#F48CAA]  rounded-full grid ">
+            <button 
+              onClick={()=>sendMail()}
+              className="w-3/4 h-full  bg-[#F48CAA]  rounded-full grid ">
               <p
                 className=" my-auto font-bold text-white text-center"
-                onClick={() => onAdd(product, 1, base, fondant, message)}
+                // onClick={() => onAdd(product, 1, base, fondant, message)}
               >
                 GET A QUOTE
               </p>
