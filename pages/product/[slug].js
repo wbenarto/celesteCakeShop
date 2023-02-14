@@ -1,5 +1,4 @@
 import React, { useState, Fragment } from "react";
-import { AiFillCaretDown } from "react-icons/ai";
 import { client, urlFor } from "../../lib/client";
 import { Product } from "../../components";
 import { useStateContext } from "../../context/StateContext";
@@ -54,7 +53,6 @@ const ProductDetails = ({ product, products }) => {
 
   const sendMail = async () => {
 
-
     const formData={ 
       "size" : size, 
       "baseFlavor" : base,
@@ -65,7 +63,6 @@ const ProductDetails = ({ product, products }) => {
 
     }
     try {
-      console.log(formData)
       const res = await fetch("/api/mail2", {
         method: "POST",
         body: JSON.stringify(formData),
@@ -80,7 +77,6 @@ const ProductDetails = ({ product, products }) => {
 
   const handleBuyNow = () => {
     onAdd(product, qty);
-
     setShowCart(true);
   };
 
@@ -151,30 +147,12 @@ const ProductDetails = ({ product, products }) => {
                   required
                 />
               </div>
-              
-              {/* Message */}
-              {/* <div className="flex py-2 items-center ">
-                <p className="p-1 text-sm w-24 text-gray-400 font-bold">Birthday Message: </p>
-                <input
-                  type="text"
-                  className="px-2 flex items-center justify-between w-full border-gray-200 border-2 bg-white rounded-md h-10 text-sm md:text-base"
-                  onChange={(e) => setMessage(e.target.value)}
-                />
-                {message.length >= 30 ? (
-                  <p className="absolute text-sm text-center mx-auto bg-red-200 mt-24">
-                    Message must be less than 30 characters
-                  </p>
-                ) : (
-                  <></>
-                )}
-              </div> */}
+    
             </div>
           </div>
 
           <div className="mb-0 p-2 mt-2 border-t-2 border-gray-600 h-[4rem] justify-center flex gap-2 md:mt-8 ">
-            {/* <p className="w-1/4 text-center my-auto text-3xl font-bold md:text-4xl">
-              ${price}
-            </p> */}
+
             <button 
               onClick={()=>sendMail()}
               className="w-3/4 h-full  bg-[#F48CAA]  rounded-full grid ">
@@ -233,8 +211,6 @@ export const getStaticProps = async ({ params: { slug } }) => {
 
   const product = await client.fetch(query);
   const products = await client.fetch(productsQuery);
-
-  // console.log(product);
 
   return {
     props: { products, product },
