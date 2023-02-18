@@ -11,7 +11,16 @@ const ProductDetails = ({ product, products }) => {
   const [index, setIndex] = useState(0);
   const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
   const router = useRouter();
-  const baseOptions = ["Classic Vanilla", "Chocolate", "Red Velvet", "Funfetti", "Lemon", "Strawberry", "Ube", "Biscoff"];
+  const baseOptions = [
+    "Classic Vanilla", 
+    "Chocolate",
+    "White Chocolate", 
+    "Red Velvet w/ Cream Cheese", 
+    "Funfetti", 
+    "Lemon", 
+    "Strawberry", 
+    "Ube", 
+    "Biscoff"];
   const sizeOptions = ["6in - Small", "8in - Medium", "10in - Large", "12in - Extra Large"];
   const fondantOptions = [
     "Fondant Layer - Vanilla",
@@ -26,7 +35,9 @@ const ProductDetails = ({ product, products }) => {
   const fillingsOptions = [
     "Strawberry",
     "Raspberry",
-    "Lemon"
+    "Lemon Curd",
+    "White Chocolate",
+    "Milk or Dark Chocolate Ganache"
   ]
   const [size, setSize] = useState(sizeOptions[0]);
   const [base, setBase] = useState(baseOptions[0]);
