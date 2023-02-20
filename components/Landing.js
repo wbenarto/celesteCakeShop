@@ -114,14 +114,20 @@ const Landing = ({bannerData, products}) => {
           </div>
         </div>
       </div>
+
+      {/* Word on the street
+      <div className='z-10 relative h-[6rem] md:h-[40rem] w-full grid content-center text-center bg-[#F48CAA] text-white overflow-hidden '>
+        <h1 className='font-mont text-2xl text-black font-bold text-left md:text-4xl'>WORD ON THE STREET</h1>
+
+      </div> */}
       
       <div className='z-10 relative bg-[url("/images/IMG_9544_jpg.jpg")]  bg-cover my-auto flex-column md:gap-10 h-[20rem] md:h-[32rem]  overflow-hidden mx-auto items-center justify-center flex '>
-            <div className='bg-[rgba(0,0,0,0.5)] w-full h-full justify-center items-center flex'>
-                <div>
-                    <h2 className='text-[#F48CAA] text-4xl text-center font-mont w-full lg:text-6xl'>Joy baked into every bite.</h2>
-                </div>
-            </div>
-        </div>
+          <div className='bg-[rgba(0,0,0,0.5)] w-full h-full justify-center items-center flex'>
+              <div>
+                  <h2 className='text-[#F48CAA] text-4xl text-center font-mont w-full lg:text-6xl'>Joy baked into every bite.</h2>
+              </div>
+          </div>
+      </div>
     
       {/* <InstagramPosts /> */}
       <FooterBanner />
