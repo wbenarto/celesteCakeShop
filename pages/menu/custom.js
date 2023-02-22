@@ -35,7 +35,7 @@ const custom = () => {
       setSize(e);
     } else if (title == "Base") {
       setBase(e);
-    } else if (title == "Fondant") {
+    } else if (title == "Fondant / Buttercream") {
       setFondant(e);
     } else if (title == 'Filling') {
       setFilling(e)
@@ -85,28 +85,28 @@ const custom = () => {
     console.log(formData)
     console.log(imageUpload)
 
-    try {
-      const result = await fetch("/api/sanity", {
-        method: "POST",
-        body: JSON.stringify({
-          customer: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          pickupDate: formData.date,
-          description: formData.description,
-          size: formData.size,
-          baseFlavor: formData.baseFlavor,
-          outerFlavor: formData.outerFlavor,
-          fillingFlavor: formData.fillingFlavor,
-          imageUrl: formData.imageFile,
-        })
-      })
+    // try {
+    //   const result = await fetch("/api/sanity", {
+    //     method: "POST",
+    //     body: JSON.stringify({
+    //       customer: formData.name,
+    //       email: formData.email,
+    //       phone: formData.phone,
+    //       pickupDate: formData.date,
+    //       description: formData.description,
+    //       size: formData.size,
+    //       baseFlavor: formData.baseFlavor,
+    //       outerFlavor: formData.outerFlavor,
+    //       fillingFlavor: formData.fillingFlavor,
+    //       imageUrl: formData.imageFile,
+    //     })
+    //   })
       
-      console.log('Result after fetch' , result)
+    //   console.log('Result after fetch' , result)
       
-    } catch (err) {
-      console.log(err)
-    }
+    // } catch (err) {
+    //   console.log(err)
+    // }
 
 
     try {
@@ -116,7 +116,7 @@ const custom = () => {
         body: JSON.stringify(formData),
       });
       console.log(await res.json())
-      toast.success("Thank you for your order!");
+      toast.success("Thank you for your inquiry! We will get back to you ASAP.");
       router.push("/menu");
     } catch (err) {
       console.log(err);
@@ -179,10 +179,10 @@ const custom = () => {
             />
           </div>
           <div className="flex-column py-2">
-            <label className="flex my-4 pb-2 font-bold text-black" htmlFor="name">
+            <label className="flex mt-4 font-bold text-black" htmlFor="name">
               Order Details
             </label>
-            <p className='text-black'>Please allow 2 weeks to place custom order cakes</p>
+            <p className='text-black text-sm py-2'>Please allow 2 weeks to place custom order cakes.</p>
             <input
               className="flex w-full p-2 border-2 rounded-md  "
               id="date"
@@ -196,8 +196,8 @@ const custom = () => {
             {/* <label className="flex pb-2 font-bold text-black" htmlFor="description">
               Description
             </label> */}
-            <input
-              className="flex w-full min-h-32 p-2 border-2 rounded-md  overflow-wrap "
+            <textarea
+              className="flex w-full h-32 p-2  border-2 rounded-md  overflow-wrap "
               id="description"
               type="text"
               name="description"
@@ -229,7 +229,7 @@ const custom = () => {
               {/* Fondant Flavor */}
               <Dropdown
                 options={fondantOptions}
-                title="Fondant"
+                title="Fondant / Buttercream"
                 name='outerFlavor'
                 selection={fondant}
                 handleSelection={handleSelection}
@@ -270,7 +270,9 @@ const custom = () => {
               />
             
           </div>
-          <div className="flex-column justify-center flex py-4">
+          <p className='text-black text-sm py-2 text-center'>We will respond to your inquiries with pricing estimates.</p>
+
+          <div className="flex-column justify-center flex pb-4">
             <button
               className=" bg-[#F48CAA] w-40 h-10 gap-2 md:w-[150px] hover:animate-wiggle md:h-14 rounded-full mt-4 text-center flex justify-center text-white items-center"
               type="submit"

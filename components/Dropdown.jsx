@@ -22,7 +22,7 @@ const Dropdown = ({title, options, selection, handleSelection, name}) => {
                 className="flex py-2 items-center "
                 name="testname"
               >
-                  <p className="p-1 text-sm text-gray-400 w-24 font-bold">{title} :</p>
+                  <p className="p-1 text-sm text-gray-400 w-36 font-bold">{title} :</p>
                 <Transition
                   as={Fragment}
                   enter="transition ease-out duration-100"
