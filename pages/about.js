@@ -80,8 +80,12 @@ function about() {
                         <h1  className=' text-2xl font-bold text-gray-600'>CHOCOLATE</h1>
                         {/* <p  className='text-sm md:text-lg font-serif font-hairline'>An exquisite chocolate sponge layered with chocolate meringue (or the option of vanilla) buttercream and thick chocolate sauce, with a rich flavour. With the option of vanilla or chocolate buttercream</p> */}
                     </div>
+                    <div className='my-10 px-4  grid '>
+                        <h1  className=' text-2xl font-bold text-gray-600'>WHITE CHOCOLATE</h1>
+                        {/* <p  className='text-sm md:text-lg font-serif font-hairline'>An exquisite chocolate sponge layered with chocolate meringue (or the option of vanilla) buttercream and thick chocolate sauce, with a rich flavour. With the option of vanilla or chocolate buttercream</p> */}
+                    </div>
                     <div className='my-10 px-4  grid'>
-                        <h1  className=' text-2xl font-bold my- text-gray-600'>RED VELVET</h1>
+                        <h1  className=' text-2xl font-bold my- text-gray-600'>RED VELVET w/ CREAM CHEESE</h1>
                         {/* <p  className='text-sm md:text-lg font-serif font-hairline'>Rich Chocolate cake layered with thick espresso chocolate sauce topped with artisan coffee buttercream or classic vanilla buttercream</p> */}
                     </div>
                     <div className='my-10 px-4  grid'>
