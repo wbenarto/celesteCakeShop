@@ -72,39 +72,39 @@ function about() {
                 <h2 className={`transition-all duration-1000 pt-4 pb-4 text-gray-600 font-black font-display ${baseFlavor ? 'text-4xl' : ''}`}>CHOOSE BASE FLAVOR</h2>
                 {/* <h1 className='my-8 font-hero text-gray-600 text-lg'>BASE</h1> */}
                 <div className='w-full  md:max-w-[900px] mx-auto  grid '>
-                    <div className='my-10 px-4  grid'>
+                    <div className='my-10 px-2  grid'>
                         <h1 className=' text-2xl font-bold text-gray-600'>CLASSIC VANILLA</h1>
                         {/* <p className='text-sm md:text-lg font-serif font-hairline'>Vanilla infused cake layered with wild homemade strawberry or raspberry preserve and finished with a delicate vanilla buttercream</p> */}
                     </div>
-                    <div className='my-10 px-4  grid '>
+                    <div className='my-10 px-2  grid '>
                         <h1  className=' text-2xl font-bold text-gray-600'>CHOCOLATE</h1>
                         {/* <p  className='text-sm md:text-lg font-serif font-hairline'>An exquisite chocolate sponge layered with chocolate meringue (or the option of vanilla) buttercream and thick chocolate sauce, with a rich flavour. With the option of vanilla or chocolate buttercream</p> */}
                     </div>
-                    <div className='my-10 px-4  grid '>
+                    <div className='my-10 px-2  grid '>
                         <h1  className=' text-2xl font-bold text-gray-600'>WHITE CHOCOLATE</h1>
                         {/* <p  className='text-sm md:text-lg font-serif font-hairline'>An exquisite chocolate sponge layered with chocolate meringue (or the option of vanilla) buttercream and thick chocolate sauce, with a rich flavour. With the option of vanilla or chocolate buttercream</p> */}
                     </div>
-                    <div className='my-10 px-4  grid'>
+                    <div className='my-10 px-2  grid'>
                         <h1  className=' text-2xl font-bold my- text-gray-600'>RED VELVET w/ CREAM CHEESE</h1>
                         {/* <p  className='text-sm md:text-lg font-serif font-hairline'>Rich Chocolate cake layered with thick espresso chocolate sauce topped with artisan coffee buttercream or classic vanilla buttercream</p> */}
                     </div>
-                    <div className='my-10 px-4  grid'>
+                    <div className='my-10 px-2  grid'>
                         <h1  className=' text-2xl font-bold my- text-gray-600'>FUNFETTI</h1>
                         {/* <p  className='text-sm md:text-lg font-serif font-hairline'>Rich Chocolate cake layered with thick espresso chocolate sauce topped with artisan coffee buttercream or classic vanilla buttercream</p> */}
                     </div>
-                    <div className='my-10 px-4  grid'>
+                    <div className='my-10 px-2  grid'>
                         <h1  className=' text-2xl font-bold my- text-gray-600'>LEMON</h1>
                         {/* <p  className='text-sm md:text-lg font-serif font-hairline'>Rich Chocolate cake layered with thick espresso chocolate sauce topped with artisan coffee buttercream or classic vanilla buttercream</p> */}
                     </div>
-                    <div className='my-10 px-4  grid'>
+                    <div className='my-10 px-2  grid'>
                         <h1  className=' text-2xl font-bold my- text-gray-600'>STRAWBERRY</h1>
                         {/* <p  className='text-sm md:text-lg font-serif font-hairline'>Rich Chocolate cake layered with thick espresso chocolate sauce topped with artisan coffee buttercream or classic vanilla buttercream</p> */}
                     </div>
-                    <div className='my-10 px-4  grid'>
+                    <div className='my-10 px-2  grid'>
                         <h1  className=' text-2xl font-bold my- text-gray-600'>UBE</h1>
                         {/* <p  className='text-sm md:text-lg font-serif font-hairline'>Rich Chocolate cake layered with thick espresso chocolate sauce topped with artisan coffee buttercream or classic vanilla buttercream</p> */}
                     </div>
-                    <div className='my-10 px-4  grid'>
+                    <div className='my-10 px-2  grid'>
                         <h1  className=' text-2xl font-bold my- text-gray-600'>BISCOFF</h1>
                         {/* <p  className='text-sm md:text-lg font-serif font-hairline'>Rich Chocolate cake layered with thick espresso chocolate sauce topped with artisan coffee buttercream or classic vanilla buttercream</p> */}
                     </div>
@@ -115,32 +115,32 @@ function about() {
                 <h2 className={`pt-4 pb-4 transition-all duration-1000 text-gray-600 font-black font-display  ${layerFlavor ? ' text-4xl' : ''}`}>CHOOSE OUTER LAYER OPTION</h2>
                 {/* <h1 className='my-8 font-hero text-gray-600 text-lg'>BASE</h1> */}
                 <div className='w-full  md:max-w-[900px] mx-auto  grid '>
-                    <div className='my-4 px-4  grid'>
+                    <div className='my-4 px-2  grid'>
                         <h1 className='my-4 text-2xl font-bold text-gray-600'>OPTION 1: FONDANT LAYER</h1>
                         <p className='text-sm md:text-lg'>Vanilla infused cake layered with wild homemade strawberry or raspberry preserve and finished with a delicate vanilla buttercream</p>
                     </div>
-                    <div className='my-4 px-4  grid'>
+                    <div className='my-4 px-2  grid'>
                         <h1 className='my-4 text-2xl font-bold text-gray-600'>OPTION 2: SWISS MERINGUE BUTTERCREAM</h1>
                     </div>
-                    <div className='my-2 px-4  grid'>
+                    <div className='my-2 px-2  grid'>
                         <h1 className='my-2 text-2xl font-bold text-gray-600'>VANILLA</h1>
                     </div>
-                    <div className='my-2 px-4  grid '>
+                    <div className='my-2 px-2  grid '>
                         <h1  className='my-2 text-2xl font-bold text-gray-600'>CHOCOLATE</h1>
                     </div>
-                    <div className='my-2 px-4  grid'>
+                    <div className='my-2 px-2  grid'>
                         <h1  className='my-2 text-2xl font-bold my- text-gray-600'>STRAWBERRY</h1>
                     </div>
-                    <div className='my-2 px-4  grid'>
+                    <div className='my-2 px-2  grid'>
                         <h1 className='my-2 text-2xl font-bold text-gray-600'>LEMON</h1>
                     </div>
-                    <div className='my-2 px-4  grid'>
+                    <div className='my-2 px-2  grid'>
                         <h1 className='my-2 text-2xl font-bold text-gray-600'>UBE</h1>
                     </div>
-                    <div className='my-2 px-4  grid'>
+                    <div className='my-2 px-2  grid'>
                         <h1 className='my-2 text-2xl font-bold text-gray-600'>BISCOFF</h1>
                     </div>
-                    <div className='my-2 px-4  grid'>
+                    <div className='my-2 px-2  grid'>
                         <h1 className='my-2 text-2xl font-bold text-gray-600'>CREAM CHEESE</h1>
                     </div>
                 </div>
@@ -152,19 +152,21 @@ function about() {
                 <div className='w-full  md:max-w-[900px] mx-auto pt-4 grid '>
                     <h2> (optional)</h2>
                     <h2>Fillings are additional cost </h2>
-                    <div className='my-10 px-4  grid'>
+                    <div className='my-2 px-2  grid'>
                         <h1 className='my-4 text-2xl font-bold text-gray-600'>STRAWBERRY</h1>
-                        <p className='text-sm md:text-lg'>Vanilla infused cake layered with wild homemade strawberry or raspberry preserve and finished with a delicate vanilla buttercream</p>
                     </div>
-                    <div className='my-10 px-4  grid '>
+                    <div className='my-2 px-2  grid '>
                         <h1  className='my-4 text-2xl font-bold text-gray-600'>RASPBERRY</h1>
-                        <p  className='text-sm md:text-lg'>An exquisite dark chocolate sponge layered with chocolate meringue (or the option of vanilla) buttercream and thick chocolate sauce, with a rich flavour. With the option of vanilla or chocolate buttercream</p>
                     </div>
-                    <div className='my-10 px-4  grid'>
-                        <h1  className='my-4 text-2xl font-bold my- text-gray-600'>LEMON</h1>
-                        <p  className='text-sm md:text-lg'>Rich Chocolate cake layered with thick espresso chocolate sauce topped with artisan coffee buttercream or classic vanilla buttercream</p>
+                    <div className='my-2 px-2  grid'>
+                        <h1  className='my-4 text-2xl font-bold my- text-gray-600'>LEMON CURD</h1>
                     </div>
-                    
+                    <div className='my-2 px-2  grid'>
+                        <h1  className='my-4 text-2xl font-bold my- text-gray-600'>WHITE CHOCOLATE GANACHE</h1>
+                    </div>
+                    <div className='my-2 px-2  grid'>
+                        <h1  className='my-4 text-2xl font-bold my- text-gray-600'>MILK OR DARK CHOCOLATE GANACHE</h1>
+                    </div>
                 </div>
                 <p></p>
             </div>

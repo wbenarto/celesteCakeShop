@@ -6,23 +6,35 @@ import Dropdown from '../../components/Dropdown'
 const custom = () => {
   const [base64, setBase64] = useState(null)
   const router = useRouter();
-  const baseOptions = ["Classic Vanilla", "Chocolate", "Red Velvet", "Funfetti", "Lemon", "Strawberry", "Ube", "Biscoff"];
+  const baseOptions = [
+    "Classic Vanilla", 
+    "Chocolate",
+    "White Chocolate", 
+    "Red Velvet w/ Cream Cheese", 
+    "Funfetti", 
+    "Lemon", 
+    "Strawberry", 
+    "Ube", 
+    "Biscoff"
+  ];
   const sizeOptions = ["6 inch", "8 inch", "10 inch", "12 inch"];
   const fondantOptions = [
-    "Vanilla Fondant",
-    "Vanilla Buttercream",
-    "Chocolate Buttercream",
-    "Strawberry Buttercream", 
-    "Lemon Buttercream", 
-    "Ube Buttercream",
-    "Biscoff Buttercream",
-    "Cream Cheese Buttercream"
+    "Fondant Layer - Vanilla",
+    "Swiss Meringue Buttercream - Vanilla",
+    "Swiss Meringue Buttercream - Chocolate",
+    "Swiss Meringue Buttercream - Strawberry",
+    "Swiss Meringue Buttercream - Lemon",
+    "Swiss Meringue Buttercream - Ube",
+    "Swiss Meringue Buttercream - Biscoff",
+    "Swiss Meringue Buttercream - Cream Cheese"
   ];
   const fillingOptions = [
     "None",
     "Strawberry",
     "Raspberry",
-    "Lemon",
+    "Lemon Curd",
+    "White Chocolate",
+    "Milk or Dark Chocolate Ganache"
   ];
   const [size, setSize] = useState(sizeOptions[0]);
   const [base, setBase] = useState(baseOptions[0]);
