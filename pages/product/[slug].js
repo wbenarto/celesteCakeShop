@@ -20,7 +20,8 @@ const ProductDetails = ({ product, products }) => {
     "Lemon", 
     "Strawberry", 
     "Ube", 
-    "Biscoff"];
+    "Biscoff"
+  ];
   const sizeOptions = ["6in - Small", "8in - Medium", "10in - Large", "12in - Extra Large"];
   const fondantOptions = [
     "Fondant Layer - Vanilla",
