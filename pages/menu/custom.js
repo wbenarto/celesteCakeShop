@@ -4,7 +4,6 @@ import { toast } from "react-hot-toast";
 import Dropdown from '../../components/Dropdown'
 
 const custom = () => {
-  const [imageUpload, setImageUpload] = useState(null)
   const [base64, setBase64] = useState(null)
   const router = useRouter();
   const baseOptions = ["Classic Vanilla", "Chocolate", "Red Velvet", "Funfetti", "Lemon", "Strawberry", "Ube", "Biscoff"];
@@ -66,7 +65,6 @@ const custom = () => {
 
     const formData = {};
     Array.from(e.currentTarget.elements).forEach((field) => {
-      console.log(field)
       if (!field.name) return;
       
       formData[field.name] = field.value;
@@ -74,43 +72,13 @@ const custom = () => {
         formData[field.name] = Number(field.value)
       }
       if (field.name == 'imageFile') {
-        console.log(field.name)
-        console.log(base64)
         formData[field.name] = base64
-        console.log(formData)
       }
       
     });
-    console.log(base, fondant, filling)
-    console.log(formData)
-    console.log(imageUpload)
-
-    // try {
-    //   const result = await fetch("/api/sanity", {
-    //     method: "POST",
-    //     body: JSON.stringify({
-    //       customer: formData.name,
-    //       email: formData.email,
-    //       phone: formData.phone,
-    //       pickupDate: formData.date,
-    //       description: formData.description,
-    //       size: formData.size,
-    //       baseFlavor: formData.baseFlavor,
-    //       outerFlavor: formData.outerFlavor,
-    //       fillingFlavor: formData.fillingFlavor,
-    //       imageUrl: formData.imageFile,
-    //     })
-    //   })
-      
-    //   console.log('Result after fetch' , result)
-      
-    // } catch (err) {
-    //   console.log(err)
-    // }
-
+   
 
     try {
-      console.log(formData)
       const res = await fetch("/api/mail", {
         method: "POST",
         body: JSON.stringify(formData),
@@ -153,9 +121,6 @@ const custom = () => {
             />
           </div>
           <div className="flex-column py-2">
-            {/* <label className="flex pb-2 font-bold text-black" htmlFor="email">
-              Email
-            </label> */}
             <input
               className="flex w-full p-2 border-2 rounded-md "
               id="email"
@@ -166,9 +131,6 @@ const custom = () => {
             />
           </div>
           <div className="flex-column py-2">
-            {/* <label className="flex pb-2 font-bold text-black" htmlFor="phone">
-              Phone
-            </label> */}
             <input
               className="flex w-full p-2 border-2 rounded-md "
               id="phone"
@@ -193,9 +155,6 @@ const custom = () => {
             />
           </div>
           <div className="flex-column py-2">
-            {/* <label className="flex pb-2 font-bold text-black" htmlFor="description">
-              Description
-            </label> */}
             <textarea
               className="flex w-full h-32 p-2  border-2 rounded-md  overflow-wrap "
               id="description"
@@ -264,7 +223,6 @@ const custom = () => {
                 onChange={async (event) => {
                   let convertImage = await getBase64(event.target.files[0])
                   console.log(convertImage)
-                  // setImageUpload(event.target.files[0]);
                 }}
                 required
               />
