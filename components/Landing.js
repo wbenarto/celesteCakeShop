@@ -115,16 +115,27 @@ const Landing = ({bannerData, products}) => {
         </div>
       </div>
 
-      {/* Word on the street
-      <div className='z-10 relative h-[6rem] md:h-[40rem] w-full grid content-center text-center bg-[#F48CAA] text-white overflow-hidden '>
-        <h1 className='font-mont text-2xl text-black font-bold text-left md:text-4xl'>WORD ON THE STREET</h1>
-
-      </div> */}
+      
+      <div className='z-10 relative h-[48rem] md:h-[60rem] w-full grid place-items-center content-center text-center bg-[#F48CAA] text-white overflow-hidden '>
+        <h1 className='font-mont text-2xl text-white font-semibold text-left md:text-4xl mb-10 md:mb-14'>WORD ON THE STREET</h1>
+        <div className='text-white w-[80%] md:text-2xl border-2 py-6 px-2 md:p-12 border-amber-200 mb-8 md:mb-10  shadow-lg shadow-amber-200/50'>
+          <h3 className='font-semibold mb-2 md:mb-4'>"Every detail is perfect. This is my best birthday cake ever!!"</h3>
+          <p>Sally. E</p>
+        </div>
+        <div className='text-white w-[80%] md:text-2xl border-2 py-6 px-2 md:p-12 border-amber-200 mb-8 md:mb-10 shadow-lg shadow-amber-200/50'>
+          <h3 className='font-semibold mb-2 md:mb-4'>"CUTEST CAKE EVER! It was so yummy! Go follow her and get your next cake from her! Thank you, Anna!"</h3>
+          <p>Monica. J</p>
+        </div>
+        <div className='text-white w-[80%] md:text-2xl border-2 py-6 px-2 md:p-12 border-amber-200 mb-8 md:mb-10 shadow-lg shadow-amber-200/50'>
+          <h3 className='font-semibold mb-2 md:mb-4'>"To say I love it, is an understatement because I LOOOOVE everything about this. It's the most beautiful cake I've ever seen. Boy bands forever! Backstreet's Back! Thank you!"</h3>
+          <p>C. Rim</p>
+        </div>
+      </div>
       
       <div className='z-10 relative bg-[url("/images/IMG_9544_jpg.jpg")]  bg-cover my-auto flex-column md:gap-10 h-[20rem] md:h-[32rem]  overflow-hidden mx-auto items-center justify-center flex '>
           <div className='bg-[rgba(0,0,0,0.5)] w-full h-full justify-center items-center flex'>
               <div>
-                  <h2 className='text-[#F48CAA] text-4xl text-center font-mont w-full lg:text-6xl'>Joy baked into every bite.</h2>
+                  <h2 className='text-white font-semibold tracking-widest text-4xl text-center font-mont w-full lg:text-6xl'>Joy baked into every bite.</h2>
               </div>
           </div>
       </div>
