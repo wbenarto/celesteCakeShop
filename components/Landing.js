@@ -116,17 +116,17 @@ const Landing = ({bannerData, products}) => {
       </div>
 
       
-      <div className='z-10 relative h-[48rem] md:h-[60rem] w-full grid place-items-center content-center text-center bg-[#F48CAA] text-white overflow-hidden '>
-        <h1 className='font-mont text-2xl text-white font-semibold text-left md:text-4xl mb-10 md:mb-14'>WORD ON THE STREET</h1>
-        <div className='text-white w-[80%] md:text-2xl border-2 py-6 px-2 md:p-12 border-amber-200 mb-8 md:mb-10  shadow-lg shadow-amber-200/50'>
+      <div className='z-10 relative h-[40rem] md:h-[60rem] w-full grid place-items-center content-center text-center bg-[#F48CAA] text-white overflow-hidden '>
+        <h1 className='font-mont text-2xl text-white mt-10 font-semibold text-left md:text-4xl mb-10 md:mb-14'>WORD ON THE STREET</h1>
+        <div className='text-white w-[80%] md:w-[60%] md:text-2xl border-2 py-6 px-2 md:p-12 border-amber-200 mb-8 md:mb-10  shadow-lg shadow-amber-200/50'>
           <h3 className='font-semibold mb-2 md:mb-4'>"Every detail is perfect. This is my best birthday cake ever!!"</h3>
           <p>Sally. E</p>
         </div>
-        <div className='text-white w-[80%] md:text-2xl border-2 py-6 px-2 md:p-12 border-amber-200 mb-8 md:mb-10 shadow-lg shadow-amber-200/50'>
+        <div className='text-white w-[80%] md:w-[60%] md:text-2xl border-2 py-6 px-2 md:p-12 border-amber-200 mb-8 md:mb-10 shadow-lg shadow-amber-200/50'>
           <h3 className='font-semibold mb-2 md:mb-4'>"CUTEST CAKE EVER! It was so yummy! Go follow her and get your next cake from her! Thank you, Anna!"</h3>
           <p>Monica. J</p>
         </div>
-        <div className='text-white w-[80%] md:text-2xl border-2 py-6 px-2 md:p-12 border-amber-200 mb-8 md:mb-10 shadow-lg shadow-amber-200/50'>
+        <div className='text-white w-[80%] md:w-[60%] md:text-2xl border-2 py-6 px-2 md:p-12 border-amber-200 mb-8 md:mb-10 shadow-lg shadow-amber-200/50'>
           <h3 className='font-semibold mb-2 md:mb-4'>"To say I love it, is an understatement because I LOOOOVE everything about this. It's the most beautiful cake I've ever seen. Boy bands forever! Backstreet's Back! Thank you!"</h3>
           <p>C. Rim</p>
         </div>

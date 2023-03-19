@@ -56,8 +56,8 @@ const Navbar = () => {
         <>
 
         <div className={scrollDown ? 
-        'fixed z-10 top-0   invisible sm:visible left-0 w-full h-24 bg-[#F48CAA]  flex  justify-center items-center gap-10 lg:gap-24 font-hero duration-500 transition-all' : 
-        'fixed z-10 top-0 shadow-xl invisible sm:visible  left-0 w-full h-0 mt-[-100px] flex  justify-center items-center gap-10 lg:gap-24 font-hero duration-500 transition-all'}>
+        'fixed z-40 top-0   invisible sm:visible left-0 w-full h-24 bg-[#F48CAA]  flex  justify-center items-center gap-10 lg:gap-24 font-hero duration-500 transition-all' : 
+        'fixed z-40 top-0 shadow-xl invisible sm:visible  left-0 w-full h-0 mt-[-100px] flex  justify-center items-center gap-10 lg:gap-24 font-hero duration-500 transition-all'}>
             <Link href='/'>
                 <div className=' items-center flex px-4 py-4 h-10 navLink rounded-full'>
                     <button className='text-sm font-semibold text-white hover:text-gray-300'>
