@@ -128,7 +128,7 @@ const Landing = ({bannerData, products}) => {
         {/* Left */}
         <div className='my-auto px-6 md:px-0 md:w-full mx-auto py-12 justify-center'>
           <h1 className='anim-me font-mont text-2xl text-gray-600 font-bold text-left md:text-4xl'>We offer Custom Designed Cakes for every occasion</h1>
-          <p className='anim-me md:text-xl font-medium text-black py-4'>Send us your design! Then choose your base, fondant, and filling flavors from our delicious options  </p>
+          <p className='anim-me md:text-xl font-medium text-black py-4'>Send us your design! Then choose your base, fondant, and filling flavors from our delicious options. Available for pickup and delivery in Orlando.  </p>
           <div className='anim-me w-full'>
             <div className='scroll-trigger flex gap-2 py-2 px-4 '>
               <div className='text-[#F48CAA] w-14 h-14 md:w-20 md:h-20 rounded-md '><FaBirthdayCake className='w-full h-full p-2'/></div>

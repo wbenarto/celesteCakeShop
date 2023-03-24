@@ -11,7 +11,7 @@ class MyDocument extends Document {
     return (
       <Html className='scroll-smooth'>
         <Head>
-          <title>Celeste Cakeshop</title>
+          <title>Celeste Cakeshop, Orlando's Best Custom Design Cakeshop</title>
           <meta name="description" content="Custom Design cakes in Orlando" />
           <meta name="keywords" content="Orlando, Bakery, Cake, Cakeshop, Custom, Custom made, Florida, Custom Cake" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
