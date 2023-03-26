@@ -11,7 +11,10 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
 const Landing = ({bannerData, products}) => {
     gsap.registerPlugin(ScrollTrigger)
     const midSec = useRef(null)
-  
+
+    useEffect(()=> {
+      gsap.fromTo(".scroll-trigger", {x: -100},{ x: 0, duration: 1})
+    })
   return (
     <>
       <HeroBanner />
@@ -25,24 +28,24 @@ const Landing = ({bannerData, products}) => {
       <div className='z-10 relative bg-white flex-column md:gap-4 h-[48rem] sm:h-[42rem]  overflow-hidden md:mx-auto md:justify-center md:flex md:px-20 lg:px-40 xl:px-[14rem]'>
         {/* Left */}
         <div className='my-auto px-6 md:px-0 md:w-full mx-auto py-12 justify-center'>
-          <h1 className='font-mont text-2xl text-black font-semibold text-left md:text-4xl'>We offer Custom Designed Cakes for every occasion</h1>
-          <p className='md:text-xl font-medium text-black py-4'>Send us your design! Then choose your base, fondant, and filling flavors from our delicious options  </p>
+          <h1 className='scroll-trigger font-mont text-2xl text-black font-semibold text-left md:text-4xl'>We offer Custom Designed Cakes for every occasion</h1>
+          <p className='scroll-trigger md:text-xl font-medium text-black py-4'>Send us your design! Then choose your base, fondant, and filling flavors from our delicious options  </p>
           <div className='w-full'>
-            <div className='flex gap-2 py-2 px-4 '>
+            <div className='scroll-trigger flex gap-2 py-2 px-4 '>
               <div className='text-[#F48CAA] w-14 h-14 md:w-20 md:h-20 rounded-md '><FaBirthdayCake className='w-full h-full p-2'/></div>
               <div>
                 <h2 className='font-bold md:p-2 my-auto md:text-xl'>Birthday Cake</h2>
                 <p className='md:px-2 my-auto'>Single layer cake </p>
               </div>
             </div>
-            <div className='flex gap-2 py-2 px-4'>
+            <div className='scroll-trigger flex gap-2 py-2 px-4'>
               <div className='text-[#F48CAA] w-14 h-14 md:w-20 md:h-20 rounded-md '><GiStairsCake className='w-full h-full p-2'/></div>
               <div>
                 <h2 className='font-bold md:p-2 my-auto md:text-xl'>Wedding Cake</h2>
                 <p className='md:px-2 my-auto'>Multi tiers cake</p>
               </div>
             </div>
-            <div className='flex gap-2 py-2 px-4'>
+            <div className='scroll-trigger flex gap-2 py-2 px-4'>
               <div className='text-[#F48CAA] w-14 h-14 md:w-20 md:h-20 rounded-md '><GiCupcake className='w-full h-full p-2'/></div>
               <div>
                 <h2 className='font-bold md:p-2 my-auto md:text-xl'>Cupcakes</h2>
