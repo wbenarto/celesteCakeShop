@@ -30,34 +30,17 @@ const Navbar = () => {
         window.addEventListener("scroll", handleScroll);
     }, []);
 
-    let t1 = gsap.timeline();
-
-    useEffect(() => {
-        gsap.fromTo(".navLink", {
-
-            opacity: 0,
-            y: -800,
-
-        }, {
-            y: 0,
-            opacity: 1,
-            ease: 'ease-in',
-            stagger: .1,
-            duration: 1,
-        })
-    }
-        , [])
 
     useEffect(() => {
         gsap.fromTo('.move', { y: '100%', opacity: 0, zIndex:0 }, { y: 0, duration: .5, delay:1, opacity: 1 ,zIndex:0})
-        gsap.fromTo('.movedown', { y: '-100%', opacity: 0, zIndex:0 }, { y: 0, duration: .5, delay: 1, opacity: 1 ,zIndex:0})
+        gsap.fromTo('.movedown', { y: '-60%', opacity: 0, zIndex:0 }, { y: 0, duration: .5, delay: 1, opacity: 1 ,zIndex:0})
     }, [])
     return (
-        <>
+        <div className="flex justify-center">
 
         <div className={scrollDown ? 
-        'fixed z-40 top-0   invisible sm:visible left-0 w-full h-24 bg-[#F48CAA]  flex  justify-center items-center gap-10 lg:gap-24 font-hero duration-500 transition-all' : 
-        'fixed z-40 top-0 shadow-xl invisible sm:visible  left-0 w-full h-0 mt-[-100px] flex  justify-center items-center gap-10 lg:gap-24 font-hero duration-500 transition-all'}>
+        'fixed z-40 top-0 invisible sm:visible mt-10  rounded-lg w-3/4 h-24 bg-[#F48CAA]  flex  justify-center items-center gap-10 lg:gap-24 font-hero duration-500 transition-all' : 
+        'fixed z-40 top-0 shadow-xl invisible sm:visible mx-auto w-3/4 h-0 mt-[-100px] flex  justify-center items-center gap-10 lg:gap-24 font-hero duration-500 transition-all'}>
             <Link href='/'>
                 <div className=' items-center flex px-4 py-4 h-10 navLink rounded-full'>
                     <button className='text-sm font-semibold text-white hover:text-gray-300'>
@@ -174,7 +157,7 @@ const Navbar = () => {
               
             </div>
         )}
-        </>
+        </div>
 
     )
 }
