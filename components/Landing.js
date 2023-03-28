@@ -28,7 +28,7 @@ const Landing = ({bannerData, products}) => {
       <div className='z-10 relative bg-white flex-column md:gap-4 h-[48rem] sm:h-[42rem]  overflow-hidden md:mx-auto md:justify-center md:flex md:px-20 lg:px-40 xl:px-[14rem]'>
         {/* Left */}
         <div className='my-auto px-6 md:px-0 md:w-full mx-auto py-12 justify-center'>
-          <h1 className='scroll-trigger font-mont text-2xl text-black font-semibold text-left md:text-4xl'>We offer Custom Designed Cakes for every occasion</h1>
+          <h1 className='scroll-trigger font-mont text-2xl text-black font-bold text-left md:text-4xl'>We offer Custom Designed Cakes for every occasion</h1>
           <p className='scroll-trigger md:text-xl font-medium text-black py-4'>Send us your design! Then choose your base, fondant, and filling flavors from our delicious options  </p>
           <div className='w-full'>
             <div className='scroll-trigger flex gap-2 py-2 px-4 '>
@@ -69,7 +69,7 @@ const Landing = ({bannerData, products}) => {
 
       <div className='z-10 relative bg-white flex-column md:gap-4 h-[40rem] md:h-[46rem] overflow-hidden lg:mx-auto lg:justify-center lg:flex sm:px-4 md:px-20 lg:px-40'>
         <div className='rounded-md my-auto px-6 lg:px-0 lg:w-1/3 mx-auto py-12 justify-center '>
-          <h1 className='font-mont text-2xl text-black font-semibold text-left md:text-4xl'>Recently Purchased</h1>
+          <h1 className='font-mont text-2xl text-black font-bold text-left md:text-4xl'>Recently Purchased</h1>
           <p className='text-black py-4'>We aim to have unique designed cake for all our patrons, so no cakes are built the same</p>
           <Link href='/menu'>
             <button className=' bg-[#F48CAA] text-xs md:text-sm mx-auto w-40 h-10 gap-2 md:w-[150px] md:hover:animate-wiggle md:h-14 rounded-full mt-4 text-center flex justify-center text-white items-center' type='button'>See Gallery <AiOutlineArrowRight className='text-lg'/></button>
@@ -119,8 +119,8 @@ const Landing = ({bannerData, products}) => {
       </div>
 
       
-      <div className='z-10 relative h-[40rem] md:h-[60rem] w-full grid place-items-center content-center text-center bg-[#F48CAA] text-white overflow-hidden '>
-        <h1 className='font-mont text-2xl text-white mt-10 font-semibold text-left md:text-4xl mb-10 md:mb-14'>WORD ON THE STREET</h1>
+      <div className='z-10 relative h-[40rem] md:h-[64rem] w-full grid place-items-center content-center text-center bg-[#F48CAA] text-white overflow-hidden '>
+        <h1 className='font-mont text-2xl text-white mt-10 font-bold text-left md:text-4xl mb-10 md:mb-14'>WORD ON THE STREET</h1>
         <div className='text-white w-[80%] md:w-[60%] md:text-2xl border-2 py-6 px-2 md:p-12 border-amber-200 mb-8 md:mb-10  shadow-lg shadow-amber-200/50'>
           <h3 className='font-semibold mb-2 md:mb-4'>"Every detail is perfect. This is my best birthday cake ever!!"</h3>
           <p>Sally. E</p>
