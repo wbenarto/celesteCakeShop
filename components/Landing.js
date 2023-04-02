@@ -11,10 +11,86 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
 const Landing = ({bannerData, products}) => {
     gsap.registerPlugin(ScrollTrigger)
     const midSec = useRef(null)
+    const anim = useRef(null);
+    const anim2 = useRef(null);
+    const anim3 = useRef(null);
+    const anim4 = useRef(null);
 
     useEffect(()=> {
-      gsap.fromTo(".scroll-trigger", {x: -100},{ x: 0, duration: 1})
-    })
+      const el = anim.current
+      const el2 = anim2.current
+      const el3 = anim3.current
+      const el4 = anim4.current
+      const allEl = el.querySelectorAll(".anim-me")
+      const allEl2 = el2.querySelectorAll(".anim2-me")
+      const allEl3 = el3.querySelectorAll(".anim3-me")
+      const allEl4 = el4.querySelectorAll(".anim4-me")
+     
+      gsap.fromTo(allEl, {
+        y: 100,
+        opacity: 0,
+        ease: "power3.in"
+      }, {
+        y: 0,
+        duration: .5,
+        stagger: 0.2,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: allEl,
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse"
+        },
+      })
+      gsap.fromTo(allEl2,{
+        y: 100,
+        opacity: 0,
+        ease: "power3.in"
+      }, {
+        y: 0,
+        duration: .5,
+        stagger: 0.2,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: el2,
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse"
+        },
+      })
+      gsap.fromTo(allEl3, {
+        y: 100,
+        opacity: 0,
+        ease: "power3.in"
+      }, {
+        y: 0,
+        duration: .5,
+        stagger: 0.2,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: el3,
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse"
+        },
+      })
+      gsap.fromTo(allEl4, {
+        y: 100,
+        opacity: 0,
+        ease: "power3.in"
+      }, {
+        y: 0,
+        duration: .5,
+        stagger: 0.2,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: el4,
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse"
+        },
+      });;
+    }, [])
   return (
     <>
       <HeroBanner />
@@ -23,14 +99,14 @@ const Landing = ({bannerData, products}) => {
           Baked with the finest natural ingredients. 
         </h1>
   </div> */}
-
+      
       {/* What we offer FIRST SECTION*/}
-      <div className='z-10 relative bg-white flex-column md:gap-4 h-[48rem] sm:h-[42rem]  overflow-hidden md:mx-auto md:justify-center md:flex md:px-20 lg:px-40 xl:px-[14rem]'>
+      <div ref={anim} className='z-10 relative bg-white flex-column md:gap-4 h-[48rem] sm:h-[42rem]  overflow-hidden md:mx-auto md:justify-center md:flex md:px-20 lg:px-40 xl:px-[14rem]'>
         {/* Left */}
         <div className='my-auto px-6 md:px-0 md:w-full mx-auto py-12 justify-center'>
-          <h1 className='scroll-trigger font-mont text-2xl text-black font-bold text-left md:text-4xl'>We offer Custom Designed Cakes for every occasion</h1>
-          <p className='scroll-trigger md:text-xl font-medium text-black py-4'>Send us your design! Then choose your base, fondant, and filling flavors from our delicious options  </p>
-          <div className='w-full'>
+          <h1 className='anim-me font-mont text-2xl text-gray-600 font-bold text-left md:text-4xl'>We offer Custom Designed Cakes for every occasion</h1>
+          <p className='anim-me md:text-xl font-medium text-black py-4'>Send us your design! Then choose your base, fondant, and filling flavors from our delicious options  </p>
+          <div className='anim-me w-full'>
             <div className='scroll-trigger flex gap-2 py-2 px-4 '>
               <div className='text-[#F48CAA] w-14 h-14 md:w-20 md:h-20 rounded-md '><FaBirthdayCake className='w-full h-full p-2'/></div>
               <div>
@@ -56,27 +132,27 @@ const Landing = ({bannerData, products}) => {
         </div>
         
         {/* Right */}
-        <div className=' h-1/2 md:w-full mt-[-40px] md:mt-0 md:h-full thirdCircle  '>
+        <div  className='anim-me h-1/2 md:w-full mt-[-40px] md:mt-0 md:h-full thirdCircle  '>
           <img src='/images/IMG_4196.PNG' alt='' className=' object-contain object-center h-full w-full' ></img>
         </div>
       </div>
 
-      <div className='z-10 relative h-[6rem] md:h-[12rem] w-full grid content-center text-center bg-[#F48CAA] text-white overflow-hidden '>
-        <h1 ref={midSec} className='midSec self-center text-base md:text-3xl lg:text-4xl tracking-widest font-aug '>
+      <div ref={anim2} className=' z-10 relative h-[6rem] md:h-[12rem] w-full grid content-center text-center bg-[#F48CAA] text-white overflow-hidden '>
+        <h1 ref={midSec} className='anim2-me midSec self-center text-base md:text-3xl lg:text-4xl tracking-widest font-aug '>
           Personalized baked goods for you and your loved ones. 
         </h1>
       </div>
 
-      <div className='z-10 relative bg-white flex-column md:gap-4 h-[40rem] md:h-[46rem] overflow-hidden lg:mx-auto lg:justify-center lg:flex sm:px-4 md:px-20 lg:px-40'>
-        <div className='rounded-md my-auto px-6 lg:px-0 lg:w-1/3 mx-auto py-12 justify-center '>
-          <h1 className='font-mont text-2xl text-black font-bold text-left md:text-4xl'>Recently Purchased</h1>
-          <p className='text-black py-4'>We aim to have unique designed cake for all our patrons, so no cakes are built the same</p>
+      <div ref={anim3} className='z-10 relative bg-white flex-column md:gap-4 h-[40rem] md:h-[46rem] overflow-hidden lg:mx-auto lg:justify-center lg:flex sm:px-4 md:px-20 lg:px-40'>
+        <div className='anim3-me rounded-md my-auto px-6 lg:px-0 lg:w-1/3 mx-auto py-12 justify-center '>
+          <h1 className='anim3-me font-mont text-2xl text-gray-600 font-bold text-left md:text-4xl'>Recently Purchased</h1>
+          <p className='anim3-me text-black py-4'>We aim to have unique designed cake for all our patrons, so no cakes are built the same</p>
           <Link href='/menu'>
-            <button className=' bg-[#F48CAA] text-xs md:text-sm mx-auto w-40 h-10 gap-2 md:w-[150px] md:hover:animate-wiggle md:h-14 rounded-full mt-4 text-center flex justify-center text-white items-center' type='button'>See Gallery <AiOutlineArrowRight className='text-lg'/></button>
+            <button className='anim3-me bg-[#F48CAA] text-xs md:text-sm mx-auto w-40 h-10 gap-2 md:w-[150px] md:hover:animate-wiggle md:h-14 rounded-full mt-4 text-center flex justify-center text-white items-center' type='button'>See Gallery <AiOutlineArrowRight className='text-lg'/></button>
           </Link> 
         </div>
-        <div className='px-2 h-1/1 w-full thirdCircle overflow-x-scroll flex items-center gap-4 md:justify-center sm:justify-between '>
-          <div className=' h-[20rem] min-w-[14rem] sm:w-[14rem] md:w-[20rem] md:h-[26rem] rounded-md  bg-white shadow-xl overflow-hidden'>
+        <div className='anim3-me px-2 h-1/1 w-full thirdCircle overflow-x-scroll flex items-center gap-4 md:justify-center sm:justify-between '>
+          <div className='anim3-me h-[20rem] min-w-[14rem] sm:w-[14rem] md:w-[20rem] md:h-[26rem] rounded-md  bg-white shadow-xl overflow-hidden'>
             <div className='h-[70%] bg-red-200 w-full overflow-hidden'>
               <img className='object-cover object-bottom w-full h-full hover:scale-150 transition duration-1000' src='/images/IMG_9544_jpg.jpg' />
             </div>
@@ -89,7 +165,7 @@ const Landing = ({bannerData, products}) => {
               </p>
             </div>
           </div>
-          <div className=' h-[20rem] min-w-[14rem] sm:w-[14rem] md:w-[20rem] md:h-[26rem] rounded-md bg-white shadow-xl overflow-hidden'>
+          <div className='anim3-me h-[20rem] min-w-[14rem] sm:w-[14rem] md:w-[20rem] md:h-[26rem] rounded-md bg-white shadow-xl overflow-hidden'>
             <div className='h-[70%] w-full overflow-hidden '>
               <img className='object-cover object-bottom w-full h-full hover:scale-150 transition duration-1000 ' src='/images/IMG_4188.jpg' />
             </div>
@@ -102,7 +178,7 @@ const Landing = ({bannerData, products}) => {
               </p>
             </div>
           </div>
-          <div className=' h-[20rem] min-w-[14rem] sm:w-[14rem] md:w-[20rem] md:h-[26rem] rounded-md bg-white shadow-xl overflow-hidden'>
+          <div className='anim3-me h-[20rem] min-w-[14rem] sm:w-[14rem] md:w-[20rem] md:h-[26rem] rounded-md bg-white shadow-xl overflow-hidden'>
             <div className='h-[70%] w-full overflow-hidden '>
               <img className='object-cover object-bottom w-full h-full hover:scale-150 transition duration-1000 ' src='/images/IMG_0818_jpg.jpg' />
             </div>
@@ -119,17 +195,17 @@ const Landing = ({bannerData, products}) => {
       </div>
 
       
-      <div className='z-10 relative h-[40rem] md:h-[64rem] w-full grid place-items-center content-center text-center bg-[#F48CAA] text-white overflow-hidden '>
-        <h1 className='font-mont text-2xl text-white mt-10 font-bold text-left md:text-4xl mb-10 md:mb-14'>WORD ON THE STREET</h1>
-        <div className='text-white w-[80%] md:w-[60%] md:text-2xl border-2 py-6 px-2 md:p-12 border-amber-200 mb-8 md:mb-10  shadow-lg shadow-amber-200/50'>
+      <div ref={anim4} className='z-10 relative h-[40rem] md:h-[64rem] w-full grid place-items-center content-center text-center bg-[#F48CAA] text-white overflow-hidden '>
+        <h1 className='anim4-me font-mont text-2xl text-white mt-10 font-bold text-left md:text-4xl mb-10 md:mb-14'>WORD ON THE STREET</h1>
+        <div className='anim4-me text-white w-[80%] md:w-[60%] md:text-2xl border-2 py-6 px-2 md:p-12 border-amber-200 mb-8 md:mb-10  shadow-lg shadow-amber-200/50'>
           <h3 className='font-semibold mb-2 md:mb-4'>"Every detail is perfect. This is my best birthday cake ever!!"</h3>
           <p>Sally. E</p>
         </div>
-        <div className='text-white w-[80%] md:w-[60%] md:text-2xl border-2 py-6 px-2 md:p-12 border-amber-200 mb-8 md:mb-10 shadow-lg shadow-amber-200/50'>
+        <div className='anim4-me text-white w-[80%] md:w-[60%] md:text-2xl border-2 py-6 px-2 md:p-12 border-amber-200 mb-8 md:mb-10 shadow-lg shadow-amber-200/50'>
           <h3 className='font-semibold mb-2 md:mb-4'>"CUTEST CAKE EVER! It was so yummy! Go follow her and get your next cake from her! Thank you, Anna!"</h3>
           <p>Monica. J</p>
         </div>
-        <div className='text-white w-[80%] md:w-[60%] md:text-2xl border-2 py-6 px-2 md:p-12 border-amber-200 mb-8 md:mb-10 shadow-lg shadow-amber-200/50'>
+        <div className='anim4-me text-white w-[80%] md:w-[60%] md:text-2xl border-2 py-6 px-2 md:p-12 border-amber-200 mb-8 md:mb-10 shadow-lg shadow-amber-200/50'>
           <h3 className='font-semibold mb-2 md:mb-4'>"To say I love it, is an understatement because I LOOOOVE everything about this. It's the most beautiful cake I've ever seen. Boy bands forever! Backstreet's Back! Thank you!"</h3>
           <p>C. Rim</p>
         </div>
@@ -138,7 +214,7 @@ const Landing = ({bannerData, products}) => {
       <div className='z-10 relative bg-[url("/images/IMG_9544_jpg.jpg")]  bg-cover my-auto flex-column md:gap-10 h-[20rem] md:h-[32rem]  overflow-hidden mx-auto items-center justify-center flex '>
           <div className='bg-[rgba(0,0,0,0.5)] w-full h-full justify-center items-center flex'>
               <div>
-                  <h2 className='text-white font-semibold tracking-widest text-4xl text-center font-mont w-full lg:text-6xl'>Joy baked into every bite.</h2>
+                  <h2 className=' text-white font-semibold tracking-widest text-4xl text-center font-mont w-full lg:text-6xl'>Joy baked into every bite.</h2>
               </div>
           </div>
       </div>
