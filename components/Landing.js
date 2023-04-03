@@ -37,7 +37,7 @@ const Landing = ({bannerData, products}) => {
         opacity: 1,
         scrollTrigger: {
           trigger: allEl,
-          start: "top 80%",
+          start: "top 60%",
           end: "bottom 20%",
           toggleActions: "play none none reverse"
         },
@@ -53,7 +53,7 @@ const Landing = ({bannerData, products}) => {
         opacity: 1,
         scrollTrigger: {
           trigger: el2,
-          start: "top 80%",
+          start: "top 60%",
           end: "bottom 20%",
           toggleActions: "play none none reverse"
         },
@@ -69,13 +69,13 @@ const Landing = ({bannerData, products}) => {
         opacity: 1,
         scrollTrigger: {
           trigger: el3,
-          start: "top 80%",
+          start: "top 60%",
           end: "bottom 20%",
           toggleActions: "play none none reverse"
         },
       })
       gsap.fromTo(allEl4, {
-        y: 100,
+        y: 10,
         opacity: 0,
         ease: "power3.in"
       }, {
@@ -85,8 +85,8 @@ const Landing = ({bannerData, products}) => {
         opacity: 1,
         scrollTrigger: {
           trigger: el4,
-          start: "top 80%",
-          end: "bottom 20%",
+          start: "top 60%",
+          end: "bottom 40%",
           toggleActions: "play none none reverse"
         },
       });;
@@ -195,7 +195,7 @@ const Landing = ({bannerData, products}) => {
       </div>
 
       
-      <div ref={anim4} className='z-10 relative h-[40rem] md:h-[64rem] w-full grid place-items-center content-center text-center bg-[#F48CAA] text-white overflow-hidden '>
+      <div ref={anim4} className='z-10 relative h-[44rem] md:h-[64rem] w-full grid place-items-center content-center text-center bg-[#F48CAA] text-white overflow-hidden '>
         <h1 className='anim4-me font-mont text-2xl text-white mt-10 font-bold text-left md:text-4xl mb-10 md:mb-14'>WORD ON THE STREET</h1>
         <div className='anim4-me text-white w-[80%] md:w-[60%] md:text-2xl border-2 py-6 px-2 md:p-12 border-amber-200 mb-8 md:mb-10  shadow-lg shadow-amber-200/50'>
           <h3 className='font-semibold mb-2 md:mb-4'>"Every detail is perfect. This is my best birthday cake ever!!"</h3>
