@@ -5,6 +5,8 @@ import { client } from '../lib/client'
 import {AiOutlineArrowRight} from 'react-icons/ai'
 import {FaBirthdayCake} from 'react-icons/fa'
 import { GiCupcake, GiStairsCake } from 'react-icons/gi'
+import { HiOutlineCake } from 'react-icons/hi'
+import { RiCake3Line, RiCake3Fill } from 'react-icons/ri'
 import {gsap} from 'gsap'
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
 
@@ -25,7 +27,17 @@ const Landing = ({bannerData, products}) => {
       const allEl2 = el2.querySelectorAll(".anim2-me")
       const allEl3 = el3.querySelectorAll(".anim3-me")
       const allEl4 = el4.querySelectorAll(".anim4-me")
+      const contEl = el.querySelectorAll(".anim-cont")
      
+      gsap.fromTo(".anim-cont", {
+        y: 100,
+        opacity: 0,
+        ease: "power3.in"
+      },{
+        y: 0,
+        duration: .5,
+        opacity: 1,
+      })
       gsap.fromTo(allEl, {
         y: 100,
         opacity: 0,
@@ -44,13 +56,11 @@ const Landing = ({bannerData, products}) => {
       })
       gsap.fromTo(allEl2,{
         y: 100,
-        opacity: 0,
         ease: "power3.in"
       }, {
         y: 0,
         duration: .5,
         stagger: 0.2,
-        opacity: 1,
         scrollTrigger: {
           trigger: el2,
           start: "top 60%",
@@ -101,7 +111,14 @@ const Landing = ({bannerData, products}) => {
   </div> */}
       
       {/* What we offer FIRST SECTION*/}
-      <div ref={anim} className='z-10 relative bg-white flex-column md:gap-4 h-[48rem] sm:h-[42rem]  overflow-hidden md:mx-auto md:justify-center md:flex md:px-20 lg:px-40 xl:px-[14rem]'>
+      <div ref={anim} className='z-10 anim-cont mt-[-8rem] relative bg-white flex-column md:gap-4 h-[48rem] sm:h-[42rem]  overflow-hidden md:mx-auto md:justify-center md:flex md:px-20 lg:px-40 xl:px-[14rem]'>
+        <div className='h-24 w-screen mt-4 text-red-200 absolute flex justify-center items-center gap-32'>
+          <RiCake3Line className='w-20 h-20 origin-bottom -rotate-12 ' />
+          <HiOutlineCake className='w-20 h-20 origin-bottom rotate-12' /> 
+          <RiCake3Line className='w-20 h-20 origin-bottom rotate-12 ' />
+          <HiOutlineCake className='w-20 h-20 origin-bottom -rotate-12' /> 
+
+        </div>
         {/* Left */}
         <div className='my-auto px-6 md:px-0 md:w-full mx-auto py-12 justify-center'>
           <h1 className='anim-me font-mont text-2xl text-gray-600 font-bold text-left md:text-4xl'>We offer Custom Designed Cakes for every occasion</h1>

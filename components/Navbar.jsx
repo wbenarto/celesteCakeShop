@@ -39,25 +39,25 @@ const Navbar = () => {
         <div className="flex justify-center">
 
         <div className={scrollDown ? 
-        'fixed z-40 top-0 invisible sm:visible mt-10  rounded-lg w-3/4 h-24 bg-[#F48CAA]  flex  justify-center items-center gap-10 lg:gap-24 font-hero duration-500 transition-all' : 
-        'fixed z-40 top-0 shadow-xl invisible sm:visible mx-auto w-3/4 h-0 mt-[-100px] flex  justify-center items-center gap-10 lg:gap-24 font-hero duration-500 transition-all'}>
+        'fixed z-40 top-0 invisible md:visible mt-10  rounded-lg w-3/4 h-24 bg-transparent  flex  justify-center items-center gap-10 lg:gap-24 font-hero duration-500 transition-all' : 
+        'fixed z-40 top-0 shadow-xl invisible md:visible mx-auto w-3/4 h-0 mt-[-100px] flex  justify-center items-center gap-10 lg:gap-24 font-hero duration-500 transition-all'}>
             <Link href='/'>
                 <div className=' items-center flex px-4 py-4 h-10 navLink rounded-full'>
-                    <button className='text-sm font-semibold text-white hover:text-gray-300'>
+                    <button className=' font-semibold text-white hover:text-gray-300'>
                         <p className='movedown font-mont md:tracking-widest navLink'>HOME</p>
                     </button>
                 </div>
             </Link>
             <Link href='/about'>
                 <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
-                    <button className='text-sm  font-semibold text-white hover:text-gray-300'>
+                    <button className='  font-semibold text-white hover:text-gray-300'>
                         <p className='movedown font-mont md:tracking-widest navLink'>ABOUT</p>
                     </button>
                 </div>
             </Link>
             <Link href='/menu/custom'>
                 <div className=' items-center flex px-4 py-4 h-10 navLink rounded-full'>
-                    <button className='text-sm font-semibold text-white hover:text-gray-300 '>
+                    <button className=' font-semibold text-white hover:text-gray-300 '>
                         <p className='movedown font-mont md:tracking-widest navLink'>CUSTOM CAKES</p>
                     </button>
                 </div>
@@ -65,14 +65,14 @@ const Navbar = () => {
            
             <Link href='/menu'>
                 <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
-                    <button className='text-sm  font-semibold text-white hover:text-gray-300'>
+                    <button className='  font-semibold text-white hover:text-gray-300'>
                         <p className='movedown font-mont md:tracking-widest navLink'>GALLERY</p>
                     </button>
                 </div>
             </Link>
             <Link href='/contact'>
                 <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
-                    <button className='text-sm font-semibold text-white hover:text-gray-300'>
+                    <button className=' font-semibold text-white hover:text-gray-300'>
                         <p className='movedown font-mont md:tracking-widest navLink'>CONTACT</p>
                     </button>
                 </div>
@@ -92,7 +92,7 @@ const Navbar = () => {
             {showCart && <Cart />}
         </div>
 
-        <div className='sm:invisible bg-[#F48CAA] fixed z-10 top-0 h-14 w-full flex items-center px-8 justify-between'>
+        <div className='md:invisible bg-[#F48CAA] fixed z-10 top-0 h-14 w-full flex items-center px-8 justify-between'>
 
                 <Link href='/'>
                     <h1 className='movedown text-base font-semibold font-mont tracking-widest text-white duration-300 transition all' >CELESTE</h1>
