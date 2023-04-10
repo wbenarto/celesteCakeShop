@@ -36,6 +36,7 @@ const Landing = ({bannerData, products}) => {
       },{
         y: 0,
         duration: .5,
+        delay: 2,
         opacity: 1,
       })
       gsap.fromTo(allEl, {
@@ -49,7 +50,7 @@ const Landing = ({bannerData, products}) => {
         opacity: 1,
         scrollTrigger: {
           trigger: allEl,
-          start: "top 60%",
+          start: "top 80%",
           end: "bottom 20%",
           toggleActions: "play none none reverse"
         },
@@ -111,12 +112,17 @@ const Landing = ({bannerData, products}) => {
   </div> */}
       
       {/* What we offer FIRST SECTION*/}
-      <div ref={anim} className='z-10 anim-cont mt-[-8rem] relative bg-white flex-column md:gap-4 h-[48rem] sm:h-[42rem]  overflow-hidden md:mx-auto md:justify-center md:flex md:px-20 lg:px-40 xl:px-[14rem]'>
-        <div className='h-24 w-screen mt-4 text-red-200 absolute flex justify-center items-center gap-32'>
-          <RiCake3Line className='w-20 h-20 origin-bottom -rotate-12 ' />
-          <HiOutlineCake className='w-20 h-20 origin-bottom rotate-12' /> 
-          <RiCake3Line className='w-20 h-20 origin-bottom rotate-12 ' />
-          <HiOutlineCake className='w-20 h-20 origin-bottom -rotate-12' /> 
+      <div ref={anim} className='z-10 anim-cont mt-[-4rem] md:mt-[-8rem] relative bg-white flex-column md:gap-4 h-[48rem] sm:h-[42rem]  overflow-hidden md:mx-auto md:justify-center md:flex md:px-20 lg:px-40 xl:px-[14rem]'>
+        <div className='h-14 md:h-24 w-screen md:mt-4 text-red-200 absolute flex justify-center items-center gap-4 md:gap-32'>
+          <RiCake3Line className='animate-wiggle w-12 h-12 md:w-20 md:h-20 origin-bottom -rotate-12 ' />
+          <HiOutlineCake className='animate-wiggle2 w-12 h-12 md:w-20 md:h-20 origin-bottom rotate-12' /> 
+          <RiCake3Line className='animate-wiggle w-12 h-12 md:w-20 md:h-20 origin-bottom -rotate-12 ' />
+          <HiOutlineCake className='animate-wiggle2 w-12 h-12 md:w-20 md:h-20 origin-bottom rotate-12' /> 
+          <RiCake3Line className='animate-wiggle w-12 h-12 md:w-20 md:h-20 origin-bottom rotate-12 ' />
+          <HiOutlineCake className='animate-wiggle2 w-12 h-12 md:w-20 md:h-20 origin-bottom -rotate-12' /> 
+          <RiCake3Line className='animate-wiggle w-12 h-12 md:w-20 md:h-20 origin-bottom rotate-12 ' />
+          <HiOutlineCake className='animate-wiggle2 w-12 h-12 md:w-20 md:h-20 origin-bottom -rotate-12' /> 
+         
 
         </div>
         {/* Left */}

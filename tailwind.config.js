@@ -42,8 +42,9 @@ module.exports = {
     },
     extend: {
       animation: {
-        "spin-slow": "spin 3s linear infinite",
+        "spin-slow": "spin 6s linear infinite",
         wiggle: "wiggle 3s linear infinite",
+        wiggle2: "wiggle2 3s linear infinite",
         slide: "slide 20s linear infinite",
       },
       keyframes: {
@@ -52,8 +53,12 @@ module.exports = {
           to: { transform: "translateX(-50%)" },
         },
         wiggle: {
-          "0%, 100%": { transform: "rotate(-3deg)" },
-          "50%": { transform: "rotate(3deg)" },
+          "0%, 100%": { transform: "rotate(-20deg)" },
+          "50%": { transform: "rotate(20deg)" },
+        },
+        wiggle2: {
+          "0%, 100%": { transform: "rotate(20deg)" },
+          "50%": { transform: "rotate(-20deg)" },
         },
       },
     },
