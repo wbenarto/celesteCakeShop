@@ -36,7 +36,7 @@ const menu = ({ products }) => {
                 <p>COOKIES</p>
                 
             </div> */}
-        <div className="w-full mx-auto h-full px-4 grid mt-8 gap-2 md:gap-10 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:max-w-[1200px]">
+        <div className="w-full mx-auto h-full px-4 grid mt-8 gap-2 md:gap-10 grid-cols-2 md:grid-cols-3 lg:grid-cols-3 lg:max-w-[1200px]">
           {products.length ? (
             products?.map((e) => <Product product={e} key={e.id} />)
           ) : (
