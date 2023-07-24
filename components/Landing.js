@@ -56,11 +56,11 @@ const Landing = ({bannerData, products}) => {
         },
       })
       gsap.fromTo(allEl2,{
-        y: 100,
+        y: 200,
         ease: "power3.in"
       }, {
         y: 0,
-        duration: .5,
+        duration: 1.5,
         stagger: 0.2,
         scrollTrigger: {
           trigger: el2,
@@ -114,14 +114,14 @@ const Landing = ({bannerData, products}) => {
       {/* What we offer FIRST SECTION*/}
       <div ref={anim} className='z-10 anim-cont mt-[-4rem] md:mt-[-8rem] relative bg-white flex-column md:gap-4 h-[48rem] sm:h-[42rem]  overflow-hidden md:mx-auto md:justify-center md:flex md:px-20 lg:px-40 xl:px-[14rem]'>
         <div className='h-14 md:h-24 w-screen md:mt-4 text-red-200 absolute flex justify-center items-center gap-4 md:gap-32'>
-          <RiCake3Line className='animate-wiggle w-12 h-12 md:w-20 md:h-20 origin-bottom -rotate-12 ' />
-          <HiOutlineCake className='animate-wiggle2 w-12 h-12 md:w-20 md:h-20 origin-bottom rotate-12' /> 
-          <RiCake3Line className='animate-wiggle w-12 h-12 md:w-20 md:h-20 origin-bottom -rotate-12 ' />
-          <HiOutlineCake className='animate-wiggle2 w-12 h-12 md:w-20 md:h-20 origin-bottom rotate-12' /> 
-          <RiCake3Line className='animate-wiggle w-12 h-12 md:w-20 md:h-20 origin-bottom rotate-12 ' />
-          <HiOutlineCake className='animate-wiggle2 w-12 h-12 md:w-20 md:h-20 origin-bottom -rotate-12' /> 
-          <RiCake3Line className='animate-wiggle w-12 h-12 md:w-20 md:h-20 origin-bottom rotate-12 ' />
-          <HiOutlineCake className='animate-wiggle2 w-12 h-12 md:w-20 md:h-20 origin-bottom -rotate-12' /> 
+          <RiCake3Line className='w-12 h-12 md:w-20 md:h-20 origin-bottom -rotate-12 ' />
+          <HiOutlineCake className=' w-12 h-12 md:w-20 md:h-20 origin-bottom rotate-12' /> 
+          <RiCake3Line className='w-12 h-12 md:w-20 md:h-20 origin-bottom -rotate-12 ' />
+          <HiOutlineCake className=' w-12 h-12 md:w-20 md:h-20 origin-bottom rotate-12' /> 
+          <RiCake3Line className='w-12 h-12 md:w-20 md:h-20 origin-bottom rotate-12 ' />
+          <HiOutlineCake className=' w-12 h-12 md:w-20 md:h-20 origin-bottom -rotate-12' /> 
+          <RiCake3Line className='w-12 h-12 md:w-20 md:h-20 origin-bottom rotate-12 ' />
+          <HiOutlineCake className=' w-12 h-12 md:w-20 md:h-20 origin-bottom -rotate-12' /> 
          
 
         </div>
@@ -160,8 +160,8 @@ const Landing = ({bannerData, products}) => {
         </div>
       </div>
 
-      <div ref={anim2} className=' z-10 relative h-[6rem] md:h-[12rem] w-full grid content-center text-center bg-[#F48CAA] text-white overflow-hidden '>
-        <h1 ref={midSec} className='anim2-me midSec self-center text-base md:text-3xl lg:text-4xl tracking-widest font-aug '>
+      <div ref={anim2} className=' z-10 relative h-[6rem] bg-[#737170] md:h-[12rem] w-full grid content-center text-center text-white overflow-hidden '>
+        <h1 ref={midSec} className='anim2-me midSec self-center text-base md:text-3xl lg:text-4xl tracking-widest text-amber-200 font-aug '>
           Personalized baked goods for you and your loved ones. 
         </h1>
       </div>
@@ -218,7 +218,7 @@ const Landing = ({bannerData, products}) => {
       </div>
 
       
-      <div ref={anim4} className='z-10 relative h-[44rem] md:h-[64rem] w-full grid place-items-center content-center text-center bg-[#F48CAA] text-white overflow-hidden '>
+      <div ref={anim4} className='z-10 relative h-[44rem] md:h-[64rem] w-full grid place-items-center content-center text-center bg-[#737170] text-white overflow-hidden '>
         <h1 className='anim4-me font-mont text-2xl text-white mt-10 font-bold text-left md:text-4xl mb-10 md:mb-14'>WORD ON THE STREET</h1>
         <div className='anim4-me text-white w-[80%] md:w-[60%] md:text-2xl border-2 py-6 px-2 md:p-12 border-amber-200 mb-8 md:mb-10  shadow-lg shadow-amber-200/50'>
           <h3 className='font-semibold mb-2 md:mb-4'>"Every detail is perfect. This is my best birthday cake ever!!"</h3>
