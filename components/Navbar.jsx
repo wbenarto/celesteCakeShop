@@ -92,12 +92,12 @@ const Navbar = () => {
             {showCart && <Cart />}
         </div>
 
-        <div className='md:invisible bg-[#F48CAA] fixed z-10 top-0 h-14 w-full flex items-center px-8 justify-between'>
+        <div className='md:invisible bg-[#f5f2ec] fixed z-10 top-0 h-14 w-full flex items-center px-8 justify-between'>
 
                 <Link href='/'>
-                    <h1 className='movedown text-base font-semibold font-mont tracking-widest text-white duration-300 transition all' >CELESTE</h1>
+                    <h1 className='movedown text-base font-semibold font-mont tracking-widests duration-300 transition all' >CELESTE</h1>
                 </Link>
-                <div className='movedown text-xl text-white' onClick={() => setHamburgerOn(!hamburgerOn)}><GiHamburgerMenu /></div>
+                <div className='movedown text-xl' onClick={() => setHamburgerOn(!hamburgerOn)}><GiHamburgerMenu /></div>
         </div>
         
         {hamburgerOn ? (

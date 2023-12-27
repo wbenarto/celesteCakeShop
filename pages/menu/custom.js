@@ -53,24 +53,24 @@ const custom = () => {
     }
   };
 
-  const getBase64 = (file) => {
+  // const getBase64 = (file) => {
 
-    console.log('get base function ', file)
+  //   console.log('get base function ', file)
 
-    return new Promise((resolve, reject)=> {
-      let reader = new FileReader()
-      reader.readAsDataURL(file)
+  //   return new Promise((resolve, reject)=> {
+  //     let reader = new FileReader()
+  //     reader.readAsDataURL(file)
   
-      reader.onload = () => {
-        setBase64(reader.result)
-        resolve(reader.result)
-      }
+  //     reader.onload = () => {
+  //       setBase64(reader.result)
+  //       resolve(reader.result)
+  //     }
 
-      reader.onerror = ((error) => {
-        reject(error)
-      })
-    })
-  }
+  //     reader.onerror = ((error) => {
+  //       reject(error)
+  //     })
+  //   })
+  // }
 
   async function handleOnSubmit(e) {
     e.preventDefault();
@@ -83,9 +83,9 @@ const custom = () => {
       if (field == 'phone') {
         formData[field.name] = Number(field.value)
       }
-      if (field.name == 'imageFile') {
-        formData[field.name] = base64
-      }
+      // if (field.name == 'imageFile') {
+      //   formData[field.name] = base64
+      // }
       
     });
    
@@ -216,7 +216,7 @@ const custom = () => {
               />
             </div>
           </div>
-          <div className="flex-column py-2">
+          {/* <div className="flex-column py-2">
             <input
                 type="file"
                 text='Upload Image' 
@@ -239,7 +239,7 @@ const custom = () => {
                 required
               />
             
-          </div>
+          </div> */}
           <p className='text-black text-sm py-2 text-center'>We will respond to your inquiries with pricing estimates.</p>
 
           <div className="flex-column justify-center flex pb-4">

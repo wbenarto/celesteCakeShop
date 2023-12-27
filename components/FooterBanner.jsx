@@ -5,7 +5,7 @@ import { AiFillInstagram, AiFillMail } from 'react-icons/ai'
 
 const FooterBanner = () => {
     return (
-        <div className='z-1 relative md:h-[34rem] w-full bg-white  md:flex '>
+        <div className='z-1 relative md:h-[34rem] w-full bg-[#f5f2ec]  md:flex '>
             <div className=' grid w-full h-[20rem] md:h-full md:w-1/2 text-center  '>
                 <div className='my-auto px-8 md:px-14 mx-auto text-gray-600 '>
 

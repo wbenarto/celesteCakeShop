@@ -34,10 +34,10 @@ const HeroBanner = () => {
 
         <div className='z-0 w-full h-screen sticky top-0'>
             <div className=' flex bg-[url("/images/home.jpg")] md:bg-fixed bg-center bg-cover md:bg-[length:full_100%] items-center justify-center w-full h-full my-auto text-center'>
-                <div ref={hero} className='bg-[rgba(138,138,138,0.3)] w-full h-full justify-center items-center flex'>
+                <div ref={hero} className='bg-[rgba(0,0,0,0.5)] w-full h-full justify-center items-center flex'>
                     <div className='hero w-full md:mt-[-2rem]  items-center '>
-                        <h1 className='hero move text-4xl md:text-6xl font-mont tracking-widest2 text-white'>CELESTE</h1>
-                        <p className='hero move text-red-600 font-aug font-bold text-2xl md:text-4xl '>Cake Design</p>
+                        <h1 className='hero move text-4xl md:text-6xl font-mont tracking-widest2 text-[#f5f2ec]'>CELESTE</h1>
+                        <p className='hero move text-[#f5f2ec] font-aug font-bold text-2xl md:text-4xl '>Cake Design</p>
                     </div>
                     
 

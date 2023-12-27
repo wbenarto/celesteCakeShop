@@ -112,8 +112,8 @@ const Landing = ({bannerData, products}) => {
   </div> */}
       
       {/* What we offer FIRST SECTION*/}
-      <div ref={anim} className='z-10 anim-cont mt-[-4rem] md:mt-[-8rem] relative bg-white flex-column md:gap-4 h-[48rem] sm:h-[42rem]  overflow-hidden md:mx-auto md:justify-center md:flex md:px-20 lg:px-40 xl:px-[14rem]'>
-        <div className='h-14 md:h-24 w-screen md:mt-4 text-red-200 absolute flex justify-center items-center gap-4 md:gap-32'>
+      <div ref={anim} className='z-10 anim-cont bg-[#f5f2ec] mt-[-4rem] md:mt-[-8rem] relative bg-white flex-column md:gap-4 h-[48rem] sm:h-[42rem]  overflow-hidden md:mx-auto md:justify-center md:flex md:px-20 lg:px-40 xl:px-[14rem]'>
+        {/* <div className='h-14 md:h-24 w-screen md:mt-4 text-red-200 absolute flex justify-center items-center gap-4 md:gap-32'>
           <RiCake3Line className='w-12 h-12 md:w-20 md:h-20 origin-bottom -rotate-12 ' />
           <HiOutlineCake className=' w-12 h-12 md:w-20 md:h-20 origin-bottom rotate-12' /> 
           <RiCake3Line className='w-12 h-12 md:w-20 md:h-20 origin-bottom -rotate-12 ' />
@@ -124,7 +124,7 @@ const Landing = ({bannerData, products}) => {
           <HiOutlineCake className=' w-12 h-12 md:w-20 md:h-20 origin-bottom -rotate-12' /> 
          
 
-        </div>
+        </div> */}
         {/* Left */}
         <div className='my-auto px-6 md:px-0 md:w-full mx-auto py-12 justify-center'>
           <h1 className='anim-me font-mont text-2xl text-gray-600 font-bold text-left md:text-4xl'>We offer Custom Designed Cakes for every occasion</h1>
@@ -166,7 +166,7 @@ const Landing = ({bannerData, products}) => {
         </h1>
       </div>
 
-      <div ref={anim3} className='z-10 relative bg-white flex-column md:gap-4 h-[40rem] md:h-[46rem] overflow-hidden lg:mx-auto lg:justify-center lg:flex sm:px-4 md:px-20 lg:px-40'>
+      <div ref={anim3} className='z-10 relative bg-[#f5f2ec] flex-column md:gap-4 h-[40rem] md:h-[46rem] overflow-hidden lg:mx-auto lg:justify-center lg:flex sm:px-4 md:px-20 lg:px-40'>
         <div className='anim3-me rounded-md my-auto px-6 lg:px-0 lg:w-1/3 mx-auto py-12 justify-center '>
           <h1 className='anim3-me font-mont text-2xl text-gray-600 font-bold text-left md:text-4xl'>Recently Purchased</h1>
           <p className='anim3-me text-black py-4'>We aim to have unique designed cake for all our patrons, so no cakes are built the same</p>
