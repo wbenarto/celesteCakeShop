@@ -23,7 +23,7 @@ const HeroBanner = () => {
             opacity: 0,
             scrollTrigger: {
               trigger: allEl,
-              start: "top 40%",
+              start: "top 30%",
               end: "bottom 20%",
               toggleActions: "play none none reverse",
             },
