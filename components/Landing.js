@@ -112,7 +112,7 @@ const Landing = ({bannerData, products}) => {
   </div> */}
       
       {/* What we offer FIRST SECTION*/}
-      <div ref={anim} className='z-10 anim-cont bg-[#e6ccb2] mt-[-4rem] md:mt-[-8rem] relative bg-white flex-column md:gap-4 h-[48rem] sm:h-[60rem] overflow-hidden md:mx-auto md:justify-center md:flex md:px-20 lg:px-40 xl:px-[18rem]'>
+      <div ref={anim} className='z-10 anim-cont bg-[#e6ccb2] mt-[-4rem] md:mt-[-8rem] relative flex-column md:gap-4 h-[48rem] sm:h-[60rem] overflow-hidden md:mx-auto md:justify-center md:flex md:px-20 lg:px-40 xl:px-[18rem]'>
         {/* <div className='h-14 md:h-24 w-screen md:mt-4 text-red-200 absolute flex justify-center items-center gap-4 md:gap-32'>
           <RiCake3Line className='w-12 h-12 md:w-20 md:h-20 origin-bottom -rotate-12 ' />
           <HiOutlineCake className=' w-12 h-12 md:w-20 md:h-20 origin-bottom rotate-12' /> 
