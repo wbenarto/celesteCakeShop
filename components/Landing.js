@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import { Product, FooterBanner, HeroBanner, InstagramPosts } from '../components'
+import { BirthdaySection, Product, FooterBanner, HeroBanner, InstagramPosts, Test } from '../components'
 import Link from 'next/link'
 import { client } from '../lib/client'
 import {AiOutlineArrowRight} from 'react-icons/ai'
@@ -17,44 +17,33 @@ const Landing = ({bannerData, products}) => {
     const anim2 = useRef(null);
     const anim3 = useRef(null);
     const anim4 = useRef(null);
-
     useEffect(()=> {
       const el = anim.current
       const el2 = anim2.current
       const el3 = anim3.current
       const el4 = anim4.current
-      const allEl = el.querySelectorAll(".anim-me")
+      const allEl = el.querySelectorAll(".anim-test")
       const allEl2 = el2.querySelectorAll(".anim2-me")
       const allEl3 = el3.querySelectorAll(".anim3-me")
       const allEl4 = el4.querySelectorAll(".anim4-me")
-      const contEl = el.querySelectorAll(".anim-cont")
      
-      gsap.fromTo(".anim-cont", {
-        y: 100,
-        opacity: 0,
-        ease: "power3.in"
-      },{
-        y: 0,
-        duration: .5,
-        delay: 2,
-        opacity: 1,
-      })
-      gsap.fromTo(allEl, {
-        y: 100,
-        opacity: 0,
-        ease: "power3.in"
-      }, {
-        y: 0,
-        duration: .5,
-        stagger: 0.2,
-        opacity: 1,
-        scrollTrigger: {
-          trigger: allEl,
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play none none reverse"
-        },
-      })
+    
+      // gsap.fromTo('.anim-test', 
+      // { y: 0, width:'50%', opacity: 1, zIndex:1, ease:'power3.in' },
+      // {
+      //   y: -300,
+      //   width:'80%',
+      //   height: "screen",
+      //   duration: .5,
+      //   opacity: 1,
+      //   scrollTrigger: {
+      //     trigger: '.anim-test',
+      //     start: "top 50%",
+      //     end: "bottom 20%",
+      //     toggleActions: "play none none reverse",
+      //     markers: true
+      //   },
+      // })
       gsap.fromTo(allEl2,{
         y: 200,
         ease: "power3.in"
@@ -100,31 +89,18 @@ const Landing = ({bannerData, products}) => {
           end: "bottom 40%",
           toggleActions: "play none none reverse"
         },
-      });;
+      });
     }, [])
   return (
     <>
       <HeroBanner />
-      {/*<div className='h-[12rem] w-full text-[#324d67] grid content-center text-center bg-white overflow-hidden '>
-        <h1 ref={midSec} className='midSec self-center text-2xl md:text-3xl lg:text-4xl font-aug text-red-500  tracking-widest '>
-          Baked with the finest natural ingredients. 
-        </h1>
-  </div> */}
       
-      {/* What we offer FIRST SECTION*/}
-      <div ref={anim} className='z-10 anim-cont bg-[#e6ccb2] mt-[-4rem] md:mt-[-8rem] relative flex-column md:gap-4 h-[48rem] sm:h-[60rem] overflow-hidden md:mx-auto md:justify-center md:flex md:px-20 lg:px-40 xl:px-[18rem]'>
-        {/* <div className='h-14 md:h-24 w-screen md:mt-4 text-red-200 absolute flex justify-center items-center gap-4 md:gap-32'>
-          <RiCake3Line className='w-12 h-12 md:w-20 md:h-20 origin-bottom -rotate-12 ' />
-          <HiOutlineCake className=' w-12 h-12 md:w-20 md:h-20 origin-bottom rotate-12' /> 
-          <RiCake3Line className='w-12 h-12 md:w-20 md:h-20 origin-bottom -rotate-12 ' />
-          <HiOutlineCake className=' w-12 h-12 md:w-20 md:h-20 origin-bottom rotate-12' /> 
-          <RiCake3Line className='w-12 h-12 md:w-20 md:h-20 origin-bottom rotate-12 ' />
-          <HiOutlineCake className=' w-12 h-12 md:w-20 md:h-20 origin-bottom -rotate-12' /> 
-          <RiCake3Line className='w-12 h-12 md:w-20 md:h-20 origin-bottom rotate-12 ' />
-          <HiOutlineCake className=' w-12 h-12 md:w-20 md:h-20 origin-bottom -rotate-12' /> 
-         
-
-        </div> */}
+      
+      {/* Birthday Section - Custom design cake */}
+      
+      <div ref={anim} className='anim-test z-10 bg-[#e6ccb2] relative flex-column md:gap-4 h-[48rem] sm:h-screen overflow-hidden md:mx-auto md:justify-center md:flex md:px-20 lg:px-40 xl:px-[18rem]'>
+       
+        {/* <BirthdaySection/>  */}
         {/* Left */}
         <div className='my-auto px-6 md:px-0 md:w-full mx-auto py-12 justify-center'>
           <h1 className='anim-me font-mont text-2xl text-gray-600 font-bold text-left md:text-4xl'>We offer Custom Designed Cakes for every occasion</h1>
@@ -160,10 +136,15 @@ const Landing = ({bannerData, products}) => {
         </div>
       </div>
 
-      <div ref={anim2} className=' z-10 relative h-[6rem] bg-[#737170] md:h-[12rem] w-full grid content-center text-center text-white overflow-hidden '>
-        <h1 ref={midSec} className='anim2-me midSec self-center text-base md:text-3xl lg:text-4xl tracking-widest text-amber-200 font-aug '>
+
+      {/* Mid section  */}
+      <div ref={anim2} className=' z-10 relative h-[6rem] bg-white md:h-[12rem] w-full grid content-center text-center text-white overflow-hidden '>
+        <div className='bg-white w-[80%]'>
+
+        </div>
+        {/* <h1 ref={midSec} className='anim2-me midSec self-center text-base md:text-3xl lg:text-4xl tracking-widest text-amber-200 font-aug '>
           Personalized baked goods for you and your loved ones. 
-        </h1>
+        </h1> */}
       </div>
 
       <div ref={anim3} className='z-10 relative bg-[#e6ccb2] flex-column md:gap-4 h-[40rem] md:h-[60rem] overflow-hidden lg:mx-auto lg:justify-center lg:flex sm:px-4 md:px-20 lg:px-40 xl:px-[18rem]'>
