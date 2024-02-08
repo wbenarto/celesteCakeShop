@@ -92,7 +92,7 @@ const Navbar = () => {
             {showCart && <Cart />}
         </div>
 
-        <div className='md:invisible bg-[#f5f2ec] fixed z-10 top-0 h-14 w-full flex items-center px-8 justify-between'>
+        <div className='md:invisible bg-[#e6ccb2] fixed z-10 top-0 h-14 w-full flex items-center px-8 justify-between'>
 
                 <Link href='/'>
                     <h1 className='movedown text-base font-semibold font-mont tracking-widests duration-300 transition all' >CELESTE</h1>
@@ -101,41 +101,41 @@ const Navbar = () => {
         </div>
         
         {hamburgerOn ? (
-            <div className='fixed top-0 mt-0 h-[24rem] w-full transition-all duration-200 bg-[#F48CAA] font-semibold text-white z-10'>
+            <div className='fixed top-0 mt-0 h-[24rem] w-full transition-all duration-200 bg-[#e6ccb2] font-semibold text-black z-10'>
                 
                 <div className='sm:invisible fixed z-999 top-0 h-14 w-full flex items-center px-8 justify-between'>
 
                     <Link href='/'>
-                        <h1 className='movedown  text-base font-mont tracking-widest text-white duration-300 transition all'>CELESTE</h1>
+                        <h1 className='movedown  text-base font-mont tracking-widest text-black duration-300 transition all'>CELESTE</h1>
                     </Link>
-                    <div className='movedown text-xl text-white' onClick={() => setHamburgerOn(!hamburgerOn)}><GiHamburgerMenu /></div>
+                    <div className='movedown text-xl text-black' onClick={() => setHamburgerOn(!hamburgerOn)}><GiHamburgerMenu /></div>
                 </div>
                 <div className='py-20 px-10'>
                 
                     <Link href='/about'>
                         <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
-                            <button onClick={()=>setHamburgerOn(false)} className='text-base text-white font-bold  '>
+                            <button onClick={()=>setHamburgerOn(false)} className='text-base text-black font-bold  '>
                                 <p className='move font-body tracking-widest navLink'>ABOUT</p>
                             </button>
                         </div>
                     </Link>
                     <Link href='/menu/custom' >
                         <div className=' items-center flex px-4 py-4 h-10 navLink rounded-full'>
-                            <button onClick={()=>setHamburgerOn(false)} className='text-base text-white font-bold '>
+                            <button onClick={()=>setHamburgerOn(false)} className='text-base text-black font-bold '>
                                 <p className='move font-body tracking-widest navLink'>CUSTOM CAKES</p>
                             </button>
                         </div>
                     </Link>
                     <Link href='/menu'>
                         <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
-                            <button onClick={()=> setHamburgerOn(false)} className='text-base text-white font-bold'>
+                            <button onClick={()=> setHamburgerOn(false)} className='text-base text-black font-bold'>
                                 <p className='move font-body tracking-widest navLink'>GALLERY</p>
                             </button>
                         </div>
                     </Link>
                     <Link href='/contact'>
                         <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
-                            <button onClick={()=> setHamburgerOn(false)} className='text-base text-white font-bold'>
+                            <button onClick={()=> setHamburgerOn(false)} className='text-base text-black font-bold'>
                                 <p className='move font-body tracking-widest navLink'>CONTACT</p>
                             </button>
                         </div>
