@@ -1,8 +1,9 @@
+import Image from 'next/image'
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { AiOutlineShopping } from 'react-icons/ai'
+import logo from '../public/images/celeste.png'
 import { GiHamburgerMenu } from 'react-icons/gi'
-import { Cart } from './'
 import { useStateContext } from '../context/StateContext'
 import { gsap } from 'gsap/dist/gsap'
 
@@ -39,40 +40,46 @@ const Navbar = () => {
         <div className="flex justify-center">
 
         <div className={scrollDown ? 
-        'fixed top-0 z-40 mt-10 px-20  invisible md:visible max-w-[80%] rounded-full h-24 bg-[#e6ccb2] flex justify-center items-center gap-14 xlg:gap-32 font-hero duration-500 transition-all' : 
-        'fixed z-40 top-0 shadow-xl invisible md:visible mx-auto max-w-[35%] h-0 mt-[-100px] flex  justify-center items-center gap-10 lg:gap-24 font-hero duration-500 transition-all'}>
-            <Link href='/'>
+        'fixed top-0 z-40  invisible rounded-b-full w-3/4 md:visible h-24 bg-white flex justify-center items-center gap-14 xlg:gap-32 font-hero duration-500 transition-all' : 
+        'fixed z-40 top-0 shadow-xl w-full invisible md:visible mx-auto h-0 mt-[-150px] flex  justify-center items-center gap-10 lg:gap-24 font-hero duration-500 transition-all'}>
+            {/* <Link href='/'>
                 <div className=' items-center flex px-4 py-4 h-10 navLink rounded-full'>
                     <button className=' font-semibold text-[#22333b] hover:text-white'>
                         <p className='movedown font-mont md:tracking-widest navLink'>HOME</p>
                     </button>
                 </div>
-            </Link>
+            </Link> */}
             <Link href='/about'>
                 <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
-                    <button className='  font-semibold text-[#22333b] hover:text-white'>
+                    <button className='  font-semibold text-[#22333b] hover:text-[#e6ccb2]'>
                         <p className='movedown font-mont md:tracking-widest navLink'>ABOUT</p>
                     </button>
                 </div>
             </Link>
             <Link href='/menu/custom'>
                 <div className=' items-center flex px-4 py-4 h-10 navLink rounded-full'>
-                    <button className=' font-semibold text-[#22333b] hover:text-white '>
+                    <button className=' font-semibold text-[#22333b] hover:text-[#e6ccb2] '>
                         <p className='movedown font-mont md:tracking-widest navLink'>CUSTOM CAKES</p>
                     </button>
                 </div>
             </Link>
+            <Link href='/'>
+                <div className='flex mt-20 p-1 navLink justify-center items-center w-44 h-44 bg-white rounded-full hover:cursor-pointer'>
+                    <img className='navLink' src={logo.src} alt='logo'/>
+                </div>
+            </Link>
+
            
             <Link href='/menu'>
                 <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
-                    <button className='  font-semibold text-[#22333b] hover:text-white'>
+                    <button className='  font-semibold text-[#22333b] hover:text-[#e6ccb2]'>
                         <p className='movedown font-mont md:tracking-widest navLink'>GALLERY</p>
                     </button>
                 </div>
             </Link>
             <Link href='/contact'>
                 <div className='items-center flex px-4 py-4 h-10 navLink rounded-full'>
-                    <button className=' font-semibold text-[#22333b] hover:text-white'>
+                    <button className=' font-semibold text-[#22333b] hover:text-[#e6ccb2]'>
                         <p className='movedown font-mont md:tracking-widest navLink'>CONTACT</p>
                     </button>
                 </div>

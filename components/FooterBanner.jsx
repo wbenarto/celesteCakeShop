@@ -13,16 +13,16 @@ const FooterBanner = () => {
                     <p className='pb-8 md:pb-14'>Email us for any inquiries. Follow us on Instagram! </p>
 
                     <Link passHref={true} href='mailto:celestecakeshop@gmail.com'>
-                    <div className='flex hover:cursor-pointer items-center py-4 '>
-                            <AiFillMail className='mx-4 text-xl' />
-                            <div className='text-sm md:text-lg'>celestecakeshop@gmail.com</div>
-                    </div>
+                        <div className='flex hover:cursor-pointer items-center py-4 '>
+                                <AiFillMail className='mx-4 text-xl' />
+                                <div className='text-sm md:text-lg'>celestecakeshop@gmail.com</div>
+                        </div>
                     </Link> 
                     <Link passHref={true} href='https://www.instagram.com/celestecakeshop/'>
-                    <div className='flex hover:cursor-pointer items-center '>
-                            <AiFillInstagram className='mx-4 text-xl' />
-                            <div className='text-sm md:text-lg'>CelesteCakeShop</div>
-                    </div>
+                        <div className='flex hover:cursor-pointer items-center '>
+                                <AiFillInstagram className='mx-4 text-xl' />
+                                <div className='text-sm md:text-lg'>CelesteCakeShop</div>
+                        </div>
                     </Link>
     
                 </div>
