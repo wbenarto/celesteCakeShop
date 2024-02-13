@@ -33,19 +33,22 @@ const HeroBanner = () => {
     return (
 
         <div className='z-0 w-full h-screen sticky top-0'>
-            <div className=' flex bg-[url("/images/home.jpg")] md:bg-fixed bg-center bg-cover md:bg-[length:full_100%] items-center justify-center w-full h-full my-auto text-center'>
-                <div ref={hero} className='bg-[rgba(0,0,0,0.5)] w-full h-full justify-center items-center flex'>
+            <div className='flex md:bg-fixed bg-center bg-cover md:bg-[length:full_100%] items-center justify-center w-full h-full my-auto text-center'>
+                <video autoPlay muted loop className="background-video object-cover absolute w-full h-full z-0">
+                    <source src="/images/anim.mp4" alt='vid' type="video/mp4" />
+                </video>
+                <div ref={hero} className='bg-[rgba(0,0,0,0.4)] w-full h-full justify-center items-center flex z-10'>
                     <div className='hero w-[80%] md:max-w-[60%] md:mt-[-2rem] items-center '>
                         <h1 className='hero move text-5xl md:text-6xl lg:text-8xl font-mont tracking-widest2 text-[#ffe5d9]'>CELESTE</h1>
                         <p className='hero move text-[#c6ac8f] mt-1 font-aug font-bold text-2xl md:text-4xl '>Cake Design</p>
                     
                         <h2 className='hero move mt-10  text-md  md:text-2xl font-mont text-white'>Welcome to our Orlando-based bakery, where we craft unforgettable moments with our custom-designed cakes tailored to elevate every occasion with sweetness and style. </h2>
                     </div>
-                    
-
-                </div>
-
+                </div>                 
             </div>
+            
+            {/* <div className=' flex bg-[url("/images/home.jpg")] md:bg-fixed bg-center bg-cover md:bg-[length:full_100%] items-center justify-center w-full h-full my-auto text-center'>
+            </div> */}
         </div>
 
     )
