@@ -34,7 +34,7 @@ const HeroBanner = () => {
 
         <div className='z-0 w-full h-screen sticky top-0'>
             <div className='flex md:bg-fixed bg-center bg-cover md:bg-[length:full_100%] items-center justify-center w-full h-full my-auto text-center'>
-                <video autoPlay muted loop className="background-video object-cover absolute w-full h-full z-0">
+                <video autoPlay muted loop playsInline className="background-video object-cover absolute w-full h-full z-0">
                     <source src="/images/anim.mp4" alt='vid' type="video/mp4" />
                 </video>
                 <div ref={hero} className='bg-[rgba(0,0,0,0.4)] w-full h-full justify-center items-center flex z-10'>
