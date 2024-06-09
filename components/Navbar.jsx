@@ -59,7 +59,7 @@ const Navbar = () => {
             <Link href='/menu/custom'>
                 <div className=' items-center flex px-4 py-4 h-10 navLink rounded-full'>
                     <button className=' font-semibold text-[#22333b] hover:text-[#e6ccb2] '>
-                        <p className='movedown font-mont md:tracking-widest navLink'>CUSTOM CAKES</p>
+                        <p className='movedown font-mont md:tracking-widest navLink'>ORDER</p>
                     </button>
                 </div>
             </Link>
@@ -129,7 +129,7 @@ const Navbar = () => {
                     <Link href='/menu/custom' >
                         <div className=' items-center flex px-4 py-4 h-10 navLink rounded-full'>
                             <button onClick={()=>setHamburgerOn(false)} className='text-base text-black font-bold '>
-                                <p className='move font-body tracking-widest navLink'>CUSTOM CAKES</p>
+                                <p className='move font-body tracking-widest navLink'>ORDER</p>
                             </button>
                         </div>
                     </Link>

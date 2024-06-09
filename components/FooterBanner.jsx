@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Map from '../pages/map/index.js'
-import { AiFillInstagram, AiFillMail } from 'react-icons/ai'
+import { AiFillInstagram, AiFillMail, AiFillFacebook } from 'react-icons/ai'
 
 const FooterBanner = () => {
     return (
@@ -15,13 +15,19 @@ const FooterBanner = () => {
                     <Link passHref={true} href='mailto:celestecakeshop@gmail.com'>
                         <div className='flex hover:cursor-pointer items-center py-4 '>
                                 <AiFillMail className='mx-4 text-xl' />
-                                <div className='text-sm md:text-lg'>celestecakeshop@gmail.com</div>
+                                <div className='text-sm md:text-lg'>celestecshop@gmail.com</div>
                         </div>
                     </Link> 
                     <Link passHref={true} href='https://www.instagram.com/celestecakeshop/'>
-                        <div className='flex hover:cursor-pointer items-center '>
-                                <AiFillInstagram className='mx-4 text-xl' />
-                                <div className='text-sm md:text-lg'>CelesteCakeShop</div>
+                        <div className='flex hover:cursor-pointer items-center py-4 '>
+                                <AiFillInstagram className='mx-4 text-xl ' />
+                                <div className='text-sm md:text-lg'>celestecakechop</div>
+                        </div>
+                    </Link>
+                    <Link passHref={true} href='https://www.facebook.com/celestecshop?mibextid=LQQJ4d'>
+                        <div className='flex hover:cursor-pointer items-center py-4'>
+                                <AiFillFacebook className='mx-4 text-xl ' />
+                                <div className='text-sm md:text-lg'>celestecakeshop</div>
                         </div>
                     </Link>
     
