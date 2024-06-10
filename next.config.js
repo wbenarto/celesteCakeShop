@@ -1,8 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    forceSwcTransforms: true,
-  },
   reactStrictMode: true,
   optimizeFonts: false,
   swcMinify: false,
