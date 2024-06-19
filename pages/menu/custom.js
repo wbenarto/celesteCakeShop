@@ -5,7 +5,7 @@ import { toast } from "react-hot-toast";
 import {AiOutlineArrowRight} from 'react-icons/ai'
 import Dropdown from '../../components/Dropdown'
 
-const custom = () => {
+const Custom = () => {
   const [base64, setBase64] = useState(null)
   const router = useRouter();
   const baseOptions = [
@@ -299,4 +299,4 @@ const custom = () => {
   );
 };
 
-export default custom;
+export default Custom;

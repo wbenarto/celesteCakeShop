@@ -17,7 +17,7 @@ const menu = ({ orders }) => {
         {/* <img src='/images/bday1.jpg' className='w-full h-full absolute object-contain' ></img> */}
         <p className="py-2 font-bold text-xl">ORDERS</p>
         {orders.map((e,i)=>(
-            <div className=' mx-auto  my-2 flex max-w-[700px] justify-between text-xs sm:text-md'>
+            <div key={i} className=' mx-auto  my-2 flex max-w-[700px] justify-between text-xs sm:text-md'>
               <div className='text-left w-1/3 text-xs sm:text-md'>
                 <p>{e.customer}</p>
                 <p>{e.email}</p>

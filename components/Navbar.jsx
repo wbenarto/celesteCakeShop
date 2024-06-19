@@ -96,7 +96,7 @@ const Navbar = () => {
             </div> */}
 
 
-            {showCart && <Cart />}
+            {/* {showCart && <Cart />} */}
         </div>
 
         <div className='md:invisible bg-[#e6ccb2] fixed z-10 top-0 h-14 w-full flex items-center px-8 justify-between'>
