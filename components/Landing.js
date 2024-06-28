@@ -105,6 +105,7 @@ const Landing = ({bannerData, products}) => {
         <div className='my-auto px-6 md:px-0 w-full  mx-auto py-12 justify-center'>
           <h1 className='anim-me font-mont text-2xl text-left md:text-6xl'>We offer Custom Designed Cakes for every occasion</h1>
           <p className='anim-me md:text-xl font-medium py-4'>Send us your design! Then choose your base, fondant, and filling flavors from our delicious options. Available for pickup and delivery in Orlando.  </p>
+         
           <div className='anim-me w-full'>
             <div className='scroll-trigger flex gap-2 py-2 px-4 '>
               <div className='text-[#e6ccb2] w-14 h-14 md:w-20 md:h-20 rounded-md '><FaBirthdayCake className='w-full h-full p-2'/></div>
@@ -128,6 +129,14 @@ const Landing = ({bannerData, products}) => {
               </div>
             </div>
           </div>
+          <Link href="https://docs.google.com/forms/d/e/1FAIpQLSeDhYKDhnuyxPmHKwx8HErkTMFFJ5rZ7U5Mw1PW57sbXFOL4g/viewform">
+            <button
+              className="hover:bg-[#000000] text-sm md:text-base w-32 h-10 md:w-[180px] md:h-14 mx-auto my-8 border-2 gap-2 rounded-full text-center flex justify-center tracking-widest text-black font-bold items-center bg-[#e6ccb2] hover:text-white "
+              type="button"
+            >
+              <p>ORDER HERE</p>
+            </button>
+          </Link>
         </div>
         
         {/* Right */}
@@ -231,6 +240,14 @@ const Landing = ({bannerData, products}) => {
           <div className='bg-[rgba(0,0,0,0.5)] w-full h-full justify-center items-center flex'>
               <div>
                   <h2 className=' text-white font-semibold tracking-widest text-4xl text-center font-mont w-full lg:text-6xl'>Joy baked into every bite.</h2>
+                  <Link href="https://docs.google.com/forms/d/e/1FAIpQLSeDhYKDhnuyxPmHKwx8HErkTMFFJ5rZ7U5Mw1PW57sbXFOL4g/viewform">
+                      <button
+                        className="hover:bg-[#ffffff] text-sm md:text-base w-32 h-10 md:w-[320px] md:h-14 mx-auto my-8 border-2 gap-2 rounded-full text-center flex justify-center tracking-widest font-bold items-center border-none bg-[#e6ccb2] text-black"
+                        type="button"
+                      >
+                        <p>SEND US YOUR INQUIRY</p>
+                      </button>
+                  </Link>
               </div>
           </div>
       </div>

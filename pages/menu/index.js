@@ -15,16 +15,16 @@ const menu = ({ products }) => {
           </h1>
         </div>
       </div>
-      <div className="pt-10 flex-column border-2 h-40 overflow-hidden text-center justify-center">
+      <div className="pt-10 flex-column border-2 h-48 overflow-hidden text-center justify-center">
         {/* <img src='/images/bday1.jpg' className='w-full h-full absolute object-contain' ></img> */}
-        <p className="py-2 font-bold text-xl">Custom Design Your Cake</p>
+        <p className="py-2 mb-2 font-bold text-4xl">Custom Design Your Cake</p>
 
-        <Link href="/menu/custom">
+        <Link href="https://docs.google.com/forms/d/e/1FAIpQLSeDhYKDhnuyxPmHKwx8HErkTMFFJ5rZ7U5Mw1PW57sbXFOL4g/viewform">
           <button
-            className="bg-[#F48CAA] text-sm md:text-base w-32 h-10 md:w-[180px] md:h-14 mx-auto border-2 gap-2 rounded-full text-center flex justify-center text-white items-center "
+            className="bg-[#000000] text-sm md:text-base w-32 h-10 md:w-[180px] md:h-14 mx-auto border-2 gap-2 rounded-full text-center flex justify-center tracking-widest text-white font-bold items-center "
             type="button"
           >
-            <p>Get a Quote</p><AiOutlineArrowRight className='text-lg'/>
+            <p>ORDER HERE</p>
           </button>
         </Link>
       </div>

@@ -5,6 +5,7 @@ import { useStateContext } from "../../context/StateContext";
 import Dropdown from "../../components/Dropdown";
 import { toast } from "react-hot-toast";
 import { useRouter } from "next/router";
+import Link from 'next/link'
 
 const ProductDetails = ({ product, products }) => {
   const { image, name, details, price } = product;
@@ -101,86 +102,35 @@ const ProductDetails = ({ product, products }) => {
           </h1>
         </div>
       </div>
-      <div className="sm:grid sm:grid-cols-8  mx-auto md:max-w-[1200px]  gap-4 p-4 rounded-lg  text-[#324d67]">
-        <div className="sm:col-span-3 my-auto">
+      <div className="sm:grid sm:grid-cols-12  mx-auto md:max-w-[1200px]  gap-4 p-4 rounded-lg  text-[#324d67]">
+        <div className="sm:col-span-8 my-auto">
           <img
             src={urlFor(image && image[index])}
             className="w-full rounded-md "
           />
         </div>
-        <div className="mt-4  rounded-lg p-4 sm:h-[auto] sm:col-span-5 md:col-span-5 sm:mt-0 ">
+        <div className=" sm:mt-28 rounded-lg p-4 sm:h-[auto] sm:col-span-4 md:col-span-4  ">
           <div className=" text-black  pb-4">
-            <h1 className="text-2xl p-2 font-bold sm:text-3xl md:text-5xl text-[#F48CAA] border-gray-600 border-b-2 md:py-8">
+            <h1 className="text-2xl p-2 font-bold sm:text-3xl md:text-5xl text-gray-600 border-gray-600 border-b-2 md:py-8">
               {name}
             </h1>
             <p className="sm:text-2xl p-2 md:py-8">{details}</p>
 
-            <div className="grid bg-gray-200">
-              {/* Size*/}
-              <Dropdown
-                options={sizeOptions}
-                title="Size"
-                selection={size}
-                handleSelection={handleSelection}
-              />
-
-              {/* Base */}
-              <Dropdown
-                options={baseOptions}
-                title="Base"
-                selection={base}
-                handleSelection={handleSelection}
-              />
-
-              {/* Fondant Flavor */}
-              <Dropdown
-                options={fondantOptions}
-                title="Fondant / Buttercream"
-                selection={fondant}
-                handleSelection={handleSelection}
-              />
-
-              {/* Fillings Flavor */}
-              <Dropdown
-                options={fillingsOptions}
-                title="Fillings"
-                selection={fillings}
-                handleSelection={handleSelection}
-              />
-              <p className='text-gray-400 text-center text-xs mt-[-5px]'>* Fillings are additional cost</p>
-              <div className="flex-column p-4">
-                <input
-                  className="flex w-full p-2 border-2 rounded-md "
-                  id="email"
-                  type="text"
-                  name="email"
-                  placeholder="Email"
-                  onChange={onInputChange}
-                  required
-                />
-              </div>
-    
-            </div>
-          </div>
-
-          <div className="mb-0 p-2 mt-2 border-t-2 border-gray-600 h-[4rem] justify-center flex gap-2 md:mt-8 ">
-
-            <button 
-              onClick={()=>sendMail()}
-              className="w-3/4 h-full  bg-[#F48CAA]  rounded-full grid ">
-              <p
-                className=" my-auto font-bold text-white text-center"
-                // onClick={() => onAdd(product, 1, base, fondant, message)}
+            <Link href="https://docs.google.com/forms/d/e/1FAIpQLSeDhYKDhnuyxPmHKwx8HErkTMFFJ5rZ7U5Mw1PW57sbXFOL4g/viewform">
+              <button
+                className="hover:bg-[#000000] text-sm md:text-base w-32 h-10 md:w-[180px] md:h-14 my-8 border-2 gap-2 rounded-full text-center flex justify-center tracking-widest text-black font-bold items-center bg-[#e6ccb2] hover:text-white "
+                type="button"
               >
-                GET A QUOTE
-              </p>
-            </button>
+                <p>ORDER HERE</p>
+              </button>
+            </Link>
           </div>
+
         </div>
       </div>
 
       <div className="w-full  pb-8 text-center px-4  bg-white overflow-hidden">
-        <h2 className="sm:text-2xl font-hero py-4  text-gray-500 mb-4">
+        <h2 className="text-2xl sm:text-4xl font-hero py-4 font-mont  font-bold text-gray-600 sm:my-12">
           OTHER BAKED GOODS
         </h2>
         <div className="w-full overflow-x-scroll hover:pause">
